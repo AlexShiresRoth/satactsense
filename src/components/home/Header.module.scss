@@ -1,0 +1,32 @@
+@import "../../../sass/variables";
+
+.header {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($brand-main, 0.7),
+      rgba($brand-accent, 0.5)
+    ),
+    url("https://res.cloudinary.com/snackmanproductions/image/upload/c_scale,q_51,w_1545/v1583618875/satactsense/neonbrand-y_6rqStQBYQ-unsplash_ijyu5b.jpg");
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-clip-path: polygon(0 0,100% 0, 100% 80vh, 0 100%);
+    clip-path: polygon(0 0,100% 0, 100% 40vh, 0 100%);
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-items: center;
+  gap: 2rem;
+  height: 50vh;
+  width: 100%;
+  & .column_left {
+    & h1 {
+      color: #fff;
+      font-family: "Volkhov";
+      font-size: 5vw;
+    }
+    & p {
+        color: #eee;
+        font-size:2vw;
+    }
+  }
+}

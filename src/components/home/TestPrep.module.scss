@@ -1,0 +1,52 @@
+@import "../../../sass/variables";
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: 1fr;
+  gap: 1rem;
+  justify-items: center;
+  max-width:1200px;
+  align-self:center;
+  & .column {
+    & h2 {
+      font-size: 2.5vw;
+      &::after {
+        content: "";
+        width: 50%;
+        height: 5px;
+        background: $brand-main;
+        display: block;
+        margin: 1rem 0;
+      }
+    }
+    & p {
+      width: 40vw;
+      line-height: 1.5;
+    }
+  }
+  & .column:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    & .inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & svg {
+        width: auto;
+        height: 25vh;
+        padding: 1rem;
+        color: $brand-accent;
+        border-radius: 50%;
+      }
+      & p {
+        width: 100%;
+        font-weight:700;
+        text-align:center;
+      }
+    }
+  }
+}
