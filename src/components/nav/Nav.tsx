@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import navStyle from './Nav.module.scss';
 
-const Nav = props => {
+const Nav = () => {
   return <nav className={navStyle.nav}>
     <div className={navStyle.nav__inner}>
       <div className={navStyle.nav__left}>

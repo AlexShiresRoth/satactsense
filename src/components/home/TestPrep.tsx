@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import testStyle from './TestPrep.module.scss';
 import { AiOutlineUser, AiOutlineUsergroupAdd } from 'react-icons/ai'
-const TestPrep = props => {
+const TestPrep = () => {
     return (
         <section className={testStyle.section}>
             <div className={testStyle.column}>
