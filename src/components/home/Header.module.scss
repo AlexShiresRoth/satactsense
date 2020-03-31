@@ -1,32 +1,100 @@
-@import "../../../sass/variables";
+@import '../../../sass/variables';
 
 .header {
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($brand-main, 0.7),
-      rgba($brand-accent, 0.5)
-    ),
-    url("https://res.cloudinary.com/snackmanproductions/image/upload/c_scale,q_51,w_1545/v1583618875/satactsense/neonbrand-y_6rqStQBYQ-unsplash_ijyu5b.jpg");
-  background-position: bottom;
-  background-attachment: fixed;
-  background-size: cover;
-  -webkit-clip-path: polygon(0 0,100% 0, 100% 80vh, 0 100%);
-    clip-path: polygon(0 0,100% 0, 100% 40vh, 0 100%);
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  justify-items: center;
-  gap: 2rem;
-  height: 50vh;
-  width: 100%;
-  & .column_left {
-    & h1 {
-      color: #fff;
-      font-family: "Volkhov";
-      font-size: 5vw;
-    }
-    & p {
-        color: #eee;
-        font-size:2vw;
-    }
-  }
+	position: relative;
+	height: 100vh;
+	max-height: 100vh;
+	width: 100vw;
+	display: flex;
+	overflow: hidden;
+	& .bg_video {
+		position: absolute;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: -100;
+	}
+
+	& .menu {
+		background: #fff;
+		height: 100%;
+		min-width: 20vw;
+		width: 20vw;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		transition: all 0.3s ease;
+		transform: translateX(-15vw);
+		position: relative;
+		& button {
+			position: absolute;
+			background: #fff;
+			color: $brand-main;
+			border-radius: 50%;
+			border: 0px solid #fff;
+			font-family: 'Muli';
+			font-weight: 700;
+			display: flex;
+			justify-content: center;
+			box-shadow: 0 1px 1px darken(#fff, 10%);
+			transform: translateX(2rem);
+			width: 5rem;
+			& svg {
+				padding: 1rem;
+				font-size: 2rem;
+			}
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+	& .menu_expanded {
+		transform: translateX(0vw);
+	}
+
+	& .menu_hidden {
+		visibility: hidden;
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		& ul {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 0;
+			width: 100%;
+			& li {
+				list-style: none;
+				margin: 1rem 0;
+				font-size: 1.5vw;
+			}
+		}
+	}
+	& .menu_show {
+		visibility: visible;
+		width: 100%;
+		opacity: 1;
+		transition: all 0.3s ease-in-out;
+		& ul {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 0;
+			width: 100%;
+			& li {
+				list-style: none;
+				padding: 1rem 0;
+				font-size: 1.5vw;
+				width: 100%;
+				text-align: center;
+			}
+			& li:not(:last-child) {
+				border-bottom: 1px solid #eee;
+			}
+		}
+	}
 }

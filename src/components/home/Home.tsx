@@ -1,20 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Layout from '../layout/Layout.tsx'
-import Header from './Header.tsx';
-import TestPrep from './TestPrep.tsx';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Layout from '../layout/Layout';
+import Header from './Header';
 
-const Home = props => {
-    return (
-        <Layout>
-            <Header />
-            <TestPrep />
-        </Layout>
-    )
-}
+const Home = (props: any) => {
+	return (
+		<Layout>
+			<Header />
+		</Layout>
+	);
+};
 
-Home.propTypes = {
+Home.propTypes = {};
 
-}
-
-export default Home
+export default Home;
