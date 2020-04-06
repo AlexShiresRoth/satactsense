@@ -39,10 +39,10 @@
 			display: flex;
 			justify-content: center;
 			box-shadow: 0 1px 1px darken(#fff, 10%);
-			transform: translateX(2rem);
-			width: 5rem;
+			transform: translateX(1.5rem);
+			width: 3.5rem;
 			& svg {
-				padding: 1rem;
+				padding: 0.5rem;
 				font-size: 2rem;
 			}
 			&:hover {

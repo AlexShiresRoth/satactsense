@@ -1,14 +1,15 @@
 import React from 'react';
-import Nav from './components/nav/Nav';
-import Home from './components/home/Home';
+import Home from './components/pages/Home';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './css/main.css';
 
-const App: React.FunctionComponent = props => {
+const App: React.FunctionComponent = () => {
 	return (
-		<>
-			<Nav />
-			<Home />
-		</>
+		<Router>
+			<Switch>
+				<Route exact path="/" component={Home} />
+			</Switch>
+		</Router>
 	);
 };
 

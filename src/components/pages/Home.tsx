@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { ReactComponentElement } from 'react';
 import PropTypes from 'prop-types';
 import Layout from '../layout/Layout';
-import Header from './Header';
-
-const Home = (props: any) => {
+import Nav from '../nav/Nav';
+import Header from '../home/Header';
+const Home = () => {
 	return (
 		<Layout>
+			<Nav />
 			<Header />
 		</Layout>
 	);

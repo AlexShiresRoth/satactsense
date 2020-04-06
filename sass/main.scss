@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Muli|Volkhov&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Muli|Lato&display=swap');
 
-@import "./variables";
+@import './variables';
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Muli", sans-serif, serif;
-  color: $text-color;
-  overflow-x:hidden;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Muli', sans-serif, serif;
+	color: $text-color;
+	overflow-x: hidden;
 }
