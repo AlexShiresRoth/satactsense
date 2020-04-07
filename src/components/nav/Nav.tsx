@@ -1,20 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import navStyle from './Nav.module.scss';
+import Menu from './Menu';
+import DropDownMenu from './DropDownMenu';
 import { MdPhoneInTalk } from 'react-icons/md';
 import { GoMail } from 'react-icons/go';
 import { TiSocialFacebook, TiSocialSkype, TiSocialGooglePlus, TiSocialLinkedinCircular } from 'react-icons/ti';
 
 const Nav = (props: any) => {
 	const serviceLinks = [
-		{ title: 'AP/Subject Testing', path: '/ap' },
-		{ title: 'SAT/ACT Prep', path: '/satact' },
-		{ title: 'General Tutoring', path: '/general' },
-		{ title: 'Johns Hopkins Program for Advanced Testing', path: '/jht' },
+		{ title: 'AP/Subject Testing', path: '/ap', id: 'AP' },
+		{ title: 'SAT/ACT Prep', path: '/satact', id: 'SAT/ACT' },
+		{ title: 'General Tutoring', path: '/general', id: 'General' },
+		{ title: 'Johns Hopkins Program for Advanced Testing', path: '/jht', id: 'Jht' },
 	];
 
-	const [current, setCurrent] = useState(0);
+	const [current, setCurrent] = useState('AP');
 
 	return (
 		<nav className={navStyle.nav}>
@@ -41,15 +43,21 @@ const Nav = (props: any) => {
 							return (
 								<li
 									className={
-										current === i ? `${navStyle.list_link} ${navStyle.active}` : navStyle.list_link
+										current === link.id
+											? `${navStyle.list_link} ${navStyle.active}`
+											: navStyle.list_link
 									}
-									onClick={() => setCurrent(i)}
+									onClick={() => setCurrent(link.id)}
 								>
-									<Link to={link.path}>{link.title}</Link>
+									<button>{link.title}</button>
+									<DropDownMenu subject={link.title} key={i} />
 								</li>
 							);
 						})}
 					</ul>
+				</div>
+				<div className={navStyle.tier}>
+					<Menu current={current} />
 				</div>
 				<div className={navStyle.tier}>
 					<div className={navStyle.banner}>
