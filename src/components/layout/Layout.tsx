@@ -1,20 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import homeStyle from './Layout.module.scss'
+import React, { ReactNode } from 'react';
+import PropTypes from 'prop-types';
+import layoutStyle from './Layout.module.scss';
 
-const Home: React.FunctionComponent<{ 
-    children: any;
+const Home: React.FunctionComponent<{
+	children: ReactNode;
 }> = (props) => {
-    console.log(props)
-    return (
-        <main className={homeStyle.main__container}>
-           {props.children}
-        </main>
-    )
-}
+	console.log(props);
+	return (
+		<main className={layoutStyle.main}>
+			<div className={layoutStyle.main__container}>{props.children}</div>
+		</main>
+	);
+};
 
-Home.propTypes = {
+Home.propTypes = {};
 
-}
-
-export default Home
+export default Home;

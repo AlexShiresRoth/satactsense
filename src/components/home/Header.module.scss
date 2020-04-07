@@ -2,98 +2,32 @@
 
 .header {
 	position: relative;
-	height: 100vh;
-	max-height: 100vh;
-	width: 100vw;
 	display: flex;
 	overflow: hidden;
-	& .bg_video {
+	width: 100%;
+	padding: 1rem 0;
+	min-height: 40vh;
+	background: linear-gradient(75deg, $brand-main 60%, $brand-secondary 0%);
+	& .svg_bg {
 		position: absolute;
-		min-width: 100%;
-		min-height: 100%;
-		width: auto;
-		height: auto;
-		z-index: -100;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 0;
 	}
-
-	& .menu {
-		background: #fff;
-		height: 100%;
-		min-width: 20vw;
-		width: 20vw;
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-end;
-		align-items: center;
-		transition: all 0.3s ease;
-		transform: translateX(-15vw);
-		position: relative;
-		& button {
-			position: absolute;
-			background: #fff;
-			color: $brand-main;
-			border-radius: 50%;
-			border: 0px solid #fff;
-			font-family: 'Muli';
-			font-weight: 700;
-			display: flex;
-			justify-content: center;
-			box-shadow: 0 1px 1px darken(#fff, 10%);
-			transform: translateX(1.5rem);
-			width: 3.5rem;
-			& svg {
-				padding: 0.5rem;
+	& .grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+		align-content: center;
+		width: 100%;
+		z-index: 1;
+		& .copy {
+			max-width: 32vw;
+			& h1 {
 				font-size: 2rem;
-			}
-			&:hover {
-				cursor: pointer;
-			}
-		}
-	}
-	& .menu_expanded {
-		transform: translateX(0vw);
-	}
-
-	& .menu_hidden {
-		visibility: hidden;
-		display: flex;
-		width: 100%;
-		flex-direction: column;
-		opacity: 0;
-		transition: all 0.3s ease-in-out;
-		& ul {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding: 0;
-			width: 100%;
-			& li {
-				list-style: none;
-				margin: 1rem 0;
-				font-size: 1.5vw;
-			}
-		}
-	}
-	& .menu_show {
-		visibility: visible;
-		width: 100%;
-		opacity: 1;
-		transition: all 0.3s ease-in-out;
-		& ul {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding: 0;
-			width: 100%;
-			& li {
-				list-style: none;
-				padding: 1rem 0;
-				font-size: 1.5vw;
-				width: 100%;
-				text-align: center;
-			}
-			& li:not(:last-child) {
-				border-bottom: 1px solid #eee;
+				color: #fff;
+				line-height: 2;
 			}
 		}
 	}

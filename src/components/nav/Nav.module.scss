@@ -3,19 +3,14 @@
 .nav {
 	display: flex;
 	flex-direction: column;
-	width: 100vw;
 	justify-content: center;
-	align-items: center;
 	min-height: 4rem;
-	padding: 1rem;
+	padding: 1rem 0;
 	background: #fff;
+	box-shadow: 0 2px 2px #eee;
 	z-index: 99999;
-	position: fixed;
-	top: 0;
-	left: 0;
+	width: 100%;
 	& .nav__inner {
-		max-width: 1400px;
-		width: 1400px;
 		height: 100%;
 		& .tier:first-of-type {
 			border-bottom: 1px solid darken(#fff, 5%);
@@ -25,8 +20,6 @@
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
-
-			padding: 0.5rem 0;
 			& .left {
 				display: flex;
 				flex-direction: row;
@@ -46,6 +39,7 @@
 				flex-direction: row;
 				justify-content: flex-start;
 				align-items: center;
+				padding: 0.5rem 0;
 				& a {
 					color: $text-color;
 					text-decoration: none;
@@ -90,8 +84,7 @@
 				background: $brand-main;
 				min-height: 3rem;
 				width: 100%;
-				margin: 0;
-				border-radius: 5px;
+				margin: 0.5rem 0;
 				& li:not(:last-child) {
 					border-right: 1px solid lighten($brand-main, 5%);
 				}
@@ -102,6 +95,8 @@
 					display: flex;
 					align-items: center;
 					justify-content: center;
+					position: relative;
+					transition: all 0.3s ease;
 					& a {
 						text-decoration: none;
 						color: #fff;
@@ -116,39 +111,58 @@
 							background: lighten($brand-main, 5%);
 						}
 					}
+					&:hover:after {
+						content: '';
+						width: 100%;
+						bottom: 0;
+						position: absolute;
+						height: 5.5px;
+						background: $brand-secondary;
+						display: block;
+					}
+				}
+				& .active {
+					position: relative;
+					& a {
+						background: lighten($brand-main, 5%);
+					}
+					&::after {
+						content: '';
+						width: 100%;
+						bottom: 0;
+						position: absolute;
+						height: 5.5px;
+						background: $brand-secondary;
+						display: block;
+					}
 				}
 			}
 			& .banner {
 				display: flex;
 				flex-direction: row;
 				align-items: center;
-
+				justify-content: space-between;
 				width: 100%;
 				position: relative;
 				overflow: hidden;
 				max-width: 100%;
-				& .overlay {
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					background: linear-gradient(to right, #fff 0, transparent 20%, transparent 80%, #fff 100%);
-					z-index: 1;
+				padding: 1rem;
+				background: linear-gradient(45deg, $alert 30%, transparent 90%);
+				& h2 {
+					margin: 0;
+					font-size: 1.5rem;
+					font-weight: 700;
+					color: #fff;
+					font-family: 'Raleway';
 				}
-				& .banner_container {
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					width: 3000px;
-					flex-wrap: nowrap;
-					& .par {
+				& .social {
+					height: 100%;
+					display: grid;
+					grid-template-columns: repeat(4, 1fr);
+					gap: 0.5rem;
+					& svg {
 						color: $brand-main;
-						animation: banneranim 90s linear infinite;
-						margin: 0 2rem;
-						width: 1000px;
-						transform: translate3d(0, 0, 0);
-						transition: all 0s ease;
+						font-size: 1.5rem;
 					}
 				}
 			}

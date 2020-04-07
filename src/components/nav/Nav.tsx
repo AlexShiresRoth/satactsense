@@ -1,26 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import navStyle from './Nav.module.scss';
 import { MdPhoneInTalk } from 'react-icons/md';
 import { GoMail } from 'react-icons/go';
+import { TiSocialFacebook, TiSocialSkype, TiSocialGooglePlus, TiSocialLinkedinCircular } from 'react-icons/ti';
 
 const Nav = (props: any) => {
 	const serviceLinks = [
-		{ title: 'SAT Prep', path: '/sat' },
-		{ title: 'ACT Prep', path: '/act' },
-		{ title: 'AP Testing', path: '/ap' },
-		{ title: 'Johns Hopkins Testing', path: '/jht' },
+		{ title: 'AP/Subject Testing', path: '/ap' },
+		{ title: 'SAT/ACT Prep', path: '/satact' },
+		{ title: 'General Tutoring', path: '/general' },
+		{ title: 'Johns Hopkins Program for Advanced Testing', path: '/jht' },
 	];
 
-	const bannerItems = [
-		'Confused or stuck, with preparing for AP tests?',
-		'Confused or stuck, with preparing for ACT prep?',
-		'Confused or stuck, with preparing for SAT prep?',
-		'Confused or stuck, with preparing for AP tests?',
-		'Confused or stuck, with preparing for ACT prep?',
-		'Confused or stuck, with preparing for SAT prep?',
-	];
+	const [current, setCurrent] = useState(0);
 
 	return (
 		<nav className={navStyle.nav}>
@@ -45,7 +39,12 @@ const Nav = (props: any) => {
 					<ul className={navStyle.grid}>
 						{serviceLinks.map((link, i) => {
 							return (
-								<li className={navStyle.list_link}>
+								<li
+									className={
+										current === i ? `${navStyle.list_link} ${navStyle.active}` : navStyle.list_link
+									}
+									onClick={() => setCurrent(i)}
+								>
 									<Link to={link.path}>{link.title}</Link>
 								</li>
 							);
@@ -54,15 +53,12 @@ const Nav = (props: any) => {
 				</div>
 				<div className={navStyle.tier}>
 					<div className={navStyle.banner}>
-						<div className={navStyle.overlay}></div>
-						<div className={navStyle.banner_container}>
-							{bannerItems.map((item, i) => {
-								return (
-									<div className={navStyle.par} key={i}>
-										<p>{item}</p>
-									</div>
-								);
-							})}
+						<h2>AP/Subject Testing is coming up next month, are you ready?</h2>
+						<div className={navStyle.social}>
+							<TiSocialLinkedinCircular />
+							<TiSocialSkype />
+							<TiSocialFacebook />
+							<TiSocialGooglePlus />
 						</div>
 					</div>
 				</div>
