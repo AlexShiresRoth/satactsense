@@ -10,7 +10,7 @@ const Nav = (props: any) => {
 		{ title: 'SAT Prep', path: '/sat' },
 		{ title: 'ACT Prep', path: '/act' },
 		{ title: 'AP Testing', path: '/ap' },
-		{ title: "John's Hopkins Testing", path: '/jht' },
+		{ title: 'Johns Hopkins Testing', path: '/jht' },
 	];
 
 	const bannerItems = [
