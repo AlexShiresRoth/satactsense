@@ -4,30 +4,7 @@ import headerStyle from './Header.module.scss';
 import { IoIosMenu, IoIosClose } from 'react-icons/io';
 
 const Header = (props: any) => {
-	const [expanded, setExpand] = useState(false);
-	const menuItems = [{ title: 'Test Prep' }, { title: 'About' }, { title: 'Success Stories' }, { title: 'Contact' }];
-	return (
-		<header className={headerStyle.header}>
-			<div className={expanded ? `${headerStyle.menu_expanded} ${headerStyle.menu}` : headerStyle.menu}>
-				{expanded ? (
-					<button onClick={(e: React.MouseEvent) => setExpand(false)}>
-						<IoIosClose />
-					</button>
-				) : (
-					<button onClick={(e: React.MouseEvent) => setExpand(true)}>
-						<IoIosMenu />
-					</button>
-				)}
-				<div className={expanded ? headerStyle.menu_show : headerStyle.menu_hidden}>
-					<ul>
-						{menuItems.map((item, i) => {
-							return <li>{item.title}</li>;
-						})}
-					</ul>
-				</div>
-			</div>
-		</header>
-	);
+	return <header className={headerStyle.header}></header>;
 };
 
 Header.propTypes = {};
