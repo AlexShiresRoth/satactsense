@@ -8,9 +8,6 @@ const Header = (props: any) => {
 	const menuItems = [{ title: 'Test Prep' }, { title: 'About' }, { title: 'Success Stories' }, { title: 'Contact' }];
 	return (
 		<header className={headerStyle.header}>
-			<video muted className={headerStyle.bg_video}>
-				<source src={require('../videos/bg-video2.mp4')} type="video/mp4" />
-			</video>
 			<div className={expanded ? `${headerStyle.menu_expanded} ${headerStyle.menu}` : headerStyle.menu}>
 				{expanded ? (
 					<button onClick={(e: React.MouseEvent) => setExpand(false)}>
