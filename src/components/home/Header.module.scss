@@ -27,8 +27,29 @@
 			& h1 {
 				font-size: 2rem;
 				color: #fff;
-				line-height: 2;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				position: relative;
+				&::after {
+					content: '';
+					display: block;
+					width: 50%;
+					height: 1.5px;
+					background: $brand-secondary;
+					position: absolute;
+					bottom: 0;
+				}
 			}
+			& p {
+				line-height: 1.5;
+				color: $brand-secondary;
+				font-size: 1.5rem;
+			}
+		}
+		& .video_container {
+			display: flex;
+			align-items: center;
 		}
 	}
 }

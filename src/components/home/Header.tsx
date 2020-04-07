@@ -8,10 +8,17 @@ const Header = (props: any) => {
 		<header className={headerStyle.header}>
 			<div className={headerStyle.grid}>
 				<div className={headerStyle.copy}>
-					<h1>
-						Are you tired and stressed from preparing for upcoming exams, like the AP/Subject Tests? If so
-						look no further, SATACTSENSE has a quick and painless way of getting you in touch with a tutor!
-					</h1>
+					<h1>AP Testing</h1>
+					<p>Is the new structure and format confusing?</p>
+					<p>
+						Our experienced AP tours/instructors can help navigate you through the material and the online
+						format of the AP exam.
+					</p>
+					<p>
+						We can offer remote tutoring for a variety of the exams based on the student's availability,
+						scheduling, and skillset.
+					</p>
+					<p>Click the ones that apply</p>
 				</div>
 				<div className={headerStyle.video_container}>
 					<video controls>

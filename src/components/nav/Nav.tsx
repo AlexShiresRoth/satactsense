@@ -53,7 +53,7 @@ const Nav = (props: any) => {
 				</div>
 				<div className={navStyle.tier}>
 					<div className={navStyle.banner}>
-						<h2>AP/Subject Testing is coming up next month, are you ready?</h2>
+						<h2>Are you ready for the new VIRTUAL AP exam?</h2>
 						<div className={navStyle.social}>
 							<TiSocialLinkedinCircular />
 							<TiSocialSkype />
