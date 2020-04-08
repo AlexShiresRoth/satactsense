@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import navStyle from './Nav.module.scss';
 import Menu from './Menu';
-import DropDownMenu from './DropDownMenu';
 import { MdPhoneInTalk } from 'react-icons/md';
 import { GoMail } from 'react-icons/go';
 import { TiSocialFacebook, TiSocialSkype, TiSocialGooglePlus, TiSocialLinkedinCircular } from 'react-icons/ti';
@@ -50,7 +47,6 @@ const Nav = (props: any) => {
 									onClick={() => setCurrent(link.id)}
 								>
 									<button>{link.title}</button>
-									<DropDownMenu subject={link.title} key={i} />
 								</li>
 							);
 						})}

@@ -152,6 +152,7 @@
 					display: flex;
 					justify-content: center;
 					transition: all 0.3s ease-in-out;
+					position: relative;
 					& button {
 						background: transparent;
 						border: 0px solid transparent;
@@ -162,8 +163,56 @@
 						cursor: pointer;
 						background: $brand-secondary;
 						& button {
-							color: #fff;
+							color: $brand-main;
 							cursor: pointer;
+						}
+						& .dropdown {
+							visibility: visible;
+							max-height: 20rem;
+							cursor: pointer;
+							& ul {
+								& li {
+									visibility: visible;
+									opacity: 1;
+									color: $brand-main;
+								}
+							}
+						}
+					}
+
+					& .dropdown {
+						visibility: hidden;
+						max-height: 0;
+						position: absolute;
+						top: 100%;
+						left: 0;
+						width: 100%;
+						background: $brand-secondary;
+						transition: all 0.3s ease-in-out;
+						z-index: 999;
+						& ul {
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							width: 100%;
+							padding: 0;
+							& li:not(:last-child) {
+								border-bottom: 1px solid darken($brand-secondary, 3%);
+							}
+							& li {
+								color: #fff;
+								list-style: none;
+								width: 100%;
+								padding: 0.5rem 0;
+								text-align: center;
+								transition: all 0.2s ease;
+								visibility: hidden;
+								opacity: 0;
+								&:hover {
+									background: $brand-main;
+									color: #fff;
+								}
+							}
 						}
 					}
 				}

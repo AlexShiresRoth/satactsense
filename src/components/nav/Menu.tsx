@@ -16,7 +16,7 @@ const Menu = ({ current }: NavProps) => {
 				{ title: 'AP Science', dropdown: ['Physics', 'Chemistry', 'Living Environment', 'Biology'] },
 				{ title: 'AP Business', dropdown: ['Micro or Macro Economics'] },
 				{ title: 'AP Foreign Language', dropdown: ['Spanish'] },
-				{ title: 'AP Psychology', dropdown: [] },
+				{ title: 'AP Psychology', dropdown: null },
 			],
 		},
 		{
@@ -45,6 +45,15 @@ const Menu = ({ current }: NavProps) => {
 						return (
 							<div className={menuStyle.subject}>
 								<button>{subject.title}</button>
+								<div className={menuStyle.dropdown}>
+									<ul>
+										{subject.dropdown !== null
+											? subject.dropdown.map((item, i) => {
+													return <li key={i}>{item}</li>;
+											  })
+											: null}
+									</ul>
+								</div>
 							</div>
 						);
 					});
