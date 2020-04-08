@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import menuStyle from './Nav.module.scss';
 type NavProps = {
 	current: string;
+	isModalVisible: boolean;
+	category: string;
+	setModalState: Function;
 };
 
-const Menu = ({ current }: NavProps) => {
+const Menu = ({ current, isModalVisible, category, setModalState }: NavProps) => {
 	const subjectArray = [
 		{
 			id: 'AP',
@@ -44,12 +47,33 @@ const Menu = ({ current }: NavProps) => {
 					return type.types.map((subject, i) => {
 						return (
 							<div className={menuStyle.subject}>
-								<button>{subject.title}</button>
+								<button
+									onClick={(e) =>
+										setModalState({
+											isModalVisible: true,
+											category: subject.title,
+										})
+									}
+								>
+									{subject.title}
+								</button>
 								<div className={menuStyle.dropdown}>
 									<ul>
 										{subject.dropdown !== null
 											? subject.dropdown.map((item, i) => {
-													return <li key={i}>{item}</li>;
+													return (
+														<li
+															key={i}
+															onClick={(e) =>
+																setModalState({
+																	isModalVisible: true,
+																	category: 'AP ' + item,
+																})
+															}
+														>
+															{item}
+														</li>
+													);
 											  })
 											: null}
 									</ul>

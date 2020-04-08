@@ -1,0 +1,48 @@
+@import '../../../sass/variables';
+.section {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background: #eee;
+	& .grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+		align-content: center;
+		justify-items: center;
+		width: 100%;
+		& h3 {
+			margin-left: 1rem;
+			color: $brand-main;
+		}
+
+		& form {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: 100%;
+			& input {
+				padding: 0.5rem 1rem;
+				background: transparent;
+				border: 2px solid #fff;
+				font-size: 16px;
+				&::placeholder {
+					color: $text-color;
+				}
+			}
+			& button {
+				padding: 0.5rem 3rem;
+				margin: 0 1rem;
+				border: 2px solid $brand-main;
+				color: #fff;
+				background: linear-gradient(45deg, $brand-main 50%, darken($brand-main, 5%) 30%);
+				font-size: 16px;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

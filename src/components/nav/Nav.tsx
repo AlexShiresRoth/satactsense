@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import navStyle from './Nav.module.scss';
 import Menu from './Menu';
+import Modal from '../contact/Modal';
 import { MdPhoneInTalk } from 'react-icons/md';
 import { GoMail } from 'react-icons/go';
-import { TiSocialFacebook, TiSocialSkype, TiSocialGooglePlus, TiSocialLinkedinCircular } from 'react-icons/ti';
+import { TiSocialSkype, TiSocialFacebookCircular } from 'react-icons/ti';
 
 const Nav = (props: any) => {
 	const serviceLinks = [
@@ -15,8 +16,21 @@ const Nav = (props: any) => {
 
 	const [current, setCurrent] = useState('AP');
 
+	const [modalState, setModalState] = useState({
+		isModalVisible: false,
+		category: '',
+	});
+
+	const { isModalVisible, category } = modalState;
+
 	return (
 		<nav className={navStyle.nav}>
+			<Modal
+				isModalVisible={isModalVisible}
+				category={category}
+				setModalState={setModalState}
+				subjects={serviceLinks}
+			/>
 			<div className={navStyle.nav__inner}>
 				<div className={navStyle.tier}>
 					<div className={navStyle.left}>
@@ -24,7 +38,14 @@ const Nav = (props: any) => {
 						<p>SAT/ACT/AP Test Tutoring</p>
 					</div>
 					<div className={navStyle.nav_contact}>
-						<button>
+						<button
+							onClick={() =>
+								setModalState({
+									isModalVisible: true,
+									category: 'General',
+								})
+							}
+						>
 							{' '}
 							<GoMail /> Contact
 						</button>
@@ -53,16 +74,25 @@ const Nav = (props: any) => {
 					</ul>
 				</div>
 				<div className={navStyle.tier}>
-					<Menu current={current} />
+					<Menu
+						current={current}
+						isModalVisible={isModalVisible}
+						category={category}
+						setModalState={setModalState}
+					/>
 				</div>
 				<div className={navStyle.tier}>
 					<div className={navStyle.banner}>
 						<h2>Are you ready for the new VIRTUAL AP exam?</h2>
 						<div className={navStyle.social}>
-							<TiSocialLinkedinCircular />
 							<TiSocialSkype />
-							<TiSocialFacebook />
-							<TiSocialGooglePlus />
+							<a
+								href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<TiSocialFacebookCircular />
+							</a>
 						</div>
 					</div>
 				</div>
