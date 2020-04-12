@@ -18,7 +18,7 @@
 	opacity: 1;
 	& .form_container {
 		min-height: 30vh;
-		width: 40vw;
+		width: 50vw;
 		z-index: 1;
 		display: flex;
 		flex-direction: column;
@@ -30,7 +30,6 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-
 			& button {
 				display: flex;
 				justify-content: center;
@@ -42,6 +41,7 @@
 				border: 0px solid transparent;
 				align-self: center;
 				transition: all 0.3s ease-in-out;
+				z-index: 1;
 				& svg {
 					font-size: 1.5rem;
 				}
@@ -51,24 +51,38 @@
 					background: $brand-main;
 				}
 			}
-			& h2 {
-				color: #fff;
-				font-family: 'Raleway';
-				position: relative;
-				font-size: 2rem;
+			& .status {
 				display: flex;
 				flex-direction: column;
-				justify-content: space-between;
-				&::after {
-					margin-top: 2rem;
-					top: 50%;
-					left: 0;
-					content: '';
+				width: 100%;
+				z-index: 0;
+				& h2 {
+					color: #fff;
+					font-family: 'Raleway';
+					position: relative;
+					font-size: 1.2rem;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
 					width: 100%;
-					display: block;
-					height: 1.5px;
-					background: $alert;
-					position: absolute;
+					height: 100%;
+					margin: 0;
+					padding: 0.5rem 0;
+					transition: all 0.3s ease-in-out;
+					border-radius: 5px;
+				}
+				& .error {
+					background: rgba(246, 67, 67, 0.431);
+					padding: 0.5rem;
+				}
+				& .success {
+					background: rgba(54, 224, 20, 0.431);
+					padding: 0.5rem;
+				}
+				& .loading {
+					padding: 0.5rem;
+					color: #fff;
+					animation: loading 0.3s linear infinite;
 				}
 			}
 		}
@@ -76,13 +90,15 @@
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(3, auto);
+			gap: 2rem;
 			& .input_row {
 				display: flex;
 				flex-direction: column;
-				align-items: flex-start;
+				justify-content: flex-end;
 				padding: 0.5rem 0;
+				width: 100%;
 				& label {
-					font-size: 0.8rem;
+					font-size: 1rem;
 					color: $brand-secondary;
 					margin: 0.5rem 0;
 					&::after {
@@ -96,22 +112,24 @@
 					color: #fff;
 					background: transparent;
 					border: 1px solid transparent;
-					border-bottom: 1px solid $alert;
-					padding: 0.5rem;
+					border-bottom: 1px solid lighten($brand-main, 5%);
+					padding: 0.5rem 0.1rem;
+					width: 100%;
 					&::placeholder {
-						color: $text-color;
+						color: rgba(238, 238, 238, 0.356);
 					}
 				}
 				& textarea {
 					font-size: 16px;
 					color: #fff;
 					background: transparent;
-					border: 1px solid $alert;
-					padding: 0.5rem;
-					min-height: 5rem;
-					max-height: 8rem;
+					border: 1px solid lighten($brand-main, 5%);
+					padding: 0.5rem 0.1rem;
+					min-height: 7rem;
+					max-height: 10rem;
+					width: 100%;
 					&::placeholder {
-						color: $text-color;
+						color: rgba(238, 238, 238, 0.356);
 					}
 				}
 				& button {
@@ -144,5 +162,14 @@
 	}
 	100% {
 		transform: scale(1);
+	}
+}
+
+@keyframes loading {
+	0% {
+		color: #fff;
+	}
+	100% {
+		color: $alert;
 	}
 }

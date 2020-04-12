@@ -1,9 +1,12 @@
+@import '../../../sass/variables';
+
 .main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	width: 100vw;
+	background: $bg-color;
 	& .main__container {
 		width: 80vw;
 		max-width: 1400px;

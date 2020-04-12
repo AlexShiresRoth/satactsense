@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import modalStyle from './Modal.module.scss';
 import { MdClose } from 'react-icons/md';
 type NavProps = {
@@ -18,20 +19,60 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 		message: '',
 	});
 
-	const { subject, email, name, phone, message } = formData;
+	const [modalMessage, setMessage] = useState({
+		status: ['Thank you for considering SATACTSENSE'],
+		loading: false,
+		error: false,
+		success: false,
+	});
+
+	const { status, loading, error, success } = modalMessage;
+
+	const { email, name, phone, message } = formData;
 
 	const onChange = (e: React.FormEvent<HTMLInputElement>) =>
 		setFormData({ ...formData, subject: category, [e.currentTarget.name]: e.currentTarget.value });
 	const onTextChange = (e: React.FormEvent<HTMLTextAreaElement>) =>
 		setFormData({ ...formData, [e.currentTarget.name]: e.currentTarget.value });
-	const onSubmit = (e: React.FormEvent) => {
-		e.preventDefault();
 
-		console.log(formData);
-		// setModalState({
-		// 	isModalVisible: false,
-		// 	category: '',
-		// });
+	const onSubmit = async (e: React.FormEvent) => {
+		e.preventDefault();
+		setMessage({
+			status: ['Sending...'],
+			loading: true,
+			error: false,
+			success: false,
+		});
+		try {
+			const res = await axios({
+				method: 'POST',
+				url: `http://localhost:5000/api/satactsense/send-email`,
+				data: {
+					headers: {
+						'Content-Type': 'application/x-www-form-urlencoded',
+						'Access-Control-Allow-Origin': 'http://localhost:3000/',
+					},
+					...formData,
+				},
+			});
+			setMessage({
+				status: ['Thank you, your message has been received. Someone will contact you shortly!'],
+				loading: false,
+				success: true,
+				error: false,
+			});
+			setTimeout(() => {
+				closeModal();
+			}, 7000);
+		} catch (error) {
+			console.log(error.response.data.msg.map((msg: any) => msg));
+			setMessage({
+				status: error.response.data.msg.map((msg: any) => `${msg.param}: ${msg.msg}`),
+				loading: false,
+				success: false,
+				error: true,
+			});
+		}
 	};
 	const closeModal = () => {
 		setFormData({
@@ -41,14 +82,40 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 			phone: '',
 			message: '',
 		});
+		setMessage({
+			status: ['Thank you for considering SATACTSENSE'],
+			loading: false,
+			error: false,
+			success: false,
+		});
 		setModalState({ isModalVisible: false, category: '' });
+		return () => clearInterval();
 	};
 
 	return (
 		<div className={isModalVisible ? modalStyle.container : modalStyle.container_hidden}>
 			<div className={modalStyle.form_container}>
 				<div className={modalStyle.heading}>
-					<h2>Thank you for considering SATACTSENSE</h2>
+					<div className={modalStyle.status}>
+						{status.map((text) => {
+							return (
+								<h2
+									className={
+										loading
+											? modalStyle.loading
+											: error
+											? modalStyle.error
+											: success
+											? modalStyle.success
+											: ''
+									}
+								>
+									{text}
+								</h2>
+							);
+						})}
+					</div>
+
 					<button onClick={() => closeModal()}>
 						<MdClose />
 					</button>

@@ -61,12 +61,12 @@ export const serviceLinks = [
 		title: 'General Tutoring',
 		path: '/general',
 		id: 'GENERAL',
-		dropdown: [{ title: 'General Tutoring', dropid: 'GENERAL' }],
+		dropdown: [],
 	},
 	{
 		title: 'Johns Hopkins Program for Advanced Testing',
 		path: '/jht',
 		id: 'JHT',
-		dropdown: [{ title: 'Johns Hopkins Program for Advanced Testing', dropid: 'JHT' }],
+		dropdown: [],
 	},
 ];
