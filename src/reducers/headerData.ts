@@ -1,7 +1,8 @@
-import { SET_DATA } from '../actions/types';
+import { SET_DATA, SET_BANNER } from '../actions/types';
 
 const initialState = {
-	data: '',
+	data: 'AP',
+	bannerData: '',
 	loading: true,
 };
 
@@ -12,6 +13,12 @@ export default (state = initialState, action: any) => {
 			return {
 				...state,
 				data: payload,
+				loading: false,
+			};
+		case SET_BANNER:
+			return {
+				...state,
+				bannerData: payload,
 				loading: false,
 			};
 		default:

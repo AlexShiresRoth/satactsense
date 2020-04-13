@@ -2,6 +2,7 @@ export const headerText = [
 	{
 		title: 'AP Testing',
 		id: 'AP',
+		banner: 'Are you ready for the new VIRTUAL AP exam?',
 		text: [
 			`Is the new structure and format confusing?`,
 			`Our experienced AP tours/instructors can help navigate you through the material and the online
@@ -14,6 +15,7 @@ export const headerText = [
 	{
 		title: 'SAT II Subject Testing',
 		id: 'SUBJECT',
+		banner: 'Some colleges require SAT II Subject Testing in addition to regular SAT tests.',
 		text: [
 			`Students take the SAT II Subject Test in June after they have taken the AP exam in May.`,
 			`As a student/parent, how do I know if my son/daughter should take an SAT II Subject Test?

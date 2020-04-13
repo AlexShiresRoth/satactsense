@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import navStyle from './Nav.module.scss';
 import Menu from './Menu';
 import Modal from '../contact/Modal';
@@ -9,11 +10,14 @@ import { serviceLinks } from './subjectArray';
 import { setHeaderData } from '../../actions/headerData';
 import { connect } from 'react-redux';
 
-type NavProps = {
-	setHeaderData: Function;
-};
+interface NavProps {
+	setHeaderData: (current: string) => any;
+	headerData?: any;
+	data?: string;
+	bannerData?: string;
+}
 
-const Nav = ({ setHeaderData }: NavProps) => {
+const Nav = ({ setHeaderData, headerData: { data, bannerData } }: NavProps) => {
 	const logo = (
 		<img
 			src="https://res.cloudinary.com/snackmanproductions/image/upload/v1586538815/satactsense/sat_logo_lpezq0.png"
@@ -37,7 +41,7 @@ const Nav = ({ setHeaderData }: NavProps) => {
 
 	useEffect(() => {
 		setHeaderData(current);
-	}, [current]);
+	}, [current, data]);
 
 	return (
 		<nav className={navStyle.nav}>
@@ -109,7 +113,7 @@ const Nav = ({ setHeaderData }: NavProps) => {
 				</div>
 				<div className={navStyle.tier}>
 					<div className={navStyle.banner}>
-						<h2>Are you ready for the new VIRTUAL AP exam?</h2>
+						<h2>{bannerData}</h2>
 						<div className={navStyle.social}>
 							<TiSocialSkype />
 							<a
@@ -127,12 +131,15 @@ const Nav = ({ setHeaderData }: NavProps) => {
 	);
 };
 
-Nav.propTypes = {};
+Nav.propTypes = {
+	data: PropTypes.string.isRequired,
+	bannerData: PropTypes.string.isRequired,
+};
 
 const mapStateToProps = (state: any) => {
 	console.log(state);
 	return {
-		data: state.headerData,
+		headerData: state.headerData,
 	};
 };
 

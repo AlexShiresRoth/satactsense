@@ -9,7 +9,7 @@ type NavProps = {
 	setModalState: Function;
 };
 
-const Menu = ({ current, isModalVisible, category, setModalState }: NavProps) => {
+const Menu = ({ current, setModalState }: NavProps) => {
 	return (
 		<div className={menuStyle.row}>
 			{subjectArray
@@ -59,6 +59,9 @@ const Menu = ({ current, isModalVisible, category, setModalState }: NavProps) =>
 	);
 };
 
-Menu.propTypes = {};
+Menu.propTypes = {
+	current: PropTypes.string.isRequired,
+	setModalState: PropTypes.func.isRequired,
+};
 
 export default Menu;
