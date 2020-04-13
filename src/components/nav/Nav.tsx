@@ -52,7 +52,7 @@ const Nav = ({ setHeaderData }: NavProps) => {
 					<div className={navStyle.left}>
 						{logo}
 						<h2>SATACTSENSE</h2>
-						<p>Making Sense of the SAT ACT</p>
+						<p>Making Sense of the SAT/ACT</p>
 					</div>
 					<div className={navStyle.nav_contact}>
 						<button

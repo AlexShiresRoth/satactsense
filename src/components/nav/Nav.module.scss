@@ -5,7 +5,7 @@
 	flex-direction: column;
 	justify-content: center;
 	min-height: 4rem;
-	padding: 1rem 0;
+	padding: 1rem 0 0 0;
 	background: #fff;
 	box-shadow: 0 2px 2px #eee;
 	z-index: 99999;
@@ -49,6 +49,7 @@
 					padding: 0 0.5rem;
 					border-left: 1px solid darken(#fff, 5%);
 					margin: 0 0.5rem;
+					font-family: 'Muli';
 					& svg {
 						margin: 0 0.5rem;
 						color: $brand-main;
@@ -195,6 +196,7 @@
 					transition: all 0.3s ease-in-out;
 					position: relative;
 					& button {
+						width: 100%;
 						background: transparent;
 						border: 0px solid transparent;
 						color: $brand-main;

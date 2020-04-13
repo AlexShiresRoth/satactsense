@@ -5,15 +5,23 @@
 	display: flex;
 	overflow: hidden;
 	width: 100%;
-	padding: 1rem 0;
-	min-height: 40vh;
-	background: linear-gradient(115deg, $brand-main 60%, $brand-secondary 48%);
+	padding: 2rem 0;
+	min-height: 50vh;
+	background: url('https://res.cloudinary.com/snackmanproductions/image/upload/v1586744389/satactsense/sat-bg_bdiqyo.png');
+	background-position: center;
+	background-size: cover;
+	opacity: 0;
+	animation: fadein 1.2s linear forwards;
 	& .svg_bg {
 		position: absolute;
-		top: 0;
-		left: 0;
+		bottom: 0;
+		right: 0;
 		width: 100%;
+		transform: rotate(-90deg) translateY(50%);
 		z-index: 0;
+		& svg {
+			width: 100%;
+		}
 	}
 	& .grid {
 		display: grid;
@@ -51,5 +59,14 @@
 			display: flex;
 			align-items: center;
 		}
+	}
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }

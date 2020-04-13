@@ -13,3 +13,11 @@
 		box-shadow: 0 10px 10px #eee;
 	}
 }
+
+@media screen and (max-width: 1300px) {
+	.main {
+		& .main__container {
+			width: 100%;
+		}
+	}
+}

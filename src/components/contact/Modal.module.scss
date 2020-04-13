@@ -99,8 +99,9 @@
 				width: 100%;
 				& label {
 					font-size: 1rem;
-					color: $brand-secondary;
+					color: $alert;
 					margin: 0.5rem 0;
+					font-weight: 700;
 					&::after {
 						content: '*';
 						color: $alert;

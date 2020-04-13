@@ -45,7 +45,7 @@ export const serviceLinks = [
 		id: 'AP',
 		dropdown: [
 			{ title: 'AP Testing', dropid: 'AP' },
-			{ title: 'Subject Testing', dropid: 'SUBJECT' },
+			{ title: 'SAT II Subject Testing', dropid: 'SUBJECT' },
 		],
 	},
 	{
