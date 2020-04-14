@@ -31,7 +31,7 @@ const EmailSignup = (props: any) => {
 		});
 
 		try {
-			const res = await axios({
+			await axios({
 				method: 'POST',
 				url: `http://localhost:5000/api/satactsense/send-email/signup`,
 				data: {

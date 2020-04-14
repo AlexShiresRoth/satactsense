@@ -6,10 +6,9 @@ import { setBanner } from '../../actions/headerData';
 import { connect } from 'react-redux';
 
 const Header = ({ setBanner, headerData: { data } }: any) => {
-	console.log(data);
 	useEffect(() => {
 		setBanner(headerText.filter((item) => item.id === data)[0].banner);
-	}, [data]);
+	}, [data, setBanner]);
 	return (
 		<header className={headerStyle.header}>
 			<div className={headerStyle.grid}>

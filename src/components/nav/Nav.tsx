@@ -41,7 +41,7 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData } }: NavProps) => {
 
 	useEffect(() => {
 		setHeaderData(current);
-	}, [current, data]);
+	}, [current, data, setHeaderData]);
 
 	return (
 		<nav className={navStyle.nav}>

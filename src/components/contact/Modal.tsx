@@ -44,7 +44,7 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 			success: false,
 		});
 		try {
-			const res = await axios({
+			await axios({
 				method: 'POST',
 				url: `http://localhost:5000/api/satactsense/send-email`,
 				data: {
