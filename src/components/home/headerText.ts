@@ -23,4 +23,39 @@ export const headerText = [
 			`All of our prospective students take a qualifying test to see if the student scores at a certain range to make preparing for the test worth it.`,
 		],
 	},
+	{
+		title: 'Johns Hopkins Program For Advanced Testing',
+		id: 'CTY',
+		banner: 'Flexible testing schedule, all tests are computer based and multiple choice.(Temporary Banner)',
+		text: [
+			'The PSAT (Abridged version of the SAT and PLAN(Abridged version of ACT).',
+			'Both tests are typically taken in 10th and 11th grades as a precursor to the SAT/ACT.',
+			'These tests are offered once a year in the fall (Usually October) and are conducted in the school on an assigned date.',
+			'Taken as an 11th grader, the PSAT qualifies students for a National Merit Scholarship.',
+		],
+	},
+	{
+		title: 'General Tutoring Sessions',
+		id: 'GENERAL',
+		banner: '',
+		text: [],
+	},
+	{
+		title: 'SAT/ACT',
+		id: 'SAT/ACT',
+		banner: '',
+		text: [],
+	},
+	{
+		title: 'SAT Preperation',
+		id: 'SAT',
+		banner: '',
+		text: [],
+	},
+	{
+		title: 'ACT Preparation',
+		id: 'ACT',
+		banner: '',
+		text: [],
+	},
 ];

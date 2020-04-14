@@ -29,18 +29,22 @@ export const subjectArray = [
 		types: [{ title: '', dropdown: [] }],
 	},
 	{
-		id: 'General',
+		id: 'GENERAL',
 		types: [{ title: '', dropdown: [] }],
 	},
 	{
-		id: 'Jht',
-		types: [{ title: '', dropdown: [] }],
+		id: 'CTY',
+		types: [
+			{ title: 'Grades 2-8', dropdown: ['SCAT Test', 'Quantative and Verbal Assessment'] },
+			{ title: 'Grades 5-6', dropdown: ['PSAT'] },
+			{ title: 'Grades 7-8', dropdown: ['SAT Test (Grades 7-8)', 'Student of Exceptional Talent'] },
+		],
 	},
 ];
 
 export const serviceLinks = [
 	{
-		title: 'AP/Subject Testing',
+		title: 'AP/SAT II Subject Testing',
 		path: '/ap',
 		id: 'AP',
 		dropdown: [
@@ -53,7 +57,7 @@ export const serviceLinks = [
 		path: '/satact',
 		id: 'SAT/ACT',
 		dropdown: [
-			{ title: 'SAT', dropid: 'ACT' },
+			{ title: 'SAT', dropid: 'SAT' },
 			{ title: 'ACT', dropid: 'ACT' },
 		],
 	},
@@ -66,7 +70,7 @@ export const serviceLinks = [
 	{
 		title: 'Johns Hopkins Program for Advanced Testing',
 		path: '/jht',
-		id: 'JHT',
-		dropdown: [],
+		id: 'CTY',
+		dropdown: [{ title: 'CTY Program for Talented Youth', dropid: 'CTY' }],
 	},
 ];

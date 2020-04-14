@@ -3,11 +3,18 @@ import footerStyle from './Footer.module.scss';
 import { TiSocialSkype, TiSocialFacebookCircular } from 'react-icons/ti';
 import { MdPhoneInTalk, MdMail } from 'react-icons/md';
 const Footer = (props: any) => {
+	const zoomLogo = (
+		<img
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Zoom_Communications_Logo.svg/85px-Zoom_Communications_Logo.svg.png"
+			alt="zoom logo"
+		/>
+	);
 	return (
 		<footer className={footerStyle.footer}>
 			<div className={footerStyle.row}>
 				<p>SATACTSENSE &copy; 2020</p>
 				<p>
+					Find us on: {` `} <a href="#!">{zoomLogo}</a>
 					<TiSocialSkype />
 					<a
 						href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"

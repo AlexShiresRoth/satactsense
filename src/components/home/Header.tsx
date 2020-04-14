@@ -28,11 +28,7 @@ const Header = ({ setBanner, headerData: { data } }: any) => {
 							);
 						})}
 				</div>
-				<div className={headerStyle.video_container}>
-					{/* <video controls>
-						<source src={require('../videos/bg-video2.mp4')} type="video/mp4" />
-					</video> */}
-				</div>
+				<div></div>
 			</div>
 		</header>
 	);

@@ -53,7 +53,7 @@
 					& svg {
 						margin: 0 0.5rem;
 						color: $brand-main;
-						font-size: 1vw;
+						font-size: 1rem;
 					}
 				}
 				& button {
@@ -70,7 +70,7 @@
 					transition: all 0.3s ease;
 					& svg {
 						margin: 0 0.5rem;
-						font-size: 1vw;
+						font-size: 1rem;
 					}
 					&:hover {
 						border: 1px solid lighten($brand-main, 5%);
@@ -203,7 +203,6 @@
 						transition: all 0.3s ease-in-out;
 					}
 					&:hover {
-						cursor: pointer;
 						background: $brand-secondary;
 						& button {
 							color: $brand-main;
@@ -276,7 +275,7 @@
 				background: linear-gradient(45deg, $alert 30%, transparent 90%);
 				& h2 {
 					margin: 0;
-					font-size: 1.5rem;
+					font-size: 1.2rem;
 					font-weight: 700;
 					color: #fff;
 					font-family: 'Raleway';
@@ -284,11 +283,15 @@
 				& .social {
 					height: 100%;
 					display: grid;
-					grid-template-columns: repeat(4, 1fr);
+					grid-template-columns: repeat(4, auto);
+					align-items: center;
 					gap: 0.5rem;
 					& svg {
 						color: $brand-main;
 						font-size: 1.5rem;
+					}
+					& img {
+						width: 100%;
 					}
 				}
 			}
@@ -296,11 +299,5 @@
 	}
 }
 
-@keyframes banneranim {
-	0% {
-		transform: translate3d(0, 0, 0);
-	}
-	100% {
-		transform: translate3d(-100%, 0, 0);
-	}
+@media screen and (max-width: 1300px) {
 }

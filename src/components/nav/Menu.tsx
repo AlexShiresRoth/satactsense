@@ -20,16 +20,7 @@ const Menu = ({ current, setModalState }: NavProps) => {
 					return type.types.map((subject, i) => {
 						return (
 							<div className={menuStyle.subject} key={i}>
-								<button
-									onClick={(e) =>
-										setModalState({
-											isModalVisible: true,
-											category: subject.title,
-										})
-									}
-								>
-									{subject.title}
-								</button>
+								<button>{subject.title}</button>
 								<div className={menuStyle.dropdown}>
 									{subject.dropdown.length > 0
 										? subject.dropdown.map((item, i) => {
