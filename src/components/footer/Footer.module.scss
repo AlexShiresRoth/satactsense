@@ -56,3 +56,15 @@
 		}
 	}
 }
+
+@media screen and (max-width: 900px) {
+	.footer {
+		& .row {
+			flex-wrap: wrap;
+		}
+		& .col {
+			width: 100%;
+			align-items: center;
+		}
+	}
+}

@@ -21,7 +21,7 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 	});
 
 	const [modalMessage, setMessage] = useState({
-		status: [`Please Contact us for more information regarding ${category}.`],
+		status: [`Please Contact us for more information regarding "${category}".`],
 		loading: false,
 		error: false,
 		success: false,
@@ -94,7 +94,7 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 			grade: '',
 		});
 		setMessage({
-			status: [`Please Contact us for more information regarding ${category}.`],
+			status: [`Please Contact us for more information regarding "${category}."`],
 			loading: false,
 			error: false,
 			success: false,
@@ -105,7 +105,7 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 
 	useEffect(() => {
 		setMessage({
-			status: [`Please Contact us for more information regarding ${category}`],
+			status: [`Please Contact us for more information regarding "${category}."`],
 			loading: false,
 			error: false,
 			success: false,
