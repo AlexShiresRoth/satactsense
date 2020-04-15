@@ -89,7 +89,7 @@
 			& .grid {
 				display: grid;
 				grid-template-rows: 1fr;
-				grid-template-columns: repeat(4, auto);
+				grid-template-columns: repeat(5, auto);
 				list-style: none;
 				padding: 0;
 				background: $brand-main;
@@ -416,7 +416,7 @@
 				}
 				& .row {
 					display: grid;
-					grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+					grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
 					grid-template-rows: auto;
 					flex-wrap: wrap;
 					& .subject {

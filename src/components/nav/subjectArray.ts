@@ -1,3 +1,4 @@
+//White tabs under the blue
 export const subjectArray = [
 	{
 		id: 'AP',
@@ -17,12 +18,16 @@ export const subjectArray = [
 	{
 		id: 'SUBJECT',
 		types: [
-			{ title: 'Literature', dropdown: [] },
+			{ title: 'Literature', dropdown: ['Literature'] },
 			{ title: 'History', dropdown: ['World History', 'US History'] },
 			{ title: 'Mathematics', dropdown: ['Level 1', 'Level 2'] },
 			{ title: 'Sciences', dropdown: ['Biology: (Ecological and Molecular)', 'Physics', 'Chemistry'] },
 			{ title: 'Languages', dropdown: ['Spanish', 'French'] },
 		],
+	},
+	{
+		id: 'PSAT/PLAN',
+		types: [{ title: '', dropdown: [] }],
 	},
 	{
 		id: 'SAT/ACT',
@@ -35,13 +40,14 @@ export const subjectArray = [
 	{
 		id: 'CTY',
 		types: [
-			{ title: 'Grades 2-8', dropdown: ['SCAT Test', 'Quantative and Verbal Assessment'] },
-			{ title: 'Grades 5-6', dropdown: ['PSAT'] },
-			{ title: 'Grades 7-8', dropdown: ['SAT Test (Grades 7-8)', 'Student of Exceptional Talent'] },
+			{ title: 'SCAT (Grades 2-8)', dropdown: [] },
+			{ title: 'PSAT (Grades 5-6)', dropdown: [] },
+			{ title: 'SAT Test (Grades 7-8)', dropdown: [] },
 		],
 	},
 ];
 
+//First set of tabs(Blue)
 export const serviceLinks = [
 	{
 		title: 'AP/SAT II Subject Testing',
@@ -50,6 +56,15 @@ export const serviceLinks = [
 		dropdown: [
 			{ title: 'AP Testing', dropid: 'AP' },
 			{ title: 'SAT II Subject Testing', dropid: 'SUBJECT' },
+		],
+	},
+	{
+		title: 'PSAT/PLAN',
+		path: '/psat',
+		id: 'PSAT/PLAN',
+		dropdown: [
+			{ title: 'PSAT(Abridged version of SAT)', dropid: 'PSAT/PLAN' },
+			{ title: 'PLAN(Abridged version of ACT)', dropid: 'PSAT/PLAN' },
 		],
 	},
 	{
