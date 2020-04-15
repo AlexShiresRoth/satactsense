@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import navStyle from './Nav.module.scss';
 import Menu from './Menu';
 import Modal from '../contact/Modal';
+import Faq from './Faq';
 import MobileNav from './MobileNav';
 import { MdPhoneInTalk } from 'react-icons/md';
 import { GoMail } from 'react-icons/go';
@@ -68,6 +69,7 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData } }: NavProps) => {
 						</div>
 					</div>
 					<div className={navStyle.nav_contact}>
+						<Faq logo={logo} />
 						<button
 							onClick={() =>
 								setModalState({

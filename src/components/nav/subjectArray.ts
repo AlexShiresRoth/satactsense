@@ -93,6 +93,6 @@ export const serviceLinks = [
 		title: 'Johns Hopkins Program for Advanced Testing',
 		path: '/jht',
 		id: 'CTY',
-		dropdown: [{ title: 'CTY Program for Talented Youth', dropid: 'CTY' }],
+		dropdown: [{ title: 'CTY Program-Center for Talented Youth', dropid: 'CTY' }],
 	},
 ];

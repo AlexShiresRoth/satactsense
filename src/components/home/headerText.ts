@@ -27,7 +27,7 @@ export const headerText = [
 	{
 		title: 'Johns Hopkins Program For Advanced Testing: The Center for Talented Youth.',
 		id: 'CTY',
-		banner: `Which test a student can take depends on their grade level, as listed above.`,
+		banner: `For the Johns Hopkins program, which test a student can take depends on their grade level, as listed above.`,
 		text: [
 			`The school and ability tests (SCAT test) is offered only to students between grades 2-8.`,
 			`The SCAT test contains a quantiative and verbal assessment.`,
