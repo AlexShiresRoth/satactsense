@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import modalStyle from './Modal.module.scss';
@@ -17,10 +17,11 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 		name: '',
 		phone: '',
 		message: '',
+		grade: '',
 	});
 
 	const [modalMessage, setMessage] = useState({
-		status: ['Thank you for considering SATACTSENSE'],
+		status: [`Please Contact us for more information regarding ${category}.`],
 		loading: false,
 		error: false,
 		success: false,
@@ -28,7 +29,7 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 
 	const { status, loading, error, success } = modalMessage;
 
-	const { email, name, phone, message } = formData;
+	const { email, name, phone, message, grade } = formData;
 
 	const onChange = (e: React.FormEvent<HTMLInputElement>) =>
 		setFormData({ ...formData, subject: category, [e.currentTarget.name]: e.currentTarget.value });
@@ -90,9 +91,10 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 			name: '',
 			phone: '',
 			message: '',
+			grade: '',
 		});
 		setMessage({
-			status: ['Thank you for considering SATACTSENSE'],
+			status: [`Please Contact us for more information regarding ${category}.`],
 			loading: false,
 			error: false,
 			success: false,
@@ -100,6 +102,15 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 		setModalState({ isModalVisible: false, category: '' });
 		return () => clearInterval();
 	};
+
+	useEffect(() => {
+		setMessage({
+			status: [`Please Contact us for more information regarding ${category}`],
+			loading: false,
+			error: false,
+			success: false,
+		});
+	}, [category, setMessage]);
 
 	return (
 		<div className={isModalVisible ? modalStyle.container : modalStyle.container_hidden}>
@@ -157,6 +168,17 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 						/>
 					</div>
 					<div className={modalStyle.input_row}>
+						<label>Student Grade Level</label>
+						<input
+							name="grade"
+							placeholder="11th"
+							value={grade}
+							type="text"
+							required
+							onChange={(e) => onChange(e)}
+						/>
+					</div>
+					<div className={modalStyle.input_row}>
 						<label>Phone #</label>
 						<input
 							name="phone"
@@ -167,11 +189,12 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 							onChange={(e) => onChange(e)}
 						/>
 					</div>
+
 					<div className={modalStyle.input_row}>
 						<label>Message</label>
 						<textarea
 							name="message"
-							placeholder="Hi, I'd like to inquire about having a tutoring session."
+							placeholder={`Hello, I would like to get more information regarding ${category}.`}
 							value={message}
 							required
 							onChange={(e) => onTextChange(e)}

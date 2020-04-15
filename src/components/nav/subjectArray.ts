@@ -4,7 +4,7 @@ export const subjectArray = [
 		id: 'AP',
 		types: [
 			{ title: 'AP Math', dropdown: ['AP Calculus & Statistics'] },
-			{ title: 'AP History', dropdown: ['AP US History', 'AP World'] },
+			{ title: 'AP History', dropdown: ['AP US History', 'AP World History'] },
 			{ title: 'AP English', dropdown: ['AP Language', 'AP Reading', 'AP Writing'] },
 			{
 				title: 'AP Science',
@@ -18,11 +18,18 @@ export const subjectArray = [
 	{
 		id: 'SUBJECT',
 		types: [
-			{ title: 'Literature', dropdown: ['Literature'] },
-			{ title: 'History', dropdown: ['World History', 'US History'] },
-			{ title: 'Mathematics', dropdown: ['Level 1', 'Level 2'] },
-			{ title: 'Sciences', dropdown: ['Biology: (Ecological and Molecular)', 'Physics', 'Chemistry'] },
-			{ title: 'Languages', dropdown: ['Spanish', 'French'] },
+			{ title: 'Literature', dropdown: ['Literature (SAT II Subject Test)'] },
+			{ title: 'History', dropdown: ['World History (SAT II Subject Test)', 'US History (SAT II Subject Test)'] },
+			{ title: 'Mathematics', dropdown: ['Level 1 (SAT II Subject Test)', 'Level 2 (SAT II Subject Test)'] },
+			{
+				title: 'Sciences',
+				dropdown: [
+					'Biology: (Ecological and Molecular) (SAT II Subject Test)',
+					'Physics (SAT II Subject Test)',
+					'Chemistry (SAT II Subject Test)',
+				],
+			},
+			{ title: 'Languages', dropdown: ['Spanish (SAT II Subject Test)', 'French (SAT II Subject Test)'] },
 		],
 	},
 	{
@@ -40,9 +47,9 @@ export const subjectArray = [
 	{
 		id: 'CTY',
 		types: [
-			{ title: 'SCAT (Grades 2-8)', dropdown: [] },
-			{ title: 'PSAT (Grades 5-6)', dropdown: [] },
-			{ title: 'SAT Test (Grades 7-8)', dropdown: [] },
+			{ title: 'SCAT (Grades 2-8)', dropdown: ['SCAT'] },
+			{ title: 'PSAT & SCAT (Grades 5-6)', dropdown: ['PSAT & SCAT'] },
+			{ title: 'PSAT, SAT & SCAT (Grades 7-8)', dropdown: ['PSAT, SAT & SCAT'] },
 		],
 	},
 ];

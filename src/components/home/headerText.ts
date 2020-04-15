@@ -7,7 +7,7 @@ export const headerText = [
 			`Is the new structure and format confusing?`,
 			`Our experienced AP tours/instructors can help navigate you through the material and the online
 						format of the AP exam.`,
-			`	We can offer remote tutoring for a variety of the exams based on the student's availability,
+			`We can offer remote tutoring for a variety of the exams based on the student's availability,
 						scheduling, and skillset.`,
 			`Click the ones that apply.`,
 		],
@@ -25,15 +25,20 @@ export const headerText = [
 		],
 	},
 	{
-		title: 'Johns Hopkins Program For Advanced Testing',
+		title: 'Johns Hopkins Program For Advanced Testing: The Center for Talented Youth.',
 		id: 'CTY',
-		banner: '',
-		text: [],
+		banner: `Which test a student can take depends on their grade level, as listed above.`,
+		text: [
+			`The school and ability tests (SCAT test) is offered only to students between grades 2-8.`,
+			`The SCAT test contains a quantiative and verbal assessment.`,
+			`The SCAT test is computer based, timed, multiple choice and offers flexible scheduling.`,
+			`Please contact us for more information.`,
+		],
 	},
 	{
 		title: 'The PSAT(Abridged version of the SAT) & PLAN(Abridged version of the ACT)',
 		id: 'PSAT/PLAN',
-		banner: '',
+		banner: ``,
 		text: [
 			`Both tests are typically taken in 10th and 11th grades as a precursor to the SAT/ACT`,
 			`These tests are typically oferred once a year in the fall(Usually October) and are conducted in the school on an assigned date`,
