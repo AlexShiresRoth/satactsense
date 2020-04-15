@@ -28,7 +28,7 @@ const Header = ({ setBanner, headerData: { data } }: any) => {
 							);
 						})}
 				</div>
-				<div></div>
+				<div className={headerStyle.right_col}></div>
 			</div>
 		</header>
 	);

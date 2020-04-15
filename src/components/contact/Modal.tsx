@@ -66,6 +66,15 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 			}, 7000);
 		} catch (error) {
 			console.log(error.response.data.msg.map((msg: any) => msg));
+			if (!error.response) {
+				setMessage({
+					status: ['Something went wrong, please retry sending.'],
+					loading: false,
+					success: false,
+					error: true,
+				});
+				return;
+			}
 			setMessage({
 				status: error.response.data.msg.map((msg: any) => `${msg.param}: ${msg.msg}`),
 				loading: false,

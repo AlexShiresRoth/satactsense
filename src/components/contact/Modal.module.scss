@@ -125,7 +125,7 @@
 					color: #fff;
 					background: transparent;
 					border: 1px solid lighten($brand-main, 5%);
-					padding: 0.5rem 0.1rem;
+					padding: 0.5rem 0.5rem;
 					min-height: 7rem;
 					max-height: 10rem;
 					width: 100%;
@@ -152,6 +152,21 @@
 	visibility: hidden;
 	max-height: 0;
 	opacity: 0;
+}
+
+@media screen and (max-width: 1300px) {
+	.container {
+		& .form_container {
+			width: 70vw;
+		}
+	}
+}
+@media screen and (max-width: 900px) {
+	.container {
+		& .form_container {
+			width: 90%;
+		}
+	}
 }
 
 @keyframes popin {

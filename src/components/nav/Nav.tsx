@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import navStyle from './Nav.module.scss';
 import Menu from './Menu';
 import Modal from '../contact/Modal';
+import MobileNav from './MobileNav';
 import { MdPhoneInTalk } from 'react-icons/md';
 import { GoMail } from 'react-icons/go';
 import { TiSocialSkype, TiSocialFacebookCircular } from 'react-icons/ti';
@@ -61,8 +62,10 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData } }: NavProps) => {
 				<div className={navStyle.tier}>
 					<div className={navStyle.left}>
 						{logo}
-						<h2>SATACTSENSE</h2>
-						<p>Making Sense of the SAT/ACT</p>
+						<div>
+							<h2>SATACTSENSE</h2>
+							<p>Making Sense of the SAT/ACT</p>
+						</div>
 					</div>
 					<div className={navStyle.nav_contact}>
 						<button
@@ -82,6 +85,7 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData } }: NavProps) => {
 						</a>
 					</div>
 				</div>
+				<MobileNav subjectTabs={serviceLinks} handleCurrentChange={handleCurrentChange} />
 				<div className={navStyle.tier}>
 					<ul className={navStyle.grid}>
 						{serviceLinks.map((link, i) => {

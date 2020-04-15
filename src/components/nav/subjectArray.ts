@@ -11,7 +11,7 @@ export const subjectArray = [
 			},
 			{ title: 'AP Business', dropdown: ['AP Micro or Macro Economics'] },
 			{ title: 'AP Foreign Language', dropdown: ['AP Spanish'] },
-			{ title: 'AP Psychology', dropdown: [] },
+			{ title: 'AP Psychology', dropdown: ['AP Psychology'] },
 		],
 	},
 	{

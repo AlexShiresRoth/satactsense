@@ -15,6 +15,11 @@
 		& .tier:first-of-type {
 			border-bottom: 1px solid darken(#fff, 5%);
 		}
+		& .mobile_nav {
+			visibility: hidden;
+			max-height: 0;
+			display: none;
+		}
 		& .tier {
 			display: flex;
 			flex-direction: row;
@@ -27,11 +32,13 @@
 				align-items: center;
 				& h2 {
 					color: $brand-main;
-					margin: 0 0.5rem;
+					margin: 0;
 					font-family: 'Lato';
 				}
 				& p {
 					margin: 0;
+					color: $text-color;
+					font-family: 'Muli';
 				}
 				& img {
 					max-width: 4rem;
@@ -184,7 +191,6 @@
 			& .row {
 				display: flex;
 				flex-direction: row;
-				justify-content: space-between;
 				width: 100%;
 				flex-wrap: nowrap;
 				min-height: 3rem;
@@ -292,6 +298,7 @@
 					}
 					& img {
 						width: 100%;
+						min-width: 4rem;
 					}
 				}
 			}
@@ -299,5 +306,147 @@
 	}
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 900px) {
+	.nav {
+		& .nav__inner {
+			& .mobile_nav {
+				display: flex;
+				flex-direction: column;
+				visibility: visible;
+				width: 100%;
+				background: $brand-main;
+				padding: 0;
+				max-height: 100vh;
+				& .container {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					& button {
+						width: 100%;
+						padding: 0.5rem;
+						background: transparent;
+						border: 1px solid transparent;
+						border-bottom: 1px solid lighten($brand-main, 5%);
+						color: #fff;
+						font-size: 1.2rem;
+						display: flex;
+						align-items: center;
+						& svg {
+							font-size: 2rem;
+						}
+					}
+					& .dropdown_mobile_hidden {
+						max-height: 0vh;
+						width: 100%;
+						visibility: hidden;
+						transition: all 0.5s ease-in-out;
+						display: flex;
+						& ul {
+							width: 100%;
+							visibility: hidden;
+							transition: all 0.5s ease-in-out;
+							display: flex;
+							flex-direction: column;
+							padding: 0;
+							& li {
+								width: 100%;
+								list-style: none;
+								visibility: hidden;
+								max-height: 0;
+								transition: all 0.5s ease-in-out;
+								opacity: 0;
+							}
+						}
+					}
+					& .dropdown_mobile {
+						max-height: 100vh;
+						visibility: visible;
+						transition: all 1s ease-in-out;
+						z-index: 9999;
+						background: $brand-main;
+						display: flex;
+						& ul {
+							display: flex;
+							flex-direction: column;
+							padding: 0;
+							width: 100%;
+							transition: all 1s ease-in-out;
+							visibility: visible;
+							& li {
+								width: 100%;
+								list-style: none;
+								visibility: visible;
+								max-height: 20vh;
+								transition: all 1s ease-in-out;
+								opacity: 1;
+								& button {
+									width: 100%;
+								}
+							}
+						}
+					}
+				}
+			}
+			& .tier {
+				& .left {
+					display: flex;
+					flex-direction: row;
+					justify-content: flex-start;
+					align-items: center;
+					flex-wrap: nowrap;
+					& h2 {
+						font-size: 1.2rem;
+					}
+					& p {
+						font-size: 1rem;
+					}
+				}
+				& .nav_contact {
+					& a {
+						visibility: hidden;
+						max-width: 0;
+						padding: 0;
+						margin: 0;
+					}
+				}
+				& .grid {
+					visibility: hidden;
+					max-height: 0;
+					display: none;
+				}
+				& .row {
+					display: grid;
+					grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+					grid-template-rows: auto;
+					flex-wrap: wrap;
+					& .subject {
+						width: auto;
+						flex: 2;
+						& button {
+							width: 100%;
+						}
+					}
+				}
+				& .banner {
+					& h2 {
+						font-size: 1rem;
+					}
+					& .social {
+						height: 100%;
+						display: grid;
+						grid-template-columns: repeat(3, auto);
+						align-items: center;
+						gap: 0.5rem;
+						& svg {
+							color: $brand-main;
+							font-size: 1.5rem;
+						}
+						& img {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
 }
