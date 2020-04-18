@@ -2,10 +2,10 @@ export const headerText = [
 	{
 		title: 'AP Testing',
 		id: 'AP',
-		banner: 'Are you ready for the new VIRTUAL AP exam?',
+		banner: 'Are you ready for the new VIRTUAL AP exam in May 2020?',
 		text: [
 			`Is the new structure and format confusing?`,
-			`Our experienced AP tours/instructors can help navigate you through the material and the online
+			`Our experienced AP tutors/instructors can help navigate you through the material and the online
 						format of the AP exam.`,
 			`We can offer remote tutoring for a variety of the exams based on the student's availability,
 						scheduling, and skillset.`,
@@ -36,15 +36,15 @@ export const headerText = [
 		],
 	},
 	{
-		title: 'The PSAT(Abridged version of the SAT) & PLAN(Abridged version of the ACT)',
+		title: 'The PSAT & PLAN (Shortened version of the ACT)',
 		id: 'PSAT/PLAN',
 		banner: ``,
 		text: [
-			`Both tests are typically taken in 10th and 11th grades as a precursor to the SAT/ACT`,
-			`These tests are typically oferred once a year in the fall(Usually October) and are conducted in the school on an assigned date`,
-			`Taken as an 11th grader, the PSAT qualifies students for a National Merit Scholarship.`,
-			`All questions are multiple choice (no essay)`,
-			`Typically students prepare for these tests in the mid summer going into 10th/11th grade`,
+			`Both tests are typically taken in 10th and 11th grades as a precursor to the SAT/ACT.`,
+			`These tests are typically oferred once a year, and are conducted in the school on an assigned date.`,
+			`Taken as a 10th or 11th grader, the PSAT qualifies students for a National Merit Scholarship.
+			 All questions are multiple choice (no essay).`,
+			`Typically students prepare for these tests in the mid summer going into 10th/11th grade.`,
 		],
 	},
 	{

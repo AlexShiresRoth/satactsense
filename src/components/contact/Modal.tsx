@@ -160,7 +160,7 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 						<label>Name</label>
 						<input
 							name="name"
-							placeholder="Ben Shwartz"
+							placeholder="John P."
 							value={name}
 							type="text"
 							required

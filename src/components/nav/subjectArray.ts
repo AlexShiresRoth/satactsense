@@ -34,7 +34,12 @@ export const subjectArray = [
 	},
 	{
 		id: 'PSAT/PLAN',
-		types: [{ title: '', dropdown: [] }],
+		types: [
+			{ title: 'PSAT 10th Grade', dropdown: ['PSAT 10th Grade'] },
+			{ title: 'PSAT 11th Grade', dropdown: ['PSAT 11th Grade'] },
+			{ title: 'PLAN 10th Grade', dropdown: ['PLAN 10th Grade'] },
+			{ title: 'PLAN 11th Grade', dropdown: ['PLAN 11th Grade'] },
+		],
 	},
 	{
 		id: 'SAT/ACT',
@@ -49,7 +54,7 @@ export const subjectArray = [
 		types: [
 			{ title: 'SCAT (Grades 2-8)', dropdown: ['SCAT'] },
 			{ title: 'PSAT & SCAT (Grades 5-6)', dropdown: ['PSAT & SCAT'] },
-			{ title: 'PSAT, SAT & SCAT (Grades 7-8)', dropdown: ['PSAT, SAT & SCAT'] },
+			{ title: 'SAT & SCAT (Grades 7-8)', dropdown: ['SAT & SCAT'] },
 		],
 	},
 ];
@@ -70,8 +75,8 @@ export const serviceLinks = [
 		path: '/psat',
 		id: 'PSAT/PLAN',
 		dropdown: [
-			{ title: 'PSAT(Abridged version of SAT)', dropid: 'PSAT/PLAN' },
-			{ title: 'PLAN(Abridged version of ACT)', dropid: 'PSAT/PLAN' },
+			{ title: 'PSAT', dropid: 'PSAT/PLAN' },
+			{ title: 'PLAN(Shortened version of ACT)', dropid: 'PSAT/PLAN' },
 		],
 	},
 	{
