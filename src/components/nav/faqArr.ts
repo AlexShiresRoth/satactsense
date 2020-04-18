@@ -6,7 +6,7 @@ export const faq = [
 	},
 	{
 		question: 'What grade does my son or daughter have to be in order to qualify for the Johns Hopkins Program?',
-		answer: 'Between grades 2-8',
+		answer: 'Between grades 2-8.',
 	},
 	{
 		question: `What happens if the act test is rescheduled in july and the sat test is rescheduled in august?`,
