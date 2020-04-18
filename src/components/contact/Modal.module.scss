@@ -170,6 +170,10 @@
 	.container {
 		& .form_container {
 			width: 90%;
+			& form {
+				display: flex;
+				flex-direction: column;
+			}
 		}
 	}
 }

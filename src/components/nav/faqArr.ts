@@ -13,7 +13,7 @@ export const faq = [
 		answer: `As per governor Cuomo the tests, starting in september, will be offered in a computer based format online. However this is only an option if schools are not available to service the test live.`,
 	},
 	{
-		question: `Do I have to take the PSAT as a sophmore and junior?`,
+		question: `Do I have to take the PSAT as a sophomore and junior?`,
 		answer: `You only have to take it once in either grade.`,
 	},
 ];

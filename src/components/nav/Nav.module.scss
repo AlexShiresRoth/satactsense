@@ -152,23 +152,29 @@
 					left: 0;
 					transition: all 0.5s ease;
 					background: #fff;
-					& .heading {
+					& .faq {
+						max-width: 1000px;
 						display: flex;
-						flex-direction: row;
-						justify-content: space-between;
-						align-items: center;
-						& h2 {
-							color: $brand-main;
+						flex-direction: column;
+						justify-content: flex-end;
+						& .heading {
+							display: flex;
+							flex-direction: row;
+							justify-content: space-between;
+							align-items: center;
+							& h2 {
+								color: $brand-main;
+							}
+							& img {
+								max-width: 4rem;
+							}
 						}
-						& img {
-							max-width: 4rem;
-						}
-					}
-					& ul {
-						padding: 0;
-						& li {
-							list-style: none;
-							padding: 0.5rem;
+						& ul {
+							padding: 0;
+							& li {
+								list-style: none;
+								padding: 0.5rem;
+							}
 						}
 					}
 				}
@@ -310,6 +316,7 @@
 									visibility: visible;
 									opacity: 1;
 									color: $brand-main;
+									font-size: 0.9rem;
 								}
 							}
 						}
@@ -503,6 +510,44 @@
 						margin: 0.2rem 0;
 						width: 100%;
 					}
+					& .faq_container {
+						padding: 0.5rem;
+						& .faq {
+							max-width: 1000px;
+							display: flex;
+							flex-direction: column;
+							justify-content: flex-end;
+							& .heading {
+								display: flex;
+								flex-direction: row;
+								justify-content: space-between;
+								align-items: center;
+								& h2 {
+									color: $brand-main;
+								}
+								& img {
+									max-width: 4rem;
+								}
+							}
+							& ul {
+								padding: 0;
+								max-width: 95%;
+								& li {
+									box-shadow: 0 2px 2px #eee;
+									list-style: none;
+									padding: 0.5rem;
+									& .question {
+										font-size: 1rem;
+										line-height: 1.5;
+									}
+									& .answer {
+										font-size: 0.9rem;
+										line-height: 1.5;
+									}
+								}
+							}
+						}
+					}
 				}
 				& .grid {
 					visibility: hidden;
@@ -525,6 +570,7 @@
 				& .banner {
 					& h2 {
 						font-size: 1rem;
+						font-weight: 100;
 					}
 					& .social {
 						height: 100%;

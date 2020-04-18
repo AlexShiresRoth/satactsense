@@ -76,7 +76,7 @@ export const serviceLinks = [
 		id: 'PSAT/PLAN',
 		dropdown: [
 			{ title: 'PSAT', dropid: 'PSAT/PLAN' },
-			{ title: 'PLAN(Shortened version of ACT)', dropid: 'PSAT/PLAN' },
+			{ title: 'PLAN', dropid: 'PSAT/PLAN' },
 		],
 	},
 	{
