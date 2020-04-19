@@ -23,7 +23,7 @@
 		flex-direction: column;
 		background: $brand-main;
 		animation: popin 0.5s linear forwards;
-		padding: 2rem;
+		padding: 2rem 4rem;
 		box-shadow: 0 10px 10px darken($brand-main, 10%);
 
 		& .heading {
