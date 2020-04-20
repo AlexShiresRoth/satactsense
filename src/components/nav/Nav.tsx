@@ -10,6 +10,7 @@ import { GoMail } from 'react-icons/go';
 import { TiSocialSkype, TiSocialFacebookCircular } from 'react-icons/ti';
 import { serviceLinks } from './subjectArray';
 import { setHeaderData } from '../../actions/headerData';
+import { setModalState, setCategory } from '../../actions/modal';
 import { connect } from 'react-redux';
 
 interface NavProps {
@@ -17,9 +18,11 @@ interface NavProps {
 	headerData?: any;
 	data?: string;
 	bannerData?: string;
+	setModalState: (val: boolean) => any;
+	setCategory: (item: string) => any;
 }
 
-const Nav = ({ setHeaderData, headerData: { data, bannerData } }: NavProps) => {
+const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, setCategory }: NavProps) => {
 	const logo = (
 		<img
 			src="https://res.cloudinary.com/snackmanproductions/image/upload/v1586538815/satactsense/sat_logo_lpezq0.png"
@@ -35,13 +38,6 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData } }: NavProps) => {
 
 	const [current, setCurrent] = useState('AP');
 
-	const [modalState, setModalState] = useState({
-		isModalVisible: false,
-		category: '',
-	});
-
-	const { isModalVisible, category } = modalState;
-
 	const handleCurrentChange = (e: React.MouseEvent, item: string) => {
 		e.stopPropagation();
 		setCurrent(item);
@@ -53,12 +49,7 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData } }: NavProps) => {
 
 	return (
 		<nav className={navStyle.nav}>
-			<Modal
-				isModalVisible={isModalVisible}
-				category={category}
-				setModalState={setModalState}
-				subjects={serviceLinks}
-			/>
+			<Modal />
 			<div className={navStyle.nav__inner}>
 				<div className={navStyle.tier}>
 					<div className={navStyle.left}>
@@ -71,12 +62,10 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData } }: NavProps) => {
 					<div className={navStyle.nav_contact}>
 						<Faq logo={logo} />
 						<button
-							onClick={() =>
-								setModalState({
-									isModalVisible: true,
-									category: 'General',
-								})
-							}
+							onClick={() => {
+								setModalState(true);
+								setCategory('General Tutoring');
+							}}
 						>
 							{' '}
 							<GoMail /> Contact
@@ -116,10 +105,7 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData } }: NavProps) => {
 					</ul>
 				</div>
 				<div className={navStyle.tier}>
-					<Menu
-						current={current}
-						setModalState={setModalState}
-					/>
+					<Menu current={current} />
 				</div>
 				<div className={navStyle.tier}>
 					<div className={navStyle.banner}>
@@ -165,4 +151,4 @@ const mapStateToProps = (state: any) => {
 	};
 };
 
-export default connect(mapStateToProps, { setHeaderData })(Nav);
+export default connect(mapStateToProps, { setHeaderData, setModalState, setCategory })(Nav);

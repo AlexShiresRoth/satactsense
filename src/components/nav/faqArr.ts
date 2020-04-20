@@ -16,4 +16,9 @@ export const faq = [
 		question: `Do I have to take the PSAT as a sophomore and junior?`,
 		answer: `You only have to take it once in either grade.`,
 	},
+	{
+		question: `When is the earliest date I can take the SAT?`,
+		answer: `August (If the test does not occurr in August, it will be available online in September).`,
+	},
+	{ question: `When is the earliest date I can take the ACT?`, answer: `June.` },
 ];

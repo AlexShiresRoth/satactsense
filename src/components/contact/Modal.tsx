@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import axios from 'axios';
 import modalStyle from './Modal.module.scss';
 import { MdClose } from 'react-icons/md';
+import { setModalState } from '../../actions/modal';
+import { connect } from 'react-redux';
+
 type NavProps = {
-	isModalVisible: boolean;
-	category: string;
 	setModalState: Function;
-	subjects: Array<any>;
+	modal: {
+		modalState: boolean;
+		category: string;
+	};
 };
 
-const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) => {
+const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => {
 	const [formData, setFormData] = useState({
 		subject: category,
 		email: '',
@@ -99,7 +102,7 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 			error: false,
 			success: false,
 		});
-		setModalState({ isModalVisible: false, category: '' });
+		setModalState(false);
 		return () => clearInterval();
 	};
 
@@ -113,7 +116,7 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 	}, [category, setMessage]);
 
 	return (
-		<div className={isModalVisible ? modalStyle.container : modalStyle.container_hidden}>
+		<div className={modalState ? modalStyle.container : modalStyle.container_hidden}>
 			<div className={modalStyle.form_container}>
 				<div className={modalStyle.heading}>
 					<div className={modalStyle.status}>
@@ -209,10 +212,12 @@ const Modal = ({ isModalVisible, category, setModalState, subjects }: NavProps) 
 	);
 };
 
-Modal.propTypes = {
-	isModalVisible: PropTypes.bool.isRequired,
-	category: PropTypes.string.isRequired,
-	setModalState: PropTypes.func.isRequired,
+const mapStateToProps = (state: any) => {
+	console.log(state);
+	return {
+		modalState: state.modalState,
+		modal: state.modal,
+	};
 };
 
-export default Modal;
+export default connect(mapStateToProps, { setModalState })(Modal);
