@@ -4,50 +4,48 @@ import menuStyle from './Nav.module.scss';
 import { subjectArray } from './subjectArray';
 type NavProps = {
 	current: string;
-	isModalVisible: boolean;
-	category: string;
 	setModalState: Function;
 };
 
-const Menu = ({ current, setModalState }: NavProps) => {
-	return (
-		<div className={menuStyle.row}>
-			{subjectArray
-				.filter((subject) => {
-					return current === subject.id;
-				})
-				.map((type) => {
-					return type.types.map((subject, i) => {
+const Menu = ({ current, setModalState, }: NavProps) => {
+
+	return (<>{
+		subjectArray
+			.filter((subject) => current === subject.id)
+			.map((type) => {
+				return <div className={type.types.length > 0 ? menuStyle.row : menuStyle.row_hidden}>
+					{type.types.map((subject, i) => {
 						return (
 							<div className={menuStyle.subject} key={i}>
 								<button>{subject.title}</button>
 								<div className={menuStyle.dropdown}>
 									{subject.dropdown.length > 0
 										? subject.dropdown.map((item, i) => {
-												return (
-													<ul>
-														<li
-															key={i}
-															onClick={(e) =>
-																setModalState({
-																	isModalVisible: true,
-																	category: item,
-																})
-															}
-														>
-															{item}
-														</li>
-													</ul>
-												);
-										  })
+											return (
+												<ul>
+													<li
+														key={i}
+														onClick={(e) =>
+															setModalState({
+																isModalVisible: true,
+																category: item,
+															})
+														}
+													>
+														{item}
+													</li>
+												</ul>
+											);
+										})
 										: null}
 								</div>
 							</div>
 						);
-					});
-				})}
-		</div>
-	);
+					})};
+				</div>
+			})
+
+	}</>);
 };
 
 Menu.propTypes = {

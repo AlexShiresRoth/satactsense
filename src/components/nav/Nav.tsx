@@ -118,8 +118,6 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData } }: NavProps) => {
 				<div className={navStyle.tier}>
 					<Menu
 						current={current}
-						isModalVisible={isModalVisible}
-						category={category}
 						setModalState={setModalState}
 					/>
 				</div>
