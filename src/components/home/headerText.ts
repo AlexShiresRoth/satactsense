@@ -56,19 +56,25 @@ export const headerText = [
       "We offer high quality online tutors for any academic/school subject.",
     text: [
       "Experienced and certified teachers from K-12.",
-	  `We can tutor for any high school and college course subject from Anthropology to Zoology.`,
-	  `Elementary and Middle School tutoring also available (Reading/Writing/Math skills).`,
-	  `1 Hour lessons (Typically).`,
-	  `Flexible Scheduling (On your son/daughter's schedule not the tutors).`,
-	  `Tutors typically communicate with students PRIOR to the lesson so they know what material to cover. `,
-	  `No Commitment other than one lesson at a time. `
+      `We can tutor for any high school and college course subject from Anthropology to Zoology.`,
+      `Elementary and Middle School tutoring also available (Reading/Writing/Math skills).`,
+      `1 Hour lessons (Typically).`,
+      `Flexible Scheduling (On your son/daughter's schedule not the tutors).`,
+      `Tutors typically communicate with students PRIOR to the lesson so they know what material to cover. `,
+      `No Commitment other than one lesson at a time. `,
     ],
   },
   {
     title: "SAT/ACT",
     id: "SAT/ACT",
-    banner: "",
-    text: [],
+    banner: "We can service students with test accommodations.",
+    text: [
+      `Step #1: We will conduct an assessment of both the SAT/ACT tests to determine which test is better suited for the student: SAT or ACT.`,
+      `Step #2: Design a game plan  to prepare for the official SAT/ACT with  the official test dates in mind and begin coordinating the lessons with the tutors.`,
+      `-Typically 90 minute to two hour lessons.`,
+      `-Specialist for each section (Verbal and Math Instructor and /or a Verbal and Math/Science instructor).`,
+    `-No Commitment to any set number of lessons: one lesson at a time with each tutor and feedback. `,
+  `-Customized based on the student's availability, skill set, and starting scores. `],
   },
   {
     title: "SAT Preperation",

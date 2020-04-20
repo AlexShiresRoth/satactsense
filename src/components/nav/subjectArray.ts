@@ -69,7 +69,15 @@ export const subjectArray = [
   },
   {
     id: "SAT/ACT",
-    types: [{ title: "", dropdown: [] }],
+    types: [],
+  },
+  {
+    id: "SAT",
+    types: [],
+  },
+  {
+    id: "ACT",
+    types: [],
   },
   {
     id: "GENERAL",
