@@ -54,7 +54,7 @@ export const headerText = [
 	{
 		title: 'The PSAT & PLAN (Shortened version of the ACT)',
 		id: 'PSAT/PLAN',
-		banner: ``,
+		banner: `Please contact us for more information!`,
 		text: [
 			{
 				par: `Both tests are typically taken in 10th and 11th grades as a precursor to the SAT/ACT.`,
@@ -106,7 +106,7 @@ export const headerText = [
 			},
 			{ par: `-Typically 90 minute to two hour lessons.`, link: `` },
 			{
-				par: `-Specialist for each section (Verbal and Math Instructor and /or a Verbal and Math/Science instructor).`,
+				par: `-Specialist for each section (Verbal and Math Instructor and/or a Verbal and Math/Science instructor).`,
 				link: ``,
 			},
 			{ par: `-No Commitment to any set number of lessons: one lesson at a time with each tutor and feedback. ` },
@@ -121,46 +121,46 @@ Taking a simulated/practice SAT/ACT practice tests at a more frequent pace as we
 	{
 		title: 'SAT (College Board)',
 		id: 'SAT',
-		banner: '',
+		banner: 'Tutoring for the SAT/ACT is our specialty.',
 		text: [
 			{
 				par: `What are the best materials/resources students should practice with to prepare for the test?`,
-				link: 'Please contact us for more information.',
+				link: 'Click here for more information.',
 			},
 			{
 				par: `What is the best strategy to get my SAT Verbal score from low mid 600's to a 700, especially after I worked with a tutor? `,
-				link: 'Please contact us for more information.',
+				link: 'Click here for more information.',
 			},
 			{
 				par: `Why is the "Word most nearly means" question on the SAT Reading the most important question for the 500 student? `,
-				link: 'Please contact us for more information.',
+				link: 'Click here for more information.',
 			},
 			{
 				par: `What is the best way to approach "Math" anxiety on the "No Calculator" section? `,
-				link: 'Please contact us for more information.',
+				link: 'Click here for more information.',
 			},
 		],
 	},
 	{
 		title: 'ACT Preparation',
 		id: 'ACT',
-		banner: '',
+		banner: 'Tutoring for the SAT/ACT is our specialty.',
 		text: [
 			{
 				par: `What is the best way to work with speed reading on the ACT Reading section?`,
-				link: 'Please contact us for more information.',
+				link: 'Click here for more information.',
 			},
 			{
-				par: `How will the new ACT Sectional testing take place starting in September`,
-				link: 'Please contact us for more information.',
+				par: `How will the new ACT Sectional testing take place starting in September?`,
+				link: 'Click here for more information.',
 			},
 			{
 				par: `Why is the ACT Verbal more coach able than the SAT verbal? `,
-				link: 'Please contact us for more information.',
+				link: 'Click here for more information.',
 			},
 			{
 				par: `How do prepare for the ACT Science section considering no other standardized test has a section on all graph/chart interpretation? `,
-				link: 'Please contact us for more information.',
+				link: 'Click here for more information.',
 			},
 		],
 	},

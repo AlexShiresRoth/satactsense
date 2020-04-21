@@ -1,9 +1,21 @@
-@import url("https://fonts.googleapis.com/css?family=Muli|Lato|Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli|Lato|Montserrat&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Raleway', sans-serif, serif;
+  font-family: 'Montserrat', sans-serif, serif;
+  font-weight: 100;
   color: #1b262c;
   overflow-x: hidden; }
+
+p {
+  font-size: 16px;
+  font-weight: 100;
+  font-family: 'Montserrat', sans-serif, serif; }
+
+h1,
+h2,
+button {
+  font-family: 'Montserrat';
+  font-weight: 300; }

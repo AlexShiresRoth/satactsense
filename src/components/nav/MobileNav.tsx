@@ -24,23 +24,42 @@ const MobileNav = ({ subjectTabs, handleCurrentChange }: MobileProps) => {
 					<ul>
 						{subjectTabs.map((subject, i) => {
 							return subject.dropdown.length > 0 ? (
-								<li>
-									{subject.dropdown.map((item: any) => {
-										return (
-											<button
-												onClick={(e) => {
-													handleCurrentChange(e, item.dropid);
-													setMenuState(!menuOpen);
-												}}
-											>
-												{item.title}
-											</button>
-										);
-									})}
-								</li>
+								<>
+									<li>
+										<button
+											onClick={(e) => {
+												handleCurrentChange(e, subject.id);
+												setMenuState(!menuOpen);
+											}}
+										>
+											{subject.title}
+										</button>
+									</li>
+									<li key={i}>
+										{subject.dropdown.map((item: any) => {
+											return (
+												<button
+													onClick={(e) => {
+														handleCurrentChange(e, item.dropid);
+														setMenuState(!menuOpen);
+													}}
+												>
+													{item.title}
+												</button>
+											);
+										})}
+									</li>
+								</>
 							) : (
 								<li key={i}>
-									<button onClick={(e) => handleCurrentChange(e, subject.id)}>{subject.title}</button>
+									<button
+										onClick={(e) => {
+											handleCurrentChange(e, subject.id);
+											setMenuState(!menuOpen);
+										}}
+									>
+										{subject.title}
+									</button>
 								</li>
 							);
 						})}

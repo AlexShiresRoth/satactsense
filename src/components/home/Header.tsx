@@ -35,8 +35,8 @@ const Header = ({ setBanner, headerData: { data }, setModalState, setCategory }:
 										return !par.link ? (
 											<p key={i}>{par.par}</p>
 										) : (
-											<p>
-												{par.par}{' '}
+											<>
+												<p>{par.par} </p>
 												<button
 													onClick={() => {
 														setModalState(true);
@@ -45,21 +45,14 @@ const Header = ({ setBanner, headerData: { data }, setModalState, setCategory }:
 												>
 													{par.link}
 												</button>
-											</p>
+											</>
 										);
 									})}
 								</>
 							);
 						})}
 				</div>
-				<div className={headerStyle.right_col}>
-					<iframe
-						src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F219579154045%2Fvideos%2F220960035794818%2F&show_text=0&width=560"
-						scrolling="no"
-						allowTransparency={true}
-						allowFullScreen={true}
-					></iframe>
-				</div>
+				<div className={headerStyle.right_col}></div>
 			</div>
 		</header>
 	);

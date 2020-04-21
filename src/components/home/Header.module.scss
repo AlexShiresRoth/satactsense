@@ -1,5 +1,10 @@
 @import '../../../sass/variables';
 
+@font-face {
+	font-family: 'Wotfard';
+	src: url('../fonts/wotfard.ttf');
+}
+
 .header {
 	position: relative;
 	display: flex;
@@ -7,7 +12,7 @@
 	overflow: hidden;
 	width: 100%;
 	padding: 2rem 0;
-	min-height: 50vh;
+	min-height: 55vh;
 	background: url('https://res.cloudinary.com/snackmanproductions/image/upload/c_scale,w_1400/v1586891420/satactsense/sat-bg_uernzk.png');
 	background-position: center;
 	background-size: cover;
@@ -35,12 +40,13 @@
 		& .copy {
 			max-width: 30vw;
 			& h1 {
-				font-size: 2rem;
+				font-size: 2.5rem;
 				color: #fff;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
 				position: relative;
+				font-family: 'Wotfard';
 				&::after {
 					content: '';
 					display: block;
@@ -48,13 +54,25 @@
 					height: 1.5px;
 					background: lighten($brand-main, 5%);
 					position: absolute;
-					bottom: -20%;
+					bottom: -10%;
 				}
 			}
 			& p {
 				line-height: 1.5;
 				color: $brand-secondary;
 				font-size: 1.2rem;
+				margin: 1rem 0;
+			}
+			& button {
+				padding: 0.5rem 1rem;
+				background: lighten($brand-main, 5%);
+				color: $alert;
+				border: 0px solid $alert;
+				font-weight: 700;
+				border-radius: 5px;
+				&:hover {
+					cursor: pointer;
+				}
 			}
 		}
 	}
@@ -66,7 +84,7 @@
 			& .copy {
 				max-width: 40vw;
 				& h1 {
-					font-size: 1.5rem;
+					font-size: 2rem;
 				}
 				& p {
 					font-size: 1rem;
@@ -106,9 +124,10 @@
 @media screen and (max-width: 600px) {
 	.header {
 		background-attachment: initial;
-		background-position: 58% 50%;
+		background-position: 50% 50%;
 		background-size: initial;
 		min-height: auto;
+		padding: 3rem 0;
 		& .grid {
 			& .copy {
 				max-width: 70vw;

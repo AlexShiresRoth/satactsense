@@ -109,29 +109,31 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 				</div>
 				<div className={navStyle.tier}>
 					<div className={navStyle.banner}>
-						<h2>{bannerData}</h2>
-						<div className={navStyle.social}>
-							<a
-								href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<TiSocialFacebookCircular />
-							</a>
-							<a
-								href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<TiSocialSkype />
-							</a>
-							<a
-								href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								{zoomLogo}
-							</a>
+						<div className={navStyle.banner_container}>
+							<h2>{bannerData}</h2>
+							<div className={navStyle.social}>
+								<a
+									href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<TiSocialFacebookCircular />
+								</a>
+								<a
+									href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<TiSocialSkype />
+								</a>
+								<a
+									href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									{zoomLogo}
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>

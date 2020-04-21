@@ -1,0 +1,165 @@
+@import '../../../sass/variables';
+.section {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: #eee;
+	padding: 2rem;
+	& .container {
+		width: 80%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: 25rem;
+		overflow: hidden;
+		& .testimonial {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 1fr;
+			justify-items: center;
+			align-items: center;
+			position: absolute;
+			opacity: 0;
+			visibility: visible;
+			animation: slidedown 1.5s linear forwards;
+			transition: all 0.5s ease-in-out;
+			& .col {
+				display: flex;
+				flex-direction: column;
+				& p {
+					line-height: 2;
+					color: $brand-main;
+					margin: 1rem 0;
+				}
+
+				& svg {
+					fill: $alert;
+					font-size: 1.5rem;
+				}
+				& svg:last-child {
+					align-self: flex-end;
+				}
+			}
+			& .col_two {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				& svg {
+					font-size: 5rem;
+					margin: 1rem 0;
+					color: $brand-secondary;
+				}
+				& span {
+					font-weight: 700;
+					color: $text-color;
+					font-size: 1.2rem;
+				}
+			}
+		}
+		& .testimonial_hidden {
+			visibility: visible;
+			animation: slideaway 1s linear forwards;
+			transition: all 1s ease-in-out;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.section {
+		& .container {
+			width: 80%;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			min-height: 30rem;
+			overflow: hidden;
+			& .testimonial {
+				height: 100%;
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-template-rows: repeat(2, 1fr);
+			}
+		}
+	}
+}
+@media screen and (max-width: 600px) {
+	.section {
+		& .container {
+			width: 80%;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			min-height: 35rem;
+			overflow: hidden;
+			height: 100%;
+			& .testimonial {
+				& .col {
+					display: flex;
+					flex-direction: column;
+					& p {
+						line-height: 2;
+						color: $brand-main;
+					}
+
+					& svg {
+						fill: $alert;
+						font-size: 1.5rem;
+					}
+					& svg:last-child {
+						align-self: flex-end;
+					}
+				}
+				& .col_two {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					& svg {
+						font-size: 4rem;
+						margin: 0.5rem 0;
+						color: $brand-secondary;
+					}
+					& span {
+						font-weight: 700;
+						color: $text-color;
+						font-size: 1rem;
+					}
+				}
+			}
+			& .testimonial_hidden {
+				visibility: visible;
+				animation: slideaway 1s linear forwards;
+				transition: all 1s ease-in-out;
+			}
+		}
+	}
+}
+@keyframes slidedown {
+	0% {
+		opacity: 0;
+		transform: translateX(-40vw);
+	}
+	90% {
+		transform: translateX(1vw);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0vw);
+	}
+}
+@keyframes slideaway {
+	0% {
+		opacity: 1;
+		transform: translateX(0vh);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(30vw);
+	}
+}
