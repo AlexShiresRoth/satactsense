@@ -70,6 +70,7 @@
 			padding: 1rem 0;
 			& p {
 				margin: 0.5rem;
+				flex-wrap: wrap;
 				& img {
 					max-width: 4.2rem;
 				}
@@ -78,6 +79,9 @@
 		& .col {
 			width: 100%;
 			align-items: center;
+			& p {
+				text-align: center;
+			}
 		}
 	}
 }
