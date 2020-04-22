@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 import headerStyle from './Header.module.scss';
+import Copy from './Copy';
 import { headerText } from './headerText';
 import { setBanner } from '../../actions/headerData';
 import { setModalState, setCategory } from '../../actions/modal';
@@ -19,40 +19,33 @@ const Header = ({ setBanner, headerData: { data }, setModalState, setCategory }:
 	useEffect(() => {
 		setBanner(headerText.filter((item) => item.id === data)[0].banner);
 	}, [data, setBanner]);
+
+	const [slideStart, setSlideStart] = useState(0);
+
 	return (
 		<header className={headerStyle.header}>
 			<div className={headerStyle.grid}>
 				<div className={headerStyle.copy}>
-					{headerText
-						.filter((item) => {
-							return item.id === data;
-						})
-						.map((item) => {
-							return (
-								<>
-									<h1>{item.title}</h1>
-									{item.text.map((par: any, i: number) => {
-										return !par.link ? (
-											<p key={i}>{par.par}</p>
-										) : (
-											<>
-												<p>{par.par} </p>
-												<button
-													onClick={() => {
-														setModalState(true);
-														setCategory(item.title);
-													}}
-												>
-													{par.link}
-												</button>
-											</>
-										);
-									})}
-								</>
-							);
-						})}
+					<Copy
+						headerText={headerText}
+						setSlideStart={setSlideStart}
+						slideStart={slideStart}
+						data={data}
+						setModalState={setModalState}
+						setCategory={setCategory}
+					/>
 				</div>
-				<div className={headerStyle.right_col}></div>
+				<div className={headerStyle.right_col}>
+					<h1>Schedule a free virtual tutoring session!</h1>
+					<button
+						onClick={() => {
+							setModalState(true);
+							setCategory('Virtual Tutoring Session');
+						}}
+					>
+						Book now!
+					</button>
+				</div>
 			</div>
 		</header>
 	);

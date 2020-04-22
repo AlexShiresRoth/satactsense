@@ -38,6 +38,14 @@ const Footer = (props: any) => {
 			</div>
 			<div className={footerStyle.row}>
 				<div className={footerStyle.col}>
+					<h4>SERVICES</h4>
+					<p>AP/Subject Testing</p>
+					<p>SAT/ACT Prep</p>
+					<p>General Tutoring</p>
+					<p>Johns Hopkins program for Advanced Testing</p>
+					<p>College Consulting and Life Coaching</p>
+				</div>
+				<div className={footerStyle.col}>
 					<h4>CONTACT</h4>
 					<a href="mailto:satactsense@gmail.com">
 						<MdMail />
@@ -47,13 +55,6 @@ const Footer = (props: any) => {
 						<MdPhoneInTalk />
 						516-509-3186
 					</a>
-				</div>
-				<div className={footerStyle.col}>
-					<h4>SERVICES</h4>
-					<p>AP/Subject Testing</p>
-					<p>SAT/ACT Prep</p>
-					<p>General Tutoring</p>
-					<p>Johns Hopkins program for Advanced Testing</p>
 				</div>
 			</div>
 		</footer>

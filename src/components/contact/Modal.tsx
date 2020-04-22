@@ -32,10 +32,10 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 
 	const { status, loading, error, success } = modalMessage;
 
-	const { email, name, phone, message, grade } = formData;
+	const { email, name, phone, message, grade, subject } = formData;
 
 	const onChange = (e: React.FormEvent<HTMLInputElement>) =>
-		setFormData({ ...formData, subject: category, [e.currentTarget.name]: e.currentTarget.value });
+		setFormData({ ...formData, [e.currentTarget.name]: e.currentTarget.value });
 	const onTextChange = (e: React.FormEvent<HTMLTextAreaElement>) =>
 		setFormData({ ...formData, [e.currentTarget.name]: e.currentTarget.value });
 
@@ -146,7 +146,7 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 				<form onSubmit={(e) => onSubmit(e)}>
 					<div className={modalStyle.input_row}>
 						<label>Category</label>
-						<input type="text" name="subject" value={category} required />
+						<input type="text" name="subject" value={category} required onChange={(e) => onChange(e)} />
 					</div>
 					<div className={modalStyle.input_row}>
 						<label>Email</label>

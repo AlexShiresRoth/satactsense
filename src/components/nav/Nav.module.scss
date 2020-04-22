@@ -385,13 +385,14 @@
 					flex-direction: row;
 					align-items: center;
 					justify-content: space-between;
-					width: 90%;
 					padding: 0 1rem;
+					width: 100%;
 					& h2 {
 						margin: 0;
 						font-size: 1rem;
 						font-weight: 100;
 						color: #fff;
+						width: 80%;
 					}
 					& .social {
 						height: 100%;
