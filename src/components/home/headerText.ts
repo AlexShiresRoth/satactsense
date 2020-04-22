@@ -35,7 +35,7 @@ export const headerText = [
 		],
 	},
 	{
-		title: 'Johns Hopkins Program For Advanced Testing: The Center for Talented Youth.',
+		title: 'Johns Hopkins Program For Advanced Testing: The Center for Talented Youth',
 		id: 'CTY',
 		banner: `For the Johns Hopkins program, which test a student can take depends on their grade level, as listed above.`,
 		text: [
@@ -161,6 +161,29 @@ Taking a simulated/practice SAT/ACT practice tests at a more frequent pace as we
 			{
 				par: `How do prepare for the ACT Science section considering no other standardized test has a section on all graph/chart interpretation? `,
 				link: 'Click here for more information.',
+			},
+		],
+	},
+	{
+		title: 'College Consulting and Life Coaching',
+		id: 'CCLC',
+		banner: `"White glove service" for parents who are going through the college admissions process for the first time and need guidance.`,
+		text: [
+			{
+				par: `Help assist in editing college essays and supplements for all schools.`,
+				link: '',
+			},
+			{
+				par: `Coach/mentor students/parents through the Athletic Recruitment process.`,
+				link: '',
+			},
+			{
+				par: `Help facilitate with all the steps in the process to the final decision for school selection.`,
+				link: '',
+			},
+			{
+				par: `Working with a private individual to helping with the school selection process.`,
+				link: '',
 			},
 		],
 	},

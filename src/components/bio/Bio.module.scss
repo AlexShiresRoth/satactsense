@@ -1,0 +1,134 @@
+@import '../../../sass/variables';
+
+.section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #eee;
+	padding: 2rem;
+	& .container {
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+		& h2 {
+			color: $alert;
+		}
+		& .copy_reduced {
+			max-height: 40vh;
+			transition: all 1s ease;
+			& p {
+				color: $brand-main;
+				line-height: 2;
+				max-width: 80%;
+				font-weight: 500;
+			}
+		}
+		& .copy {
+			max-height: 100vh;
+			transition: all 0.5s ease;
+			& p {
+				color: $brand-main;
+				line-height: 2;
+				max-width: 80%;
+				font-weight: 500;
+			}
+		}
+		& .copy_button_container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			& button {
+				background: transparent;
+				border: 0px solid transparent;
+				color: $alert;
+				width: 50%;
+				transition: all 0.3s ease;
+				margin: 1rem 0;
+				&:active {
+					outline: 0px solid transparent;
+				}
+				&:focus {
+					outline: 0px solid transparent;
+				}
+				&:hover {
+					cursor: pointer;
+				}
+			}
+			& span {
+				width: 100%;
+				height: 1px;
+				background: #fff;
+				display: block;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.section {
+		& .container {
+			display: flex;
+			flex-direction: column;
+			width: 80%;
+			& h2 {
+				color: $alert;
+			}
+			& .copy_reduced {
+				max-height: 60vh;
+				transition: all 1s ease;
+				& p {
+					color: $brand-main;
+					line-height: 2;
+					max-width: 100%;
+					font-weight: 500;
+				}
+			}
+			& .copy {
+				max-height: 300vh;
+				transition: all 0.5s ease;
+				& p {
+					color: $brand-main;
+					line-height: 2;
+					max-width: 100%;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.section {
+		& .container {
+			display: flex;
+			flex-direction: column;
+			width: 80%;
+			& h2 {
+				color: $alert;
+			}
+			& .copy_reduced {
+				max-height: 60vh;
+				transition: all 1s ease;
+				& p {
+					color: $brand-main;
+					line-height: 2;
+					max-width: 100%;
+					font-weight: 500;
+					font-size: 0.9rem;
+				}
+			}
+			& .copy {
+				max-height: 300vh;
+				transition: all 0.5s ease;
+				& p {
+					color: $brand-main;
+					line-height: 2;
+					max-width: 100%;
+					font-weight: 500;
+					font-size: 0.9rem;
+				}
+			}
+		}
+	}
+}

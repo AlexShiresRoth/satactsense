@@ -188,7 +188,7 @@
 			& .grid {
 				display: grid;
 				grid-template-rows: 1fr;
-				grid-template-columns: repeat(5, auto);
+				grid-template-columns: repeat(6, auto);
 				list-style: none;
 				padding: 0;
 				background: $brand-main;
@@ -322,7 +322,7 @@
 									visibility: visible;
 									opacity: 1;
 									color: $brand-main;
-									font-size: 0.9rem;
+									font-size: 0.8rem;
 								}
 							}
 						}
@@ -356,6 +356,7 @@
 								transition: all 0.2s ease;
 								visibility: hidden;
 								opacity: 0;
+								font-size: 0.8rem;
 								&:hover {
 									background: $brand-main;
 									color: #fff;
@@ -385,9 +386,10 @@
 					align-items: center;
 					justify-content: space-between;
 					width: 90%;
+					padding: 0 1rem;
 					& h2 {
 						margin: 0;
-						font-size: 1.2rem;
+						font-size: 1rem;
 						font-weight: 100;
 						color: #fff;
 					}

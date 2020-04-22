@@ -85,6 +85,10 @@ export const subjectArray = [
 			{ title: 'SAT & SCAT (Grades 7-8)', dropdown: ['SAT & SCAT'] },
 		],
 	},
+	{
+		id: 'CCLC',
+		types: [],
+	},
 ];
 
 //First set of tabs(Blue)
@@ -124,5 +128,11 @@ export const serviceLinks = [
 		path: '/jht',
 		id: 'CTY',
 		dropdown: [{ title: 'CTY Program-Center for Talented Youth', dropid: 'CTY' }],
+	},
+	{
+		title: 'College Consulting and Life Coaching',
+		path: '/CCLC',
+		id: 'CCLC',
+		dropdown: [],
 	},
 ];

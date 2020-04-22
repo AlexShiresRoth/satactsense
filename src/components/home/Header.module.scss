@@ -61,11 +61,12 @@
 				line-height: 1.5;
 				color: $brand-secondary;
 				font-size: 1.2rem;
-				margin: 1rem 0;
+				font-weight: 100;
+				margin: 0.5rem 0;
 			}
 			& button {
-				padding: 0.5rem 1rem;
-				background: lighten($brand-main, 5%);
+				padding: 0rem;
+				background: transparent;
 				color: $alert;
 				border: 0px solid $alert;
 				font-weight: 700;
