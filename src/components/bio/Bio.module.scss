@@ -103,7 +103,7 @@
 		& .container {
 			display: flex;
 			flex-direction: column;
-			width: 80%;
+			width: auto;
 			& h2 {
 				color: $alert;
 			}

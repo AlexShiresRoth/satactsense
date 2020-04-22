@@ -51,6 +51,14 @@
 				justify-content: space-between;
 				position: relative;
 				font-family: 'Wotfard';
+				&::after {
+					content: '';
+					display: block;
+					height: 1px;
+					width: 40%;
+					margin-top: 1rem;
+					background: $brand-accent;
+				}
 			}
 			& p {
 				line-height: 1.5;
@@ -184,15 +192,24 @@
 @media screen and (max-width: 600px) {
 	.header {
 		min-height: auto;
-		padding: 3rem 0;
+		padding: 2rem 0;
+		justify-content: center;
 		& .grid {
+			margin: 0;
+			width: 80vw;
 			& .copy {
-				max-width: 70vw;
+				width: 100%;
+				& h2 {
+					font-size: 1.5rem;
+				}
 			}
 			& .right_col {
-				max-width: 70vw;
 				grid-row-start: 1;
 				width: 100%;
+				max-width: 100%;
+				& h1 {
+					font-size: 1.5rem;
+				}
 				& button {
 					width: 100%;
 					align-self: flex-start;
