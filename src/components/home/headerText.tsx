@@ -168,9 +168,9 @@ export const headerText = [
 			{
 				par: (
 					<p>
-						Step #3: Once we get comfortable with the tutors and the format/structure of the test, we should
-						be doing the following: Taking a simulated/practice SAT/ACT practice tests at a more frequent
-						pace as we get closer to the official test date.
+						Step #3: After we've completed 3-4 lessons with each tutor, we will be taking our next
+						simulated/practice SAT/ACT test to help towards maximizing the student's score on official
+						testing.
 					</p>
 				),
 				link: ``,
@@ -186,7 +186,7 @@ export const headerText = [
 				par: (
 					<p>What are the best materials/resources students should practice with to prepare for the test?</p>
 				),
-				link: 'Click here for more information.',
+				link: '',
 			},
 			{
 				par: (
@@ -195,7 +195,7 @@ export const headerText = [
 						after I worked with a tutor?
 					</p>
 				),
-				link: 'Click here for more information.',
+				link: '',
 			},
 			{
 				par: (
@@ -204,11 +204,11 @@ export const headerText = [
 						the 500 student?
 					</p>
 				),
-				link: 'Click here for more information.',
+				link: '',
 			},
 			{
 				par: <p>What is the best way to approach "Math" anxiety on the "No Calculator" section? </p>,
-				link: 'Click here for more information.',
+				link: '',
 			},
 		],
 	},
@@ -219,15 +219,15 @@ export const headerText = [
 		text: [
 			{
 				par: <p>What is the best way to work with speed reading on the ACT Reading section?</p>,
-				link: 'Click here for more information.',
+				link: '',
 			},
 			{
 				par: <p>How will the new ACT Sectional testing take place starting in September?</p>,
-				link: 'Click here for more information.',
+				link: '',
 			},
 			{
 				par: <p>Why is the ACT Verbal more coach able than the SAT verbal?</p>,
-				link: 'Click here for more information.',
+				link: '',
 			},
 			{
 				par: (
@@ -236,7 +236,7 @@ export const headerText = [
 						on all graph/chart interpretation?{' '}
 					</p>
 				),
-				link: 'Click here for more information.',
+				link: '',
 			},
 		],
 	},
@@ -274,10 +274,7 @@ Our exclusive college consulting and life coaching program is a "White Glove Ser
 				par: <p>- personality</p>,
 				link: '',
 			},
-			{
-				par: <p>- social behaviors</p>,
-				link: '',
-			},
+
 			{
 				par: <p>- likes and dislikes</p>,
 				link: '',
@@ -297,10 +294,9 @@ Our exclusive college consulting and life coaching program is a "White Glove Ser
 			{
 				par: (
 					<p>
-						After understanding who they are as a student and a person, we can assist in editing college
-						essays and supplements for all schools, coaching students through the Athletic Recruitment
-						process, and helping in all the steps of the process from the final decision to school
-						selection. ,
+						After working with the student and a person, we can assist in editing college essays and
+						supplements for all schools, coaching students through the Athletic Recruitment process, and
+						helping in all the steps of the process from the final decision to school selection.
 					</p>
 				),
 				link: '',

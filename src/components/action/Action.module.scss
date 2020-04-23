@@ -1,0 +1,39 @@
+@import '../../../sass/variables';
+
+.section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	background: $brand-main;
+	padding: 2rem 0;
+	& p {
+		color: #fff;
+		font-size: 1.2rem;
+	}
+	& button {
+		width: 10rem;
+		height: 3rem;
+		background: $alert;
+		border: 1px solid $alert;
+		box-shadow: 0 2px 2px darken($alert, 10%);
+		border-radius: 2px;
+		color: #fff;
+		text-transform: uppercase;
+		transition: all 0.3s ease;
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0 10px 10px darken($alert, 10%);
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.section {
+		& p {
+			font-size: 1rem;
+			text-align: center;
+		}
+	}
+}

@@ -6,6 +6,7 @@ import Video from '../video/Video';
 import Bio from '../bio/Bio';
 import EmailSignup from '../signup/EmailSignup';
 import Testimonials from '../testimonials/Testimonials';
+import Action from '../action/Action';
 import Footer from '../footer/Footer';
 const Home = () => {
 	return (
@@ -16,6 +17,7 @@ const Home = () => {
 			<Video />
 			<Bio />
 			<Testimonials />
+			<Action />
 			<Footer />
 		</Layout>
 	);

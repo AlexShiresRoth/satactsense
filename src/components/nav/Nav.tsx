@@ -7,7 +7,6 @@ import Faq from './Faq';
 import MobileNav from './MobileNav';
 import { MdPhoneInTalk } from 'react-icons/md';
 import { GoMail } from 'react-icons/go';
-import { TiSocialSkype, TiSocialFacebookCircular } from 'react-icons/ti';
 import { serviceLinks } from './subjectArray';
 import { setHeaderData } from '../../actions/headerData';
 import { setModalState, setCategory } from '../../actions/modal';
@@ -27,12 +26,6 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 		<img
 			src="https://res.cloudinary.com/snackmanproductions/image/upload/v1586538815/satactsense/sat_logo_lpezq0.png"
 			alt="logo"
-		/>
-	);
-	const zoomLogo = (
-		<img
-			src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Zoom_Communications_Logo.svg/85px-Zoom_Communications_Logo.svg.png"
-			alt="zoom logo"
 		/>
 	);
 
@@ -111,29 +104,6 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 					<div className={navStyle.banner}>
 						<div className={navStyle.banner_container}>
 							<h2>{bannerData}</h2>
-							<div className={navStyle.social}>
-								<a
-									href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<TiSocialFacebookCircular />
-								</a>
-								<a
-									href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<TiSocialSkype />
-								</a>
-								<a
-									href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									{zoomLogo}
-								</a>
-							</div>
 						</div>
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import headerStyle from './Header.module.scss';
 import { IoMdArrowRoundForward, IoMdArrowRoundBack } from 'react-icons/io';
 
@@ -12,6 +12,9 @@ interface CopyProps {
 }
 
 const Copy = ({ headerText, setCategory, setModalState, setSlideStart, slideStart, data }: CopyProps) => {
+	useEffect(() => {
+		setSlideStart(0);
+	}, []);
 	return headerText
 		.filter((item: any) => {
 			return item.id === data;

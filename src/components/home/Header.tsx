@@ -4,6 +4,7 @@ import Copy from './Copy';
 import { headerText } from './headerText';
 import { setBanner } from '../../actions/headerData';
 import { setModalState, setCategory } from '../../actions/modal';
+import { TiSocialSkype, TiSocialFacebookCircular } from 'react-icons/ti';
 import { connect } from 'react-redux';
 
 interface HeaderProps {
@@ -22,6 +23,39 @@ const Header = ({ setBanner, headerData: { data }, setModalState, setCategory }:
 
 	const [slideStart, setSlideStart] = useState(0);
 
+	const zoomLogo = (
+		<img
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Zoom_Communications_Logo.svg/85px-Zoom_Communications_Logo.svg.png"
+			alt="zoom logo"
+		/>
+	);
+
+	const socialIcons = (
+		<>
+			<a
+				href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<TiSocialFacebookCircular />
+			</a>
+			<a
+				href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<TiSocialSkype />
+			</a>
+			<a
+				href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				{zoomLogo}
+			</a>
+		</>
+	);
+
 	return (
 		<header className={headerStyle.header}>
 			<div className={headerStyle.grid}>
@@ -36,15 +70,19 @@ const Header = ({ setBanner, headerData: { data }, setModalState, setCategory }:
 					/>
 				</div>
 				<div className={headerStyle.right_col}>
-					<h1>Schedule a free virtual tutoring session!</h1>
+					<h1>
+						Schedule a virtual tutoring
+						<br /> consultation and get started today!
+					</h1>
 					<button
 						onClick={() => {
 							setModalState(true);
-							setCategory('Virtual Tutoring Session');
+							setCategory('Virtual Tutoring Consultation');
 						}}
 					>
 						Book now!
 					</button>
+					<div className={headerStyle.social}>{socialIcons}</div>
 				</div>
 			</div>
 		</header>

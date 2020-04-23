@@ -394,21 +394,6 @@
 						color: #fff;
 						width: 80%;
 					}
-					& .social {
-						height: 100%;
-						display: grid;
-						grid-template-columns: repeat(4, auto);
-						align-items: center;
-						gap: 0.5rem;
-						& svg {
-							color: $brand-main;
-							font-size: 1.5rem;
-						}
-						& img {
-							width: 100%;
-							min-width: 4rem;
-						}
-					}
 				}
 			}
 		}
@@ -595,20 +580,6 @@
 					& h2 {
 						font-size: 1rem;
 						font-weight: 100;
-					}
-					& .social {
-						height: 100%;
-						display: grid;
-						grid-template-columns: repeat(3, auto);
-						align-items: center;
-						gap: 0.5rem;
-						& svg {
-							color: $brand-main;
-							font-size: 1.5rem;
-						}
-						& img {
-							width: 100%;
-						}
 					}
 				}
 			}
