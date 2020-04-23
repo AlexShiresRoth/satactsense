@@ -71,8 +71,8 @@
 				position: absolute;
 				opacity: 0;
 				visibility: visible;
-				animation: slidedown 1.5s linear forwards;
-				transition: all 0.5s ease-in-out;
+				animation: slidedown 0.8s linear forwards;
+				transition: all 1s ease-in-out;
 				max-width: 80%;
 				z-index: 2;
 				& .col {
@@ -204,6 +204,12 @@
 	.section {
 		padding: 1rem 0;
 		& .inner {
+			& .arrow_container {
+				& svg {
+					font-size: 3rem;
+					padding: 0rem;
+				}
+			}
 			& .container {
 				width: 80%;
 				position: relative;
@@ -211,7 +217,7 @@
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				min-height: 40rem;
+				min-height: 50rem;
 				overflow: hidden;
 				& .testimonial {
 					& .col {
@@ -258,7 +264,7 @@
 @keyframes slidedown {
 	0% {
 		opacity: 0;
-		transform: translateX(-40vw);
+		transform: translateX(-100vw);
 	}
 	90% {
 		transform: translateX(1vw);
@@ -275,6 +281,6 @@
 	}
 	100% {
 		opacity: 0;
-		transform: translateX(30vw);
+		transform: translateX(100vw);
 	}
 }
