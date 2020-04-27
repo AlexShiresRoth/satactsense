@@ -1,24 +1,26 @@
 export const faq = [
 	{
-		question: 'As a student or parent how do I know if my son/daughter should take an SAT II Subject Test?',
-		answer:
-			'All of our prospective students take a qualifying test to see if the student scores at a certain range to make preparing for the test worth it.',
+		question: 'As a student or parent, how do I know if my son/daughter should take an SAT II Subject Test?',
+		answer: `All of our prospective students take a qualifying test to see if the student scores at a certain range to make preparing for the test “worth it.”`,
 	},
 	{
-		question: 'What grade does my son or daughter have to be in order to qualify for the Johns Hopkins Program?',
+		question: 'In what grade does my son or daughter have to be in order to qualify for the Johns Hopkins Program?',
 		answer: 'Between grades 2-8.',
 	},
 	{
-		question: `What happens if the act test is rescheduled in july and the sat test is rescheduled in august?`,
-		answer: `As per governor Cuomo the tests, starting in september, will be offered in a computer based format online. However this is only an option if schools are not available to service the test live.`,
+		question: `What happens if the ACT is rescheduled in July and the SAT is rescheduled in August?`,
+		answer: `As per governor Cuomo, the tests, starting in September, will be offered in an online format. However, this is only an option if schools are not available to service the test live.`,
 	},
 	{
-		question: `Do I have to take the PSAT as a sophomore and junior?`,
-		answer: `You only have to take it once in either grade.`,
+		question: `Do I have to take the PSAT as a sophomore AND as a junior?`,
+		answer: `You only have to take it ONCE, in either grade.`,
 	},
 	{
-		question: `When is the earliest date I can take the SAT?`,
-		answer: `August (If the test does not occurr in August, it will be available online in September).`,
+		question: `What is the earliest date I can take the SAT this year?`,
+		answer: `August (If the test does not occur in August, it will be available online in September if schools are not available to service the test live.).`,
 	},
-	{ question: `When is the earliest date I can take the ACT?`, answer: `June.` },
+	{
+		question: `When is the earliest date I can take the ACT?`,
+		answer: `June…but stay tuned for more info on that as wel,`,
+	},
 ];

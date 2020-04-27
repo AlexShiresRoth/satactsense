@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import headerStyle from './Header.module.scss';
 import Copy from './Copy';
 import { headerText } from './headerText';
-import { setBanner } from '../../actions/headerData';
+import { setBanner, setRef } from '../../actions/headerData';
 import { setModalState, setCategory } from '../../actions/modal';
 import { TiSocialSkype, TiSocialFacebookCircular } from 'react-icons/ti';
 import { connect } from 'react-redux';
@@ -14,14 +14,13 @@ interface HeaderProps {
 	headerData: {
 		data: any;
 	};
+	setRef: (val: any) => any;
 }
 
-const Header = ({ setBanner, headerData: { data }, setModalState, setCategory }: HeaderProps) => {
-	useEffect(() => {
-		setBanner(headerText.filter((item) => item.id === data)[0].banner);
-	}, [data, setBanner]);
-
+const Header = ({ setBanner, setRef, headerData: { data }, setModalState, setCategory }: HeaderProps) => {
 	const [slideStart, setSlideStart] = useState(0);
+
+	const headerRef = useRef(null);
 
 	const zoomLogo = (
 		<img
@@ -55,9 +54,12 @@ const Header = ({ setBanner, headerData: { data }, setModalState, setCategory }:
 			</a>
 		</>
 	);
-
+	useEffect(() => {
+		setBanner(headerText.filter((item) => item.id === data)[0].banner);
+		setRef(headerRef);
+	}, [data, setBanner, headerRef, setRef]);
 	return (
-		<header className={headerStyle.header}>
+		<header className={headerStyle.header} ref={headerRef}>
 			<div className={headerStyle.grid}>
 				<div className={headerStyle.copy}>
 					<Copy
@@ -97,4 +99,4 @@ const mapStateToProps = (state: any) => {
 	};
 };
 
-export default connect(mapStateToProps, { setBanner, setModalState, setCategory })(Header);
+export default connect(mapStateToProps, { setBanner, setModalState, setCategory, setRef })(Header);

@@ -202,7 +202,7 @@
 }
 @media screen and (max-width: 600px) {
 	.section {
-		padding: 1rem 0;
+		padding: 2rem 0;
 		& .inner {
 			& .arrow_container {
 				& svg {
@@ -217,7 +217,7 @@
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				min-height: 47rem;
+				min-height: 40rem;
 				overflow: hidden;
 				& .testimonial {
 					& .col {

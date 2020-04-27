@@ -20,7 +20,7 @@ const Testimonials = () => {
 			author: `K. Ryan, Manhasset, NY`,
 		},
 		{
-			text: `Thank you SAT/ACT Sense. With your excellent tutoring and test preparation, my son was able to jump over 200 points for a perfect score on the SATII Biology Subject test! We're looking forward to a great partnership and continued success for the SAT or ACT next year!`,
+			text: `My son got his scores and his ACT composite moved up 7 points! Your team was wonderful: Diana and Casey couldn’t have done more, and their upbeat attitude made all the difference. Thank so much for your help, and I will definitely let my friends know of your services.`,
 			author: `P. Sodi, Manhasset, NY`,
 		},
 	];
@@ -49,6 +49,11 @@ const Testimonials = () => {
 
 	return (
 		<section className={testStyle.section}>
+			<div className={testStyle.current_index}>
+				{ratings.map((r, i) => {
+					return <span className={current === i ? testStyle.current : testStyle.marker}></span>;
+				})}
+			</div>
 			<div className={testStyle.inner}>
 				<div className={testStyle.arrow_container}>
 					<MdKeyboardArrowLeft onClick={() => handleIntervalChange('left')} />
@@ -100,11 +105,6 @@ const Testimonials = () => {
 				<div className={testStyle.arrow_container}>
 					<MdKeyboardArrowRight onClick={() => handleIntervalChange('right')} />
 				</div>
-			</div>
-			<div className={testStyle.current_index}>
-				{ratings.map((r, i) => {
-					return <span className={current === i ? testStyle.current : testStyle.marker}></span>;
-				})}
 			</div>
 		</section>
 	);

@@ -5,7 +5,7 @@ import Menu from './Menu';
 import Modal from '../contact/Modal';
 import Faq from './Faq';
 import MobileNav from './MobileNav';
-import { MdPhoneInTalk } from 'react-icons/md';
+import { MdPhoneInTalk, MdModeComment } from 'react-icons/md';
 import { GoMail } from 'react-icons/go';
 import { serviceLinks } from './subjectArray';
 import { setHeaderData } from '../../actions/headerData';
@@ -19,9 +19,10 @@ interface NavProps {
 	bannerData?: string;
 	setModalState: (val: boolean) => any;
 	setCategory: (item: string) => any;
+	ref?: any;
 }
 
-const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, setCategory }: NavProps) => {
+const Nav = ({ setHeaderData, headerData: { data, bannerData, ref }, setModalState, setCategory }: NavProps) => {
 	const logo = (
 		<img
 			src="https://res.cloudinary.com/snackmanproductions/image/upload/v1586538815/satactsense/sat_logo_lpezq0.png"
@@ -34,6 +35,18 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 	const handleCurrentChange = (e: React.MouseEvent, item: string) => {
 		e.stopPropagation();
 		setCurrent(item);
+	};
+
+	const handleScrollDown = (wait: number) => {
+		if (ref.current) {
+			setTimeout(() => {
+				window.scrollTo({
+					top: ref.current.offsetTop - 100,
+					left: 0,
+					behavior: 'smooth',
+				});
+			}, wait);
+		}
 	};
 
 	useEffect(() => {
@@ -69,7 +82,12 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 						</a>
 					</div>
 				</div>
-				<MobileNav subjectTabs={serviceLinks} handleCurrentChange={handleCurrentChange} />
+				<MobileNav
+					subjectTabs={serviceLinks}
+					handleCurrentChange={handleCurrentChange}
+					handleScrollDown={handleScrollDown}
+				/>
+
 				<div className={navStyle.tier}>
 					<ul className={navStyle.grid}>
 						{serviceLinks.map((link, i) => {
@@ -80,13 +98,22 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 											? `${navStyle.list_link} ${navStyle.active}`
 											: navStyle.list_link
 									}
-									onClick={(e) => handleCurrentChange(e, link.id)}
+									onClick={(e) => {
+										handleCurrentChange(e, link.id);
+										handleScrollDown(100);
+									}}
 								>
 									<button>{link.title}</button>
 									<div className={navStyle.dropdown_container}>
 										{link.dropdown.map((item, i) => {
 											return item.title !== '' ? (
-												<button key={i} onClick={(e) => handleCurrentChange(e, item.dropid)}>
+												<button
+													key={i}
+													onClick={(e) => {
+														handleCurrentChange(e, item.dropid);
+														handleScrollDown(100);
+													}}
+												>
 													{item.title}
 												</button>
 											) : null;
@@ -98,14 +125,19 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 					</ul>
 				</div>
 				<div className={navStyle.tier}>
-					<Menu current={current} />
-				</div>
-				<div className={navStyle.tier}>
 					<div className={navStyle.banner}>
 						<div className={navStyle.banner_container}>
 							<h2>{bannerData}</h2>
+							<p>
+								<MdModeComment />
+								Select a tab below to contact us on that particular subject.
+							</p>
 						</div>
 					</div>
+				</div>
+
+				<div className={navStyle.tier}>
+					<Menu current={current} />
 				</div>
 			</div>
 		</nav>
@@ -118,6 +150,7 @@ Nav.propTypes = {
 };
 
 const mapStateToProps = (state: any) => {
+	console.log(state);
 	return {
 		headerData: state.headerData,
 	};
