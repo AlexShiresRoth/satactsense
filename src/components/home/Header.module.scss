@@ -193,12 +193,12 @@
 				}
 			}
 			& .right_col {
-				max-width: 50vw;
-				width: 50vw;
-				grid-row-start: 1;
+				max-width: 70vw;
+				width: 70vw;
+				grid-row-start: 2;
 
 				& button {
-					width: 50%;
+					width: 70%;
 					align-self: flex-start;
 				}
 				& .social {
@@ -234,7 +234,7 @@
 				}
 			}
 			& .right_col {
-				grid-row-start: 1;
+				grid-row-start: 3;
 				width: 100%;
 				max-width: 100%;
 				& h1 {
