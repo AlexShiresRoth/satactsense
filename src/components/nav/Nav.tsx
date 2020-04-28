@@ -7,7 +7,8 @@ import Faq from './Faq';
 import MobileNav from './MobileNav';
 import { MdPhoneInTalk, MdModeComment } from 'react-icons/md';
 import { GoMail } from 'react-icons/go';
-import { serviceLinks } from './subjectArray';
+import { AiFillAlert } from 'react-icons/ai'
+import { serviceLinks, subjectArray } from './subjectArray';
 import { setHeaderData } from '../../actions/headerData';
 import { setModalState, setCategory } from '../../actions/modal';
 import { connect } from 'react-redux';
@@ -127,11 +128,14 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData, ref }, setModalSta
 				<div className={navStyle.tier}>
 					<div className={navStyle.banner}>
 						<div className={navStyle.banner_container}>
-							<h2>{bannerData}</h2>
-							<p>
-								<MdModeComment />
+							<h2><AiFillAlert /> {bannerData}</h2>
+							{subjectArray.filter((item) => item.id === data).map((item) => {
+								return item.types.length > 0 ? <p>
+									<MdModeComment />
 								Select a tab below to contact us on that particular subject.
-							</p>
+							</p> : null
+							})}
+
 						</div>
 					</div>
 				</div>

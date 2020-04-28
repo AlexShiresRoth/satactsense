@@ -57,6 +57,7 @@ const Header = ({ setBanner, setRef, headerData: { data }, setModalState, setCat
 	useEffect(() => {
 		setBanner(headerText.filter((item) => item.id === data)[0].banner);
 		setRef(headerRef);
+		setSlideStart(0);
 	}, [data, setBanner, headerRef, setRef]);
 	return (
 		<header className={headerStyle.header} ref={headerRef}>
