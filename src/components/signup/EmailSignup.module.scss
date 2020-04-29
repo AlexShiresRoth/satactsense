@@ -78,12 +78,12 @@
 			& input {
 				padding: 1rem 2rem;
 				background: transparent;
-				border: 2px solid #fff;
+				border: 2px solid $brand-secondary;
 				font-size: 16px;
 				color: $text-color;
 				transition: all 0.3s ease-in-out;
 				&::placeholder {
-					color: #fff;
+					color: $brand-secondary;
 				}
 				&:focus {
 					outline: 3px solid $brand-main;

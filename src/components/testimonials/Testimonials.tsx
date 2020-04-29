@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import testStyle from './Testimonials.module.scss';
 import { FaQuoteLeft, FaQuoteRight, FaUserGraduate } from 'react-icons/fa';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
@@ -21,7 +21,6 @@ const Testimonials = () => {
 	};
 
 	const expandText = (text: number) => {
-		console.log(start);
 		return start !== 0
 			? setStart({
 					start: 0,
@@ -32,6 +31,13 @@ const Testimonials = () => {
 					end: text,
 			  });
 	};
+
+	useEffect(() => {
+		setStart({
+			start: 0,
+			end: 400,
+		});
+	}, [current]);
 
 	return (
 		<section className={testStyle.section}>

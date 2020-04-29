@@ -102,13 +102,7 @@ const EmailSignup = (props: any) => {
 				</h3>
 				<div className={signupStyle.form_container}>
 					<form onSubmit={(e) => formSubmit(e)}>
-						<input
-							type="email"
-							value={email}
-							onChange={(e) => onChange(e)}
-							placeholder="leslie@gmail.com"
-							required
-						/>
+						<input type="email" value={email} onChange={(e) => onChange(e)} placeholder="Email" required />
 						<button onClick={(e) => formSubmit(e)}>Send</button>
 					</form>
 				</div>

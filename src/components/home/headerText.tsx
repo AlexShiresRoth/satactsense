@@ -71,12 +71,10 @@ export const headerText = [
 				par: <p>Typically offered once a year, these tests are conducted in schools on assigned dates.</p>,
 			},
 			{
-				par: (
-					<p>
-						Taken in 11th grade, the PSAT qualifies students for National Merit Scholarships. All questions
-						are multiple choice (no essay).
-					</p>
-				),
+				par: <p>Taken in 11th grade, the PSAT qualifies students for National Merit Scholarships.</p>,
+			},
+			{
+				par: <p> All questions are multiple choice (no essay).</p>,
 			},
 			{
 				par: <p>Generally, students prepare for these tests the summer before 10th/11th grade.</p>,
@@ -178,7 +176,7 @@ export const headerText = [
 				),
 			},
 			{
-				par: <p>What are the best ways to alleviate"Math anxiety” on the "No Calculator" section?</p>,
+				par: <p>What are the best ways to alleviate "Math anxiety” on the "No Calculator" section?</p>,
 			},
 		],
 	},
