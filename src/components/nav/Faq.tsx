@@ -13,13 +13,13 @@ const Faq = ({ logo }: FaqProps) => {
 	return (
 		<>
 			<button onClick={() => setFaqState(!showFaq)}>
-				<AiOutlineQuestionCircle /> Faq
+				<AiOutlineQuestionCircle /> FAQ
 			</button>
 			<div className={showFaq ? faqStyle.faq_container : faqStyle.hidden}>
 				<div className={faqStyle.faq}>
 					<div className={faqStyle.heading}>
 						{logo}
-						<h2>SATACTSENSE Faq.</h2>
+						<h2>SATACTSENSE FAQ.</h2>
 						<button onClick={() => setFaqState(!showFaq)}>
 							<MdClose />
 						</button>

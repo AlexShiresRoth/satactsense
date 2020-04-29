@@ -16,7 +16,7 @@ export const faq = [
 		answer: `You only have to take it ONCE, in either grade.`,
 	},
 	{
-		question: `What is the earliest date I can take the SAT this year?`,
+		question: `“What is the earliest date this year that I can take the SAT in a school environment?`,
 		answer: `August (If the test does not occur in August, it will be available online in September if schools are not available to service the test live).`,
 	},
 	{

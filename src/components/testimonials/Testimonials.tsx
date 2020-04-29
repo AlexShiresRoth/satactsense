@@ -41,6 +41,9 @@ const Testimonials = () => {
 
 	return (
 		<section className={testStyle.section}>
+			<div className={testStyle.heading}>
+				<h2>Testimonials</h2>
+			</div>
 			<div className={testStyle.current_index}>
 				{ratings.map((r, i) => {
 					return <span className={current === i ? testStyle.current : testStyle.marker}></span>;

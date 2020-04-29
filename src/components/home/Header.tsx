@@ -4,8 +4,8 @@ import Copy from './Copy';
 import { headerText } from './headerText';
 import { setBanner, setRef } from '../../actions/headerData';
 import { setModalState, setCategory } from '../../actions/modal';
-import { TiSocialSkype, TiSocialFacebookCircular } from 'react-icons/ti';
 import { connect } from 'react-redux';
+import { socialIcons } from '../reusable/icons';
 
 interface HeaderProps {
 	setBanner: (val: string) => any;
@@ -22,38 +22,6 @@ const Header = ({ setBanner, setRef, headerData: { data }, setModalState, setCat
 
 	const headerRef = useRef(null);
 
-	const zoomLogo = (
-		<img
-			src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Zoom_Communications_Logo.svg/85px-Zoom_Communications_Logo.svg.png"
-			alt="zoom logo"
-		/>
-	);
-
-	const socialIcons = (
-		<>
-			<a
-				href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<TiSocialFacebookCircular />
-			</a>
-			<a
-				href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<TiSocialSkype />
-			</a>
-			<a
-				href="https://www.facebook.com/SATACT-Sense-Making-sense-of-the-SAT-ACT-219579154045/?__tn__=%2Cd%2CP-R&eid=ARBgrhXPMFtOsJ5wtl9wmSERTEtfNfvxAXDC8eW9GE1M3Rrfee-7HAnYBaiO8ZXEZtK1QFYSxv1WlBSP"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				{zoomLogo}
-			</a>
-		</>
-	);
 	useEffect(() => {
 		setBanner(headerText.filter((item) => item.id === data)[0].banner);
 		setRef(headerRef);

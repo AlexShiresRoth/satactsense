@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import modalStyle from './Modal.module.scss';
 import { MdClose } from 'react-icons/md';
+import { socialIcons } from '../reusable/icons';
 import { setModalState } from '../../actions/modal';
 import { connect } from 'react-redux';
 
@@ -14,6 +15,13 @@ type NavProps = {
 };
 
 const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => {
+	const logo = (
+		<img
+			src="https://res.cloudinary.com/snackmanproductions/image/upload/v1586538815/satactsense/sat_logo_lpezq0.png"
+			alt="logo"
+		/>
+	);
+
 	const [formData, setFormData] = useState({
 		subject: category,
 		email: '',
@@ -117,6 +125,15 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 
 	return (
 		<div className={modalState ? modalStyle.container : modalStyle.container_hidden}>
+			<div className={modalStyle.background}></div>
+			<div className={modalStyle.logo_container}>
+				<div>{logo}</div>
+				<div>
+					<h2>SATACTSENSE</h2>
+					<p>Making Sense of the SAT/ACT</p>
+				</div>
+			</div>
+			<div className={modalStyle.icons}>{socialIcons}</div>
 			<div className={modalStyle.form_container}>
 				<div className={modalStyle.heading}>
 					<div className={modalStyle.status}>
@@ -150,58 +167,24 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 					</div>
 					<div className={modalStyle.input_row}>
 						<label>Email</label>
-						<input
-							name="email"
-							placeholder="jan@gmail.com"
-							type="email"
-							value={email}
-							required
-							onChange={(e) => onChange(e)}
-						/>
+						<input name="email" type="email" value={email} required onChange={(e) => onChange(e)} />
 					</div>
 					<div className={modalStyle.input_row}>
 						<label>Name</label>
-						<input
-							name="name"
-							placeholder="John P."
-							value={name}
-							type="text"
-							required
-							onChange={(e) => onChange(e)}
-						/>
+						<input name="name" value={name} type="text" required onChange={(e) => onChange(e)} />
 					</div>
 					<div className={modalStyle.input_row}>
 						<label>Student Grade Level</label>
-						<input
-							name="grade"
-							placeholder="11th"
-							value={grade}
-							type="text"
-							required
-							onChange={(e) => onChange(e)}
-						/>
+						<input name="grade" value={grade} type="text" required onChange={(e) => onChange(e)} />
 					</div>
 					<div className={modalStyle.input_row}>
 						<label>Phone #</label>
-						<input
-							name="phone"
-							placeholder="631-555-5555"
-							value={phone}
-							type="phone"
-							required
-							onChange={(e) => onChange(e)}
-						/>
+						<input name="phone" value={phone} type="phone" required onChange={(e) => onChange(e)} />
 					</div>
 
 					<div className={modalStyle.input_row}>
 						<label>Message</label>
-						<textarea
-							name="message"
-							placeholder={`Hello, I would like to get more information regarding ${category}.`}
-							value={message}
-							required
-							onChange={(e) => onTextChange(e)}
-						></textarea>
+						<textarea name="message" value={message} required onChange={(e) => onTextChange(e)}></textarea>
 					</div>
 					<div className={modalStyle.input_row}>
 						<button onClick={(e) => onSubmit(e)}>Send</button>

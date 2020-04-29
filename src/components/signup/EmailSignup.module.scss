@@ -78,18 +78,24 @@
 			& input {
 				padding: 1rem 2rem;
 				background: transparent;
-				border: 2px solid $brand-secondary;
+				border: 2px solid $brand-main;
 				font-size: 16px;
 				color: $text-color;
 				transition: all 0.3s ease-in-out;
+				border-radius: 3px;
 				&::placeholder {
-					color: $brand-secondary;
+					color: $brand-main;
+					transition: all 0.3s ease-in-out;
 				}
 				&:focus {
-					outline: 3px solid $brand-main;
+					border-radius: 3px;
+					outline: 2px solid $brand-secondary;
 				}
 				&:hover {
-					border: 2px solid $brand-main;
+					border: 2px solid $brand-secondary;
+					&::placeholder {
+						color: $brand-secondary;
+					}
 				}
 			}
 			& button {
@@ -100,6 +106,7 @@
 				background: linear-gradient(45deg, $brand-main 50%, darken($brand-main, 5%) 30%);
 				font-size: 16px;
 				transition: all 0.3s ease-in-out;
+				border-radius: 3px;
 				&:hover {
 					cursor: pointer;
 					box-shadow: 0 5px 5px darken($brand-main, 5%);

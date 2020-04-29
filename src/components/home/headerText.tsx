@@ -37,7 +37,7 @@ export const headerText = [
 			{
 				par: (
 					<p>
-						-Students will take a qualifying test to see if preparing for the individual subjects test is in
+						Students will take a qualifying test to see if preparing for the individual subjects test is in
 						their best interests.
 					</p>
 				),
@@ -48,7 +48,7 @@ export const headerText = [
 	{
 		title: 'Johns Hopkins Program For Advanced Testing: The Center for Talented Youth',
 		id: 'CTY',
-		banner: `For the Johns Hopkins program, which test a student can take depends on their grade level, as listed above.`,
+		banner: `For the Johns Hopkins program, which test students can take depends on his/her grade level, as listed below.`,
 		text: [
 			{
 				par: <p>The School and Ability Test (SCAT) is offered only to students in grades 2-8.</p>,
@@ -95,7 +95,7 @@ export const headerText = [
 			{
 				par: (
 					<p>
-						Tutors typically communicate with students PRIOR to the lesson, so students know what material
+						Tutors typically communicate with students PRIOR to the lesson, so the tutors know what material
 						to cover.
 					</p>
 				),
@@ -124,7 +124,7 @@ export const headerText = [
 					</p>
 				),
 			},
-			{ par: <p>-Typically 90 minutes to two hour lessons.</p> },
+			{ par: <p>-Typically lessons are 90 minutes to two hours.</p> },
 			{
 				par: (
 					<p>
@@ -243,10 +243,19 @@ Our exclusive college consulting and life coaching program is a "White Glove Ser
 				par: <p>- extracurricular activities</p>,
 			},
 			{
-				par: <p>- common application essay</p>,
+				par: (
+					<p>
+						What do we do when our guidance counselor and english teachers do not have time to edit our
+						essays?
+					</p>
+				),
+			},
+			{ par: <p>We also offer:</p> },
+			{
+				par: <p>- editing common application essay</p>,
 			},
 			{
-				par: <p>- supplemental essays</p>,
+				par: <p>- editing supplemental essays</p>,
 			},
 			{
 				par: (
