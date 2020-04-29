@@ -6,7 +6,7 @@ export const headerText = [
 		id: 'AP',
 		banner: 'Are you ready for the new VIRTUAL AP exam in May 2020?',
 		text: [
-			{ par: <p>Is the new structure and format confusing?</p> },
+			{ par: <p>Are the new structures and formats confusing?</p> },
 			{
 				par: (
 					<p>
@@ -18,7 +18,7 @@ export const headerText = [
 			{
 				par: (
 					<p>
-						We can offer remote tutoring for a variety of AP exams based on your student's availability,
+						We can offer remote tutoring for a variety of AP exams based on the student's availability,
 						scheduling, and skillset.
 					</p>
 				),
@@ -32,15 +32,15 @@ export const headerText = [
 		banner: 'Some colleges require SAT II Subject Testing in addition to regular SAT tests.',
 		text: [
 			{
-				par: (
-					<p>
-						Your student will take a qualifying test to see if preparing for the test is in your best
-						interests.
-					</p>
-				),
+				par: <p>As a student/parent, how do I know if my son/daughter should take an SAT II Subject Test?</p>,
 			},
 			{
-				par: <p>As a student/parent, how do I know if my son/daughter should take an SAT II Subject Test?</p>,
+				par: (
+					<p>
+						-Students will take a qualifying test to see if preparing for the individual subjects test is in
+						their best interests.
+					</p>
+				),
 			},
 			{ par: <p>Students generally take the SAT II Subject Tests in June following their AP exams in May.</p> },
 		],
@@ -51,13 +51,12 @@ export const headerText = [
 		banner: `For the Johns Hopkins program, which test a student can take depends on their grade level, as listed above.`,
 		text: [
 			{
-				par: <p>The SChool and Ability Test (SCAT) is offered only to students in grades 2-8.</p>,
+				par: <p>The School and Ability Test (SCAT) is offered only to students in grades 2-8.</p>,
 			},
 			{ par: <p>The SCAT test contains a quantitative and verbal assessment.</p> },
 			{
 				par: <p>The SCAT test is computer-based, timed, multiple-choice, and flexibly scheduled.</p>,
 			},
-			{ par: <p>Please contact us for more information.</p> },
 		],
 	},
 	{
@@ -69,18 +68,18 @@ export const headerText = [
 				par: <p>Both tests are typically taken in 10th and 11th grades as precursors to the SAT/ACT.</p>,
 			},
 			{
-				par: <p>Typically offered once a year, these tests are conducted in schools on an assigned date.</p>,
+				par: <p>Typically offered once a year, these tests are conducted in schools on assigned dates.</p>,
 			},
 			{
 				par: (
 					<p>
-						Taken in 10th or 11th grade, the PSAT qualifies students for National Merit Scholarships. All
-						questions are multiple choice (no essay).
+						Taken in 11th grade, the PSAT qualifies students for National Merit Scholarships. All questions
+						are multiple choice (no essay).
 					</p>
 				),
 			},
 			{
-				par: <p>Typically, students prepare for these tests the summer before 10th/11th grade.</p>,
+				par: <p>Generally, students prepare for these tests the summer before 10th/11th grade.</p>,
 			},
 		],
 	},
@@ -93,7 +92,7 @@ export const headerText = [
 			{
 				par: <p>Elementary and Middle School tutoring also available (Reading/Writing/Math skills).</p>,
 			},
-			{ par: <p>1 Hour lessons (Typically).</p> },
+			{ par: <p>1 Hour lessons (Standard).</p> },
 			{ par: <p>Flexible Scheduling (On your son/daughter's schedule, not the tutor’s).</p> },
 			{
 				par: (
@@ -123,7 +122,7 @@ export const headerText = [
 				par: (
 					<p>
 						Step #2: Design a game plan to prepare for the official SAT/ACT and begin coordinating the
-						lessons with the tutor.
+						lessons with the tutors.
 					</p>
 				),
 			},
@@ -139,7 +138,7 @@ export const headerText = [
 			{
 				par: (
 					<p>
-						-No Commitment to any set number of lessons: one lesson at a time with each tutor and feedback.{' '}
+						-No Commitment to any set number of lessons: one lesson at a time with each tutor and feedback.
 					</p>
 				),
 			},
@@ -147,9 +146,8 @@ export const headerText = [
 			{
 				par: (
 					<p>
-						Step #3: After we've completed 3-4 lessons with each tutor, we will be taking our next
-						simulated/practice SAT/ACT test to help towards maximizing the student's score on official
-						testing.
+						Step #3: After the student has completed 3-4 lessons with each tutor, the student will then take
+						his/her next simulated practice SAT/ACT test.
 					</p>
 				),
 			},
@@ -166,7 +164,7 @@ export const headerText = [
 			{
 				par: (
 					<p>
-						What is the best strategy to get my SAT Verbal score from low-mid 600's to 700+, especially
+						What is the best strategy to increase my SAT Verbal score from low-mid 600's to 700+, especially
 						after working with a tutor?
 					</p>
 				),
@@ -180,7 +178,7 @@ export const headerText = [
 				),
 			},
 			{
-				par: <p>What are the best ways to approach "Math anxiety” on the "No Calculator" section?</p>,
+				par: <p>What are the best ways to alleviate"Math anxiety” on the "No Calculator" section?</p>,
 			},
 		],
 	},
@@ -190,10 +188,10 @@ export const headerText = [
 		banner: 'Tutoring for the SAT/ACT is our specialty.',
 		text: [
 			{
-				par: <p>What are the best ways to speed-read the ACT Reading section?</p>,
+				par: <p>What are the best speed reading methods to use on the ACT reading section?</p>,
 			},
 			{
-				par: <p>What will the new ACT Sectional testing(“a la carte”) starting in September involve?</p>,
+				par: <p>Will the new ACT Sectional testing(“a la carte”) take place in September?</p>,
 			},
 			{
 				par: <p>Why is the ACT Verbal more “coachable” than the SAT verbal?</p>,
@@ -247,19 +245,16 @@ Our exclusive college consulting and life coaching program is a "White Glove Ser
 				par: <p>- extracurricular activities</p>,
 			},
 			{
-				par: (
-					<p>
-						After working with the student and a person, we can edit college essays and supplements for all
-						schools, coach students through the athletic recruitment process, and help in all the steps of
-						the process—all the way to the final decision: school selection.
-					</p>
-				),
+				par: <p>- common application essay</p>,
+			},
+			{
+				par: <p>- supplemental essays</p>,
 			},
 			{
 				par: (
 					<p>
 						To see if this program is a good fit for you and your child, call today
-						<a href="tel:516-509-3186">516-509-3186</a>
+						<a href="tel:516-509-3186">516-509-3186</a>.
 					</p>
 				),
 			},
