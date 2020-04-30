@@ -123,7 +123,6 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 			loading: false,
 		});
 	}, [category, setMessage]);
-	console.log(loading);
 	return (
 		<div className={modalState ? modalStyle.container : modalStyle.container_hidden}>
 			<div className={modalStyle.background}></div>
