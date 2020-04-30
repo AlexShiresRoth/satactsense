@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import modalStyle from './Modal.module.scss';
-import { MdClose } from 'react-icons/md';
+import { MdClose, MdKeyboardArrowRight } from 'react-icons/md';
 import { socialIcons } from '../reusable/icons';
 import { setModalState } from '../../actions/modal';
 import { connect } from 'react-redux';
@@ -167,27 +167,64 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 					</div>
 					<div className={modalStyle.input_row}>
 						<label>Email</label>
-						<input name="email" type="email" value={email} required onChange={(e) => onChange(e)} />
+						<input
+							name="email"
+							type="email"
+							value={email}
+							required
+							onChange={(e) => onChange(e)}
+							placeholder="Enter your email"
+						/>
 					</div>
 					<div className={modalStyle.input_row}>
 						<label>Name</label>
-						<input name="name" value={name} type="text" required onChange={(e) => onChange(e)} />
+						<input
+							name="name"
+							value={name}
+							type="text"
+							required
+							onChange={(e) => onChange(e)}
+							placeholder="Enter your name"
+						/>
 					</div>
 					<div className={modalStyle.input_row}>
 						<label>Student Grade Level</label>
-						<input name="grade" value={grade} type="text" required onChange={(e) => onChange(e)} />
+						<input
+							name="grade"
+							value={grade}
+							type="text"
+							required
+							onChange={(e) => onChange(e)}
+							placeholder="Enter student grade"
+						/>
 					</div>
 					<div className={modalStyle.input_row}>
 						<label>Phone #</label>
-						<input name="phone" value={phone} type="phone" required onChange={(e) => onChange(e)} />
+						<input
+							name="phone"
+							value={phone}
+							type="phone"
+							required
+							onChange={(e) => onChange(e)}
+							placeholder="Enter your phone number"
+						/>
 					</div>
 
 					<div className={modalStyle.input_row}>
 						<label>Message</label>
-						<textarea name="message" value={message} required onChange={(e) => onTextChange(e)}></textarea>
+						<textarea
+							name="message"
+							value={message}
+							required
+							onChange={(e) => onTextChange(e)}
+							placeholder="Enter your message here"
+						></textarea>
 					</div>
 					<div className={modalStyle.input_row}>
-						<button onClick={(e) => onSubmit(e)}>Send</button>
+						<button onClick={(e) => onSubmit(e)}>
+							Submit
+							<MdKeyboardArrowRight />
+						</button>
 					</div>
 				</form>
 			</div>

@@ -1,43 +1,61 @@
 @import '../../../sass/variables';
 
 .section {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	justify-items: center;
 	align-items: center;
-	background: #f3f2f2c0;
+	gap: 2rem;
+	background: #f3f2f2;
 	padding: 2rem;
+	& .img_container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		& p {
+			font-weight: 700;
+		}
+		& img {
+			max-width: 12rem;
+			border-radius: 10px;
+			box-shadow: 0 5px 5px darken(#eee, 5%);
+		}
+	}
 	& .container {
 		display: flex;
 		flex-direction: column;
-		width: 80%;
+		overflow: hidden;
 		& h2 {
 			color: $alert;
 		}
-		& .copy_reduced {
-			max-height: 10rem;
+		& .copy {
+			max-height: 100vh;
 			transition: all 1s ease;
 			& p {
 				color: $brand-main;
 				line-height: 2;
-				max-width: 80%;
 				font-weight: 500;
+				display: flex;
+				align-items: center;
 			}
 		}
-		& .copy {
-			max-height: 100vh;
-			transition: all 0.5s ease;
+		& .copy_reduced {
+			max-height: 7rem;
+			transition: all 1s ease;
 			& p {
 				color: $brand-main;
 				line-height: 2;
-				max-width: 80%;
 				font-weight: 500;
 			}
 		}
+
 		& .copy_button_container {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			justify-content: center;
+			background: #f3f2f2;
 			& button {
 				background: transparent;
 				border: 0px solid transparent;
@@ -67,15 +85,22 @@
 
 @media screen and (max-width: 900px) {
 	.section {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, auto);
+		& .img_container {
+			& img {
+				max-width: 9rem;
+			}
+		}
 		& .container {
 			display: flex;
 			flex-direction: column;
-			width: 80%;
+			max-width: 70%;
 			& h2 {
 				color: $alert;
 			}
-			& .copy_reduced {
-				max-height: 60vh;
+			& .copy {
+				max-height: 300vh;
 				transition: all 1s ease;
 				& p {
 					color: $brand-main;
@@ -84,9 +109,9 @@
 					font-weight: 500;
 				}
 			}
-			& .copy {
-				max-height: 300vh;
-				transition: all 0.5s ease;
+			& .copy_reduced {
+				transition: all 1s ease;
+				max-height: 10rem;
 				& p {
 					color: $brand-main;
 					line-height: 2;
@@ -103,12 +128,13 @@
 		& .container {
 			display: flex;
 			flex-direction: column;
-			width: auto;
+			max-width: 90vw;
 			& h2 {
 				color: $alert;
 			}
-			& .copy_reduced {
-				max-height: 60vh;
+
+			& .copy {
+				max-height: 300vh;
 				transition: all 1s ease;
 				& p {
 					color: $brand-main;
@@ -118,9 +144,9 @@
 					font-size: 0.9rem;
 				}
 			}
-			& .copy {
-				max-height: 300vh;
-				transition: all 0.5s ease;
+			& .copy_reduced {
+				transition: all 1s ease;
+				max-height: 10rem;
 				& p {
 					color: $brand-main;
 					line-height: 2;

@@ -2,25 +2,26 @@
 
 .container {
 	visibility: visible;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	display: grid;
+	grid-template-rows: repeat(2, auto);
+	justify-items: center;
 	position: fixed;
 	background-color: #eeeeee;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='928' height='464' viewBox='0 0 160 80'%3E%3Cg fill='%23ffffff' fill-opacity='0.19'%3E%3Cpolygon points='0 10 0 0 10 0'/%3E%3Cpolygon points='0 40 0 30 10 30'/%3E%3Cpolygon points='0 30 0 20 10 20'/%3E%3Cpolygon points='0 70 0 60 10 60'/%3E%3Cpolygon points='0 80 0 70 10 70'/%3E%3Cpolygon points='50 80 50 70 60 70'/%3E%3Cpolygon points='10 20 10 10 20 10'/%3E%3Cpolygon points='10 40 10 30 20 30'/%3E%3Cpolygon points='20 10 20 0 30 0'/%3E%3Cpolygon points='10 10 10 0 20 0'/%3E%3Cpolygon points='30 20 30 10 40 10'/%3E%3Cpolygon points='20 20 20 40 40 20'/%3E%3Cpolygon points='40 10 40 0 50 0'/%3E%3Cpolygon points='40 20 40 10 50 10'/%3E%3Cpolygon points='40 40 40 30 50 30'/%3E%3Cpolygon points='30 40 30 30 40 30'/%3E%3Cpolygon points='40 60 40 50 50 50'/%3E%3Cpolygon points='50 30 50 20 60 20'/%3E%3Cpolygon points='40 60 40 80 60 60'/%3E%3Cpolygon points='50 40 50 60 70 40'/%3E%3Cpolygon points='60 0 60 20 80 0'/%3E%3Cpolygon points='70 30 70 20 80 20'/%3E%3Cpolygon points='70 40 70 30 80 30'/%3E%3Cpolygon points='60 60 60 80 80 60'/%3E%3Cpolygon points='80 10 80 0 90 0'/%3E%3Cpolygon points='70 40 70 60 90 40'/%3E%3Cpolygon points='80 60 80 50 90 50'/%3E%3Cpolygon points='60 30 60 20 70 20'/%3E%3Cpolygon points='80 70 80 80 90 80 100 70'/%3E%3Cpolygon points='80 10 80 40 110 10'/%3E%3Cpolygon points='110 40 110 30 120 30'/%3E%3Cpolygon points='90 40 90 70 120 40'/%3E%3Cpolygon points='10 50 10 80 40 50'/%3E%3Cpolygon points='110 60 110 50 120 50'/%3E%3Cpolygon points='100 60 100 80 120 60'/%3E%3Cpolygon points='110 0 110 20 130 0'/%3E%3Cpolygon points='120 30 120 20 130 20'/%3E%3Cpolygon points='130 10 130 0 140 0'/%3E%3Cpolygon points='130 30 130 20 140 20'/%3E%3Cpolygon points='120 40 120 30 130 30'/%3E%3Cpolygon points='130 50 130 40 140 40'/%3E%3Cpolygon points='120 50 120 70 140 50'/%3E%3Cpolygon points='110 70 110 80 130 80 140 70'/%3E%3Cpolygon points='140 10 140 0 150 0'/%3E%3Cpolygon points='140 20 140 10 150 10'/%3E%3Cpolygon points='140 40 140 30 150 30'/%3E%3Cpolygon points='140 50 140 40 150 40'/%3E%3Cpolygon points='140 70 140 60 150 60'/%3E%3Cpolygon points='150 20 150 40 160 30 160 20'/%3E%3Cpolygon points='150 60 150 50 160 50'/%3E%3Cpolygon points='140 70 140 80 150 80 160 70'/%3E%3C/g%3E%3C/svg%3E");
 	min-height: 100vh;
+	max-height: 100vh;
 	width: 100vw;
 	top: 0;
 	left: 0;
 	z-index: 99999;
 	transition: all 0.3s ease-in-out;
 	opacity: 0;
+	overflow-y: scroll;
 	animation: fadein 0.5s linear forwards;
 
 	& .background {
 		position: absolute;
-		height: 100%;
+		height: 150%;
 		width: 100%;
 		display: flex;
 		top: 0;
@@ -59,7 +60,6 @@
 		}
 	}
 	& .form_container {
-		min-height: 25vh;
 		min-width: 40vw;
 		z-index: 1;
 		display: flex;
@@ -99,7 +99,7 @@
 				width: 100%;
 				z-index: 0;
 				& h2 {
-					color: #fff;
+					color: $alert;
 					position: relative;
 					font-size: 1.2rem;
 					display: flex;
@@ -129,8 +129,8 @@
 		}
 		& form {
 			display: grid;
-			grid-template-columns: 1;
-			grid-template-rows: repeat(7, auto);
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, auto);
 			gap: 2rem;
 			& .input_row {
 				display: flex;
@@ -155,11 +155,11 @@
 					background: #eee;
 					border: 2px solid #eee;
 					border-radius: 3px;
-					padding: 0.5rem;
+					padding: 0.5rem 0;
 					width: 100%;
 					transition: all 0.3s ease;
 					&::placeholder {
-						color: rgba(238, 238, 238, 0.356);
+						color: #999;
 					}
 					&:hover {
 						border: 2px solid $brand-main;
@@ -173,13 +173,13 @@
 					color: $brand-main;
 					background: #eee;
 					border: 2px solid #eee;
-					padding: 0.5rem 0.5rem;
+					padding: 0.5rem 0;
 					min-height: 7rem;
 					max-height: 10rem;
 					width: 100%;
 					border-radius: 3px;
 					&::placeholder {
-						color: rgba(238, 238, 238, 0.356);
+						color: #999;
 					}
 					&:hover {
 						border: 2px solid $brand-main;
@@ -189,6 +189,9 @@
 					}
 				}
 				& button {
+					display: flex;
+					justify-content: center;
+					align-items: center;
 					padding: 1rem 0;
 					border-radius: 2px;
 					width: 100%;
@@ -198,6 +201,8 @@
 					text-transform: uppercase;
 					font-size: 1.2rem;
 					letter-spacing: 1px;
+					border-radius: 150px;
+					box-shadow: 0 5px 15px $brand-main;
 					transition: all 0.3s ease-in-out;
 					&:hover {
 						cursor: pointer;
@@ -207,8 +212,7 @@
 			}
 			& .input_row:last-child {
 				justify-content: center;
-				grid-column-start: 1;
-				grid-column-end: 3;
+				grid-column-start: 2;
 			}
 		}
 	}
@@ -221,10 +225,42 @@
 
 @media screen and (max-width: 900px) {
 	.container {
+		overflow-y: scroll;
+		display: grid;
+		justify-items: center;
+		max-height: 100vh;
+
+		& .logo_container {
+			display: flex;
+			align-items: flex-start;
+			margin: 1rem 0 0 0;
+			z-index: 9999;
+			& img {
+				max-width: 3rem;
+			}
+			& h2 {
+				color: $brand-main;
+				font-weight: 700;
+				margin: 0;
+				font-size: 1.2rem;
+			}
+			& p {
+				margin: 0;
+				font-size: 0.9rem;
+			}
+		}
+		& .background {
+			position: absolute;
+			height: auto;
+			min-height: 150%;
+			width: 100%;
+			display: flex;
+			top: 0;
+			left: 0;
+			background: linear-gradient(170deg, transparent 60%, $brand-main 0%);
+		}
 		& .form_container {
-			max-height: 100vh;
-			overflow-y: scroll;
-			padding: 2rem 1rem;
+			padding: 3rem;
 			max-width: 70vw;
 			& form {
 				display: flex;
@@ -251,7 +287,7 @@
 						padding: 0.5rem 0;
 					}
 					& textarea {
-						padding: 0.3rem 0.1rem;
+						padding: 0.5rem 0;
 						min-height: 5rem;
 						max-height: 7rem;
 					}
