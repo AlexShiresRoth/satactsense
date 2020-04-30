@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import modalStyle from './Modal.module.scss';
+import LoadingSpinner from '../reusable/LoadingSpinner';
 import { MdClose, MdKeyboardArrowRight } from 'react-icons/md';
 import { socialIcons } from '../reusable/icons';
 import { setModalState } from '../../actions/modal';
@@ -33,14 +34,14 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 
 	const [modalMessage, setMessage] = useState({
 		status: [`Please Contact us for more information regarding "${category}".`],
-		loading: false,
 		error: false,
+		loading: false,
 		success: false,
 	});
 
-	const { status, loading, error, success } = modalMessage;
+	const { status, error, loading, success } = modalMessage;
 
-	const { email, name, phone, message, grade, subject } = formData;
+	const { email, name, phone, message, grade } = formData;
 
 	const onChange = (e: React.FormEvent<HTMLInputElement>) =>
 		setFormData({ ...formData, [e.currentTarget.name]: e.currentTarget.value });
@@ -51,14 +52,14 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 		e.preventDefault();
 		setMessage({
 			status: ['Sending...'],
-			loading: true,
 			error: false,
 			success: false,
+			loading: true,
 		});
 		try {
 			await axios({
 				method: 'POST',
-				url: `http://localhost:5000/api/satactsense/send-email`,
+				url: `https://asrserver.herokuapp.com/api/satactsense/send-email`,
 				data: {
 					headers: {
 						'Content-Type': 'application/x-www-form-urlencoded',
@@ -69,8 +70,8 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 			});
 			setMessage({
 				status: ['Thank you, your message has been received. Someone will contact you shortly!'],
-				loading: false,
 				success: true,
+				loading: false,
 				error: false,
 			});
 			setTimeout(() => {
@@ -81,16 +82,16 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 			if (!error.response) {
 				setMessage({
 					status: ['Something went wrong, please retry sending.'],
-					loading: false,
 					success: false,
+					loading: false,
 					error: true,
 				});
 				return;
 			}
 			setMessage({
 				status: error.response.data.msg.map((msg: any) => `${msg.param}: ${msg.msg}`),
-				loading: false,
 				success: false,
+				loading: false,
 				error: true,
 			});
 		}
@@ -106,9 +107,9 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 		});
 		setMessage({
 			status: [`Please Contact us for more information regarding "${category}."`],
-			loading: false,
 			error: false,
 			success: false,
+			loading: false,
 		});
 		setModalState(false);
 		return () => clearInterval();
@@ -117,28 +118,32 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 	useEffect(() => {
 		setMessage({
 			status: [`Please Contact us for more information regarding "${category}."`],
-			loading: false,
 			error: false,
 			success: false,
+			loading: false,
 		});
 	}, [category, setMessage]);
-
+	console.log(loading);
 	return (
 		<div className={modalState ? modalStyle.container : modalStyle.container_hidden}>
 			<div className={modalStyle.background}></div>
-			<div className={modalStyle.logo_container}>
-				<div>{logo}</div>
-				<div>
-					<h2>SATACTSENSE</h2>
-					<p>Making Sense of the SAT/ACT</p>
-				</div>
-			</div>
-			<div className={modalStyle.icons}>{socialIcons}</div>
 			<div className={modalStyle.form_container}>
+				<div className={modalStyle.header}>
+					<div className={modalStyle.logo_container}>
+						<div>{logo}</div>
+						<div>
+							<h2>SATACTSENSE</h2>
+							<p>Making Sense of the SAT/ACT</p>
+						</div>
+					</div>
+					<div className={modalStyle.icons}>{socialIcons}</div>
+				</div>
 				<div className={modalStyle.heading}>
 					<div className={modalStyle.status}>
 						{status.map((text) => {
-							return (
+							return loading ? (
+								<LoadingSpinner />
+							) : (
 								<h2
 									className={
 										loading

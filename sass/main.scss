@@ -12,7 +12,10 @@ body {
 	color: $text-color;
 	overflow-x: hidden;
 }
-p {
+p,
+input,
+label,
+textarea {
 	font-size: 16px;
 	font-weight: 100;
 	font-family: 'Montserrat', sans-serif, serif;

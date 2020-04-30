@@ -7,10 +7,9 @@ import { IoIosMenu, IoIosClose } from 'react-icons/io';
 interface MobileProps {
 	subjectTabs: Array<any>;
 	handleCurrentChange: (e: any, subject: string) => any;
-	handleScrollDown: (val: number) => any;
 }
 
-const MobileNav = ({ subjectTabs, handleCurrentChange, handleScrollDown }: MobileProps) => {
+const MobileNav = ({ subjectTabs, handleCurrentChange }: MobileProps) => {
 	const [menuOpen, setMenuState] = useState(false);
 
 	return (
@@ -31,7 +30,6 @@ const MobileNav = ({ subjectTabs, handleCurrentChange, handleScrollDown }: Mobil
 											onClick={(e) => {
 												handleCurrentChange(e, subject.id);
 												setMenuState(!menuOpen);
-												handleScrollDown(500);
 											}}
 										>
 											{subject.title}
@@ -44,7 +42,6 @@ const MobileNav = ({ subjectTabs, handleCurrentChange, handleScrollDown }: Mobil
 													onClick={(e) => {
 														handleCurrentChange(e, item.dropid);
 														setMenuState(!menuOpen);
-														handleScrollDown(500);
 													}}
 												>
 													{item.title}
@@ -59,7 +56,6 @@ const MobileNav = ({ subjectTabs, handleCurrentChange, handleScrollDown }: Mobil
 										onClick={(e) => {
 											handleCurrentChange(e, subject.id);
 											setMenuState(!menuOpen);
-											handleScrollDown(500);
 										}}
 									>
 										{subject.title}

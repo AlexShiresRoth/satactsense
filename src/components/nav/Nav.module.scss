@@ -95,6 +95,10 @@
 						cursor: pointer;
 					}
 				}
+				& button:nth-of-type(2) {
+					border: 1px solid $alert;
+					background: $alert;
+				}
 				& .faq_container {
 					min-height: 100vh;
 					max-height: 100vh;
@@ -397,24 +401,24 @@
 					padding: 0 1rem;
 					width: 100%;
 					& h2 {
-						font-family:'Wotfard';
+						font-family: 'Wotfard';
 						margin: 0;
 						font-size: 1rem;
 						font-weight: 500;
 						color: #fff;
-						display:flex;
+						display: flex;
 						align-items: center;
 						& svg {
-							width:2rem;
+							width: 2rem;
 							font-size: 1.2rem;
 							border-radius: 10px;
-							padding:1rem;
-							margin:0 .5rem;;
+							padding: 1rem;
+							margin: 0 0.5rem;
 							box-shadow: 0 2px 2px $alert;
 						}
 					}
 					& p {
-						font-family:'Wotfard';
+						font-family: 'Wotfard';
 						margin: 0.5rem 0;
 						font-size: 0.9rem;
 						font-weight: 100;
@@ -424,7 +428,7 @@
 						& svg {
 							fill: $brand-main;
 							width: 2rem;
-							font-size: .9rem;
+							font-size: 0.9rem;
 						}
 					}
 				}
@@ -547,7 +551,7 @@
 						width: 100%;
 					}
 					& .faq_container {
-						padding: 0rem;
+						padding: 2rem 0;
 						width: 100vw;
 						& .faq {
 							max-width: 80vw;

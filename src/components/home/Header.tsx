@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import headerStyle from './Header.module.scss';
 import Copy from './Copy';
+import LoadingSpinner from '../reusable/LoadingSpinner';
 import { headerText } from './headerText';
 import { setBanner, setRef } from '../../actions/headerData';
 import { setModalState, setCategory } from '../../actions/modal';
@@ -13,11 +14,12 @@ interface HeaderProps {
 	setCategory: (val: string) => any;
 	headerData: {
 		data: any;
+		loading: boolean;
 	};
 	setRef: (val: any) => any;
 }
 
-const Header = ({ setBanner, setRef, headerData: { data }, setModalState, setCategory }: HeaderProps) => {
+const Header = ({ setBanner, setRef, headerData: { data, loading }, setModalState, setCategory }: HeaderProps) => {
 	const [slideStart, setSlideStart] = useState(0);
 
 	const headerRef = useRef(null);
@@ -31,14 +33,18 @@ const Header = ({ setBanner, setRef, headerData: { data }, setModalState, setCat
 		<header className={headerStyle.header} ref={headerRef}>
 			<div className={headerStyle.grid}>
 				<div className={headerStyle.copy}>
-					<Copy
-						headerText={headerText}
-						setSlideStart={setSlideStart}
-						slideStart={slideStart}
-						data={data}
-						setModalState={setModalState}
-						setCategory={setCategory}
-					/>
+					{loading ? (
+						<LoadingSpinner />
+					) : (
+						<Copy
+							headerText={headerText}
+							setSlideStart={setSlideStart}
+							slideStart={slideStart}
+							data={data}
+							setModalState={setModalState}
+							setCategory={setCategory}
+						/>
+					)}
 				</div>
 				<div className={headerStyle.right_col}>
 					<h1>

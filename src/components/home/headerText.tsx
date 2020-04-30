@@ -37,7 +37,7 @@ export const headerText = [
 			{
 				par: (
 					<p>
-						Students will take a qualifying test to see if preparing for the individual subjects test is in
+						Students will take a qualifying test to see if preparing for the individual subject test is in
 						their best interests.
 					</p>
 				),
@@ -57,6 +57,9 @@ export const headerText = [
 			{
 				par: <p>The SCAT test is computer-based, timed, multiple-choice, and flexibly scheduled.</p>,
 			},
+			{ par: <p>The PSAT is offered only to sudents in between grades 5 and 6.</p> },
+
+			{ par: <p>The SAT is offered only to sudents in between grades 7 and 8.</p> },
 		],
 	},
 	{
@@ -186,13 +189,13 @@ export const headerText = [
 		banner: 'Tutoring for the SAT/ACT is our specialty.',
 		text: [
 			{
-				par: <p>What are the best speed reading methods to use on the ACT reading section?</p>,
+				par: <p>What are the best speed Reading methods to use on the ACT Reading section?</p>,
 			},
 			{
 				par: <p>Will the new ACT Sectional testing(“a la carte”) take place in September?</p>,
 			},
 			{
-				par: <p>Why is the ACT Verbal more “coachable” than the SAT verbal?</p>,
+				par: <p>Why is the ACT Verbal more “coachable” than the SAT Verbal?</p>,
 			},
 			{
 				par: <p>How do I prepare for the ACT Science section?</p>,
@@ -202,7 +205,7 @@ export const headerText = [
 	{
 		title: 'College Consulting and Life Coaching',
 		id: 'CCLC',
-		banner: `Not sure where to start your college applications process? We can help.
+		banner: `Not sure where to start your college application process? We can help.
 Our exclusive college consulting and life coaching program is a "White Glove Service." `,
 		text: [
 			{
@@ -218,8 +221,8 @@ Our exclusive college consulting and life coaching program is a "White Glove Ser
 				par: (
 					<p>
 						During our initial evaluation session, our professional consultants interview candidates without
-						a script to gain a good understanding of “who they really are" and assess which schools might be
-						good fits.
+						a script to gain a better understanding of “who they really are" and assess which schools might
+						be good fits.
 					</p>
 				),
 			},
@@ -242,21 +245,12 @@ Our exclusive college consulting and life coaching program is a "White Glove Ser
 			{
 				par: <p>- extracurricular activities</p>,
 			},
-			{
-				par: (
-					<p>
-						What do we do when our guidance counselor and english teachers do not have time to edit our
-						essays?
-					</p>
-				),
-			},
+
 			{ par: <p>We also offer:</p> },
 			{
-				par: <p>- editing common application essay</p>,
+				par: <p>- Editing services for the common application essay and supplemental essay.</p>,
 			},
-			{
-				par: <p>- editing supplemental essays</p>,
-			},
+
 			{
 				par: (
 					<p>
