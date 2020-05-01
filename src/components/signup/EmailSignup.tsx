@@ -33,7 +33,7 @@ const EmailSignup = (props: any) => {
 		try {
 			await axios({
 				method: 'POST',
-				url: `http://localhost:5000/api/satactsense/send-email/signup`,
+				url: `https://asrserver.herokuapp.com/api/satactsense/send-email/signup`,
 				data: {
 					headers: {
 						'Content-Type': 'application/x-www-form-urlencoded',
