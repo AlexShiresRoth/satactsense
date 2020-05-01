@@ -550,6 +550,10 @@
 						margin: 0.2rem 0;
 						width: 100%;
 						padding: 0.5rem;
+						justify-content: space-around;
+						& svg {
+							margin: 0;
+						}
 					}
 					& .faq_container {
 						padding: 0.5rem 0;
@@ -611,15 +615,15 @@
 						min-width: 7rem;
 						width: 100%;
 						flex: 1;
-						flex-grow: 2;
+						border: 1px solid #eee;
 						& button {
 							width: 100%;
+							text-align: center;
 						}
 					}
 				}
 				& .banner {
 					padding: 1rem 0.5rem;
-
 					background: linear-gradient(45deg, $alert 100%, transparent 90%);
 					& .banner_container {
 						padding: 0;
@@ -628,6 +632,9 @@
 						& h2 {
 							font-size: 0.9rem;
 							font-weight: 100;
+							& svg {
+								padding: 0.5rem;
+							}
 						}
 						& p {
 							color: $brand-secondary;
