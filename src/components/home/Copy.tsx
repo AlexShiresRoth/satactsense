@@ -30,7 +30,6 @@ const Copy = ({ headerText, setCategory, setModalState, setSlideStart, slideStar
 									return par.par;
 								})
 						: item.text.map((par: any, i: number) => {
-								console.log(item.text.length);
 								return !par.link ? (
 									par.par
 								) : (

@@ -237,7 +237,6 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 };
 
 const mapStateToProps = (state: any) => {
-	console.log(state);
 	return {
 		modalState: state.modalState,
 		modal: state.modal,
