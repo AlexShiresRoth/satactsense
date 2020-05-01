@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import signupStyle from './EmailSignup.module.scss';
 import axios from 'axios';
+import LoadingSpinner from '../reusable/LoadingSpinner';
 
 const EmailSignup = (props: any) => {
 	const [formData, setFormData] = useState({
@@ -93,7 +94,7 @@ const EmailSignup = (props: any) => {
 						: signupStyle.alert
 				}
 			>
-				{message}
+				{loading ? <LoadingSpinner /> : message}
 			</div>
 			<div className={signupStyle.grid}>
 				<h3>
