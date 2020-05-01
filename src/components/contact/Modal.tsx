@@ -127,6 +127,9 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 		<div className={modalState ? modalStyle.container : modalStyle.container_hidden}>
 			<div className={modalStyle.background}></div>
 			<div className={modalStyle.form_container}>
+				<button className={modalStyle.close_button} onClick={() => closeModal()}>
+					<MdClose />
+				</button>
 				<div className={modalStyle.header}>
 					<div className={modalStyle.logo_container}>
 						<div>{logo}</div>
@@ -137,6 +140,7 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 					</div>
 					<div className={modalStyle.icons}>{socialIcons}</div>
 				</div>
+
 				<div className={modalStyle.heading}>
 					<div className={modalStyle.status}>
 						{status.map((text) => {
@@ -159,10 +163,6 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 							);
 						})}
 					</div>
-
-					<button onClick={() => closeModal()}>
-						<MdClose />
-					</button>
 				</div>
 				<form onSubmit={(e) => onSubmit(e)}>
 					<div className={modalStyle.input_row}>

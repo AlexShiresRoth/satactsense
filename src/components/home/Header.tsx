@@ -54,7 +54,7 @@ const Header = ({ setBanner, setRef, headerData: { data, loading }, setModalStat
 					<button
 						onClick={() => {
 							setModalState(true);
-							setCategory('Virtual Tutoring Consultation');
+							setCategory('Virtual Tutoring Consultations');
 						}}
 					>
 						Book now!

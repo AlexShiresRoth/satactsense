@@ -114,7 +114,7 @@
 			}
 			& button {
 				width: 80%;
-				height: 3rem;
+				min-height: 3rem;
 				background: $alert;
 				border: 1px solid $alert;
 				box-shadow: 0 1px 22px darken($alert, 1%);
