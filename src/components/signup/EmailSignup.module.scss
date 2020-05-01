@@ -126,13 +126,18 @@
 				font-size: 1rem;
 				text-align: center;
 			}
-			& form {
-				& input {
-					padding: 0.5rem 1rem;
-				}
-				& button {
-					margin: 0;
-					padding: 0.5rem 3rem;
+			& .form_container {
+				display: flex;
+				justify-content: center;
+				& form {
+					width: 80%;
+					& input {
+						padding: 0.5rem 0;
+					}
+					& button {
+						margin: 0;
+						padding: 0.5rem 3rem;
+					}
 				}
 			}
 		}

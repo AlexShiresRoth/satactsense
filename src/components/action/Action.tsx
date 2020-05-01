@@ -15,7 +15,7 @@ const Action = ({ setCategory, setModalState }: ActioProps) => {
 			<button
 				onClick={() => {
 					setModalState(true);
-					setCategory('Virtual Tutoring Consultation');
+					setCategory('Virtual Tutoring Consultations');
 				}}
 			>
 				Book now!

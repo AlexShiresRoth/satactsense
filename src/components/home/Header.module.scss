@@ -228,10 +228,11 @@
 		& .grid {
 			margin: 0;
 			width: 80vw;
+			gap: 1rem;
 			& .copy {
 				width: 100%;
 				& h2 {
-					font-size: 1.5rem;
+					font-size: 2rem;
 				}
 			}
 			& .right_col {
@@ -239,7 +240,7 @@
 				width: 100%;
 				max-width: 100%;
 				& h1 {
-					font-size: 1.5rem;
+					font-size: 1.3rem;
 				}
 				& button {
 					width: 100%;

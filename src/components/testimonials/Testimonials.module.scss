@@ -213,6 +213,9 @@
 @media screen and (max-width: 600px) {
 	.section {
 		padding: 2rem 0;
+		& .heading {
+			margin: 2rem 0;
+		}
 		& .inner {
 			& .arrow_container {
 				& svg {

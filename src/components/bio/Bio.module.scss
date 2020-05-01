@@ -125,6 +125,13 @@
 
 @media screen and (max-width: 600px) {
 	.section {
+		& .img_container {
+			& img {
+				max-width: 6rem;
+				border-radius: 50%;
+				border: 2px solid #eee;
+			}
+		}
 		& .container {
 			display: flex;
 			flex-direction: column;
