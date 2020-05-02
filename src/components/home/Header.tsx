@@ -17,18 +17,38 @@ interface HeaderProps {
 		loading: boolean;
 	};
 	setRef: (val: any) => any;
+	modal: {
+		modalState: boolean;
+	};
 }
-
-const Header = ({ setBanner, setRef, headerData: { data, loading }, setModalState, setCategory }: HeaderProps) => {
+const Header = ({
+	setBanner,
+	setRef,
+	headerData: { data, loading },
+	modal: { modalState },
+	setModalState,
+	setCategory,
+}: HeaderProps) => {
 	const [slideStart, setSlideStart] = useState(0);
 
 	const headerRef = useRef(null);
+
+	const handleModalOpen = () => {
+		const html = document.querySelector('html');
+		return modalState && html !== null
+			? (html.style.overflow = 'hidden')
+			: html !== null
+			? (html.style.overflow = 'visible')
+			: null;
+	};
 
 	useEffect(() => {
 		setBanner(headerText.filter((item) => item.id === data)[0].banner);
 		setRef(headerRef);
 		setSlideStart(0);
-	}, [data, setBanner, headerRef, setRef]);
+		handleModalOpen();
+	}, [data, setBanner, headerRef, setRef, modalState]);
+
 	return (
 		<header className={headerStyle.header} ref={headerRef}>
 			<div className={headerStyle.grid}>
@@ -70,7 +90,7 @@ const mapStateToProps = (state: any) => {
 	return {
 		headerData: state.headerData,
 		bannerData: state.headerData.banner,
-		modalState: state.modalState,
+		modal: state.modal,
 	};
 };
 
