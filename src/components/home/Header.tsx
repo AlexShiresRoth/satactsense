@@ -36,9 +36,9 @@ const Header = ({
 	const handleModalOpen = () => {
 		const html = document.querySelector('html');
 		return modalState && html !== null
-			? (html.style.overflow = 'hidden')
+			? (html.style.overflowY = 'hidden')
 			: html !== null
-			? (html.style.overflow = 'visible')
+			? (html.style.overflowY = 'scroll')
 			: null;
 	};
 
