@@ -130,38 +130,40 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 				<button className={modalStyle.close_button} onClick={() => closeModal()}>
 					<MdClose />
 				</button>
-				<div className={modalStyle.header}>
-					<div className={modalStyle.logo_container}>
-						<div>{logo}</div>
-						<div>
-							<h2>SATACTSENSE</h2>
-							<p>Making Sense of the SAT/ACT</p>
+				<div className={modalStyle.left_column}>
+					<div className={modalStyle.header}>
+						<div className={modalStyle.logo_container}>
+							<div>{logo}</div>
+							<div>
+								<h2>SATACTSENSE</h2>
+								<p>Making Sense of the SAT/ACT</p>
+							</div>
 						</div>
+						<div className={modalStyle.icons}>{socialIcons}</div>
 					</div>
-					<div className={modalStyle.icons}>{socialIcons}</div>
-				</div>
 
-				<div className={modalStyle.heading}>
-					<div className={modalStyle.status}>
-						{status.map((text) => {
-							return loading ? (
-								<LoadingSpinner />
-							) : (
-								<h2
-									className={
-										loading
-											? modalStyle.loading
-											: error
-											? modalStyle.error
-											: success
-											? modalStyle.success
-											: ''
-									}
-								>
-									{text}
-								</h2>
-							);
-						})}
+					<div className={modalStyle.heading}>
+						<div className={modalStyle.status}>
+							{status.map((text) => {
+								return loading ? (
+									<LoadingSpinner />
+								) : (
+									<h2
+										className={
+											loading
+												? modalStyle.loading
+												: error
+												? modalStyle.error
+												: success
+												? modalStyle.success
+												: ''
+										}
+									>
+										{text}
+									</h2>
+								);
+							})}
+						</div>
 					</div>
 				</div>
 				<form onSubmit={(e) => onSubmit(e)}>
