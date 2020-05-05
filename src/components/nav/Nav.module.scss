@@ -79,7 +79,8 @@
 					justify-content: flex-start;
 					align-items: center;
 					border-radius: 5px;
-					padding: 0.5rem 1rem;
+					min-height: 2.5rem;
+					padding: 0 1rem;
 					margin: 0 0.5rem;
 					color: #fff;
 					border: 1px solid $brand-main;
@@ -549,10 +550,12 @@
 					& button:not(:last-child) {
 						margin: 0.2rem 0;
 						width: 100%;
+						min-width: 5rem;
 						padding: 0.5rem;
 						justify-content: space-around;
 						& svg {
 							margin: 0;
+							font-size: 1.3rem;
 						}
 					}
 					& .faq_container {

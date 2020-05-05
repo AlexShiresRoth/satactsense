@@ -33,6 +33,8 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 
 	const [current, setCurrent] = useState('AP');
 
+	const [isMobile, setMobile] = useState(window.innerWidth <= 600);
+
 	const handleCurrentChange = (e: React.MouseEvent, item: string) => {
 		e.stopPropagation();
 		setCurrent(item);
@@ -41,6 +43,14 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 	useEffect(() => {
 		setHeaderData(current);
 	}, [current, data, setHeaderData]);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setMobile(window.innerWidth <= 600);
+		};
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	});
 
 	return (
 		<nav className={navStyle.nav}>
@@ -55,20 +65,40 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 						</div>
 					</div>
 					<div className={navStyle.nav_contact}>
-						<Faq logo={logo} />
-						<button
-							onClick={() => {
-								setModalState(true);
-								setCategory('General Tutoring');
-							}}
-						>
-							{' '}
-							<GoMail /> Book Now
-						</button>
-						<a href="tel:555-555-5555">
-							<MdPhoneInTalk />
-							516-509-3186
-						</a>
+						<Faq logo={logo} isMobile={isMobile} />
+						{!isMobile ? (
+							<>
+								<button
+									onClick={() => {
+										setModalState(true);
+										setCategory('General Tutoring');
+									}}
+								>
+									{' '}
+									<GoMail /> Book Now
+								</button>
+								<a href="tel:516-509-3186">
+									<MdPhoneInTalk />
+									516-509-3186
+								</a>
+							</>
+						) : (
+							<>
+								<button
+									onClick={() => {
+										setModalState(true);
+										setCategory('General Tutoring');
+									}}
+								>
+									{' '}
+									<GoMail />
+								</button>
+								<a href="tel:516-509-3186">
+									<MdPhoneInTalk />
+									516-509-3186
+								</a>
+							</>
+						)}
 					</div>
 				</div>
 				<MobileNav subjectTabs={serviceLinks} handleCurrentChange={handleCurrentChange} />

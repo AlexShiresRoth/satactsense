@@ -6,14 +6,23 @@ import { AiOutlineQuestionCircle } from 'react-icons/ai';
 
 interface FaqProps {
 	logo: any;
+	isMobile: boolean;
 }
 
-const Faq = ({ logo }: FaqProps) => {
+const Faq = ({ logo, isMobile }: FaqProps) => {
 	const [showFaq, setFaqState] = useState(false);
 	return (
 		<>
 			<button onClick={() => setFaqState(!showFaq)}>
-				<AiOutlineQuestionCircle /> FAQ
+				{!isMobile ? (
+					<>
+						<AiOutlineQuestionCircle /> FAQ
+					</>
+				) : (
+					<>
+						<AiOutlineQuestionCircle />{' '}
+					</>
+				)}
 			</button>
 			<div className={showFaq ? faqStyle.faq_container : faqStyle.hidden}>
 				<div className={faqStyle.faq}>
