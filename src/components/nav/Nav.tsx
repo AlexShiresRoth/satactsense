@@ -13,6 +13,7 @@ import { setHeaderData } from '../../actions/headerData';
 import { setModalState, setCategory } from '../../actions/modal';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import PopUp from '../contact/PopUp';
 
 interface NavProps {
 	setHeaderData: (current: string) => any;
@@ -24,7 +25,7 @@ interface NavProps {
 	ref?: any;
 }
 
-const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, setCategory }: NavProps) => {
+const Nav = ({ headerData: { data, bannerData }, setModalState, setCategory }: NavProps) => {
 	const logo = (
 		<img
 			src="https://res.cloudinary.com/snackmanproductions/image/upload/v1586538815/satactsense/sat_logo_lpezq0.png"
@@ -45,6 +46,7 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 	return (
 		<nav className={navStyle.nav}>
 			<Modal />
+			<PopUp />
 			<div className={navStyle.nav__inner}>
 				<div className={navStyle.tier}>
 					<div className={navStyle.left}>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import navStyle from './Nav.module.scss';
 import { connect } from 'react-redux';
 import { IoIosMenu, IoIosClose } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 interface MobileProps {
 	subjectTabs: Array<any>;
@@ -25,6 +25,35 @@ const MobileNav = ({ subjectTabs }: MobileProps) => {
 							return subject.dropdown.length > 0 ? (
 								<>
 									<li>
+										<Link to={subject.path}>
+											<button
+												onClick={(e) => {
+													setMenuState(!menuOpen);
+												}}
+											>
+												{subject.title}
+											</button>
+										</Link>
+									</li>
+									<li key={i}>
+										{subject.dropdown.map((item: any) => {
+											return (
+												<Link to={item.path}>
+													<button
+														onClick={(e) => {
+															setMenuState(!menuOpen);
+														}}
+													>
+														{item.title}
+													</button>
+												</Link>
+											);
+										})}
+									</li>
+								</>
+							) : (
+								<li key={i}>
+									<Link to={subject.path}>
 										<button
 											onClick={(e) => {
 												setMenuState(!menuOpen);
@@ -32,30 +61,7 @@ const MobileNav = ({ subjectTabs }: MobileProps) => {
 										>
 											{subject.title}
 										</button>
-									</li>
-									<li key={i}>
-										{subject.dropdown.map((item: any) => {
-											return (
-												<button
-													onClick={(e) => {
-														setMenuState(!menuOpen);
-													}}
-												>
-													{item.title}
-												</button>
-											);
-										})}
-									</li>
-								</>
-							) : (
-								<li key={i}>
-									<button
-										onClick={(e) => {
-											setMenuState(!menuOpen);
-										}}
-									>
-										{subject.title}
-									</button>
+									</Link>
 								</li>
 							);
 						})}

@@ -97,7 +97,7 @@ export const subjectArray = [
 
 //First set of tabs(Blue)
 export const serviceLinks = [
-	{ title: 'Home', path: '/landing', id: 'LANDING', dropdown: [] },
+	{ title: 'Home', path: '/', id: 'LANDING', dropdown: [] },
 	{
 		title: 'AP/SAT II Subject Testing',
 		path: '/ap',

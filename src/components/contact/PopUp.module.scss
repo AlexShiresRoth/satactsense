@@ -1,0 +1,204 @@
+@import '../../../sass/variables';
+
+@font-face {
+	font-family: 'Wotfard';
+	src: url('../fonts/wotfard.ttf');
+}
+.popup_container {
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	& .popup {
+		display: flex;
+		flex-direction: column;
+		background: #fff;
+		padding: 2rem;
+		& .heading {
+			display: grid;
+			grid-template-columns: repeat(3, auto);
+			gap: 3rem;
+			justify-items: center;
+			align-items: center;
+			border-bottom: 1px solid #eee;
+			& img {
+				max-width: 5rem;
+			}
+			& h2 {
+				margin: 0;
+				font-weight: 700;
+				color: $brand-main;
+				font-family: 'Wotfard';
+			}
+			& p {
+				margin: 0;
+			}
+			& button {
+				padding: 1rem;
+				background: $brand-main;
+				border-radius: 50%;
+				border: 1px solid $brand-main;
+				color: #fff;
+				font-size: 1.2rem;
+				display: flex;
+				align-items: center;
+				box-shadow: 0 1px 15px lighten($brand-main, 5%);
+				transition: all 0.3s ease;
+				&:hover {
+					cursor: pointer;
+					box-shadow: 0 1px 5px lighten($brand-main, 5%);
+				}
+			}
+		}
+		& .msg {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			& p {
+				width: 100%;
+				text-align: center;
+				font-size: 1.2rem;
+				padding: 0.5rem;
+				border-radius: 5px;
+				color: $brand-main;
+			}
+			& .error {
+				background: rgba(241, 74, 74, 0.39);
+				color: #fff;
+			}
+			& .success {
+				background: rgba(33, 149, 33, 0.712);
+				color: #fff;
+			}
+		}
+		& form {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 1rem 0;
+			& input {
+				padding: 0.5rem 1rem;
+				border: 2px solid #eee;
+			}
+			& button {
+				padding: 0.5rem 1rem;
+				border: 2px solid $brand-main;
+				background: $brand-main;
+				color: #fff;
+				font-size: 16px;
+				transition: all 0.3s ease;
+				&:hover {
+					cursor: pointer;
+					background: lighten($brand-main, 5%);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.popup_container {
+		height: 100%;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.3);
+		position: fixed;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: 0;
+		z-index: 99999;
+		& .popup {
+			display: flex;
+			flex-direction: column;
+			background: #fff;
+			padding: 2rem;
+			& .heading {
+				display: grid;
+				grid-template-columns: repeat(3, auto);
+				gap: 0.5rem;
+				justify-items: center;
+				align-items: center;
+
+				& img {
+					max-width: 5rem;
+				}
+				& h2 {
+					margin: 0;
+					font-weight: 700;
+					color: $brand-main;
+					font-family: 'Wotfard';
+				}
+				& p {
+					margin: 0;
+				}
+				& button {
+					padding: 1rem;
+					background: $brand-main;
+					border-radius: 50%;
+					border: 1px solid $brand-main;
+					color: #fff;
+					font-size: 1.2rem;
+					display: flex;
+					align-items: center;
+					box-shadow: 0 1px 15px lighten($brand-main, 5%);
+					transition: all 0.3s ease;
+					&:hover {
+						cursor: pointer;
+						box-shadow: 0 1px 5px lighten($brand-main, 5%);
+					}
+				}
+			}
+			& .msg {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				& p {
+					width: 100%;
+					text-align: center;
+					font-size: 1.2rem;
+					padding: 0.5rem;
+					border-radius: 5px;
+				}
+				& .error {
+					background: rgba(241, 74, 74, 0.39);
+					color: #fff;
+				}
+				& .success {
+					background: rgba(33, 149, 33, 0.712);
+					color: #fff;
+				}
+			}
+			& form {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 1rem 0;
+				& input {
+					padding: 0.5rem 1rem;
+					border: 2px solid #eee;
+				}
+				& button {
+					padding: 0.5rem 1rem;
+					border: 2px solid $brand-main;
+					background: $brand-main;
+					color: #fff;
+					font-size: 16px;
+					transition: all 0.3s ease;
+					&:hover {
+						cursor: pointer;
+						background: lighten($brand-main, 5%);
+					}
+				}
+			}
+		}
+	}
+}

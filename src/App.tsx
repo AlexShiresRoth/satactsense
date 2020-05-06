@@ -25,8 +25,7 @@ const App: React.FunctionComponent = () => {
 		<Provider store={store}>
 			<Router>
 				<Switch>
-					<Route exact path="/" component={Home} />
-					<Route exact path="/landing" component={Landing} />
+					<Route exact path="/" component={Landing} />
 					<Route exact path="/ap" component={APPage} />
 					<Route exact path="/general" component={GeneralPage} />
 					<Route exact path="/sat" component={SatPage} />

@@ -87,7 +87,6 @@ const Header = ({
 };
 
 const mapStateToProps = (state: any) => {
-	console.log(state);
 	return {
 		headerData: state.headerData,
 		bannerData: state.headerData.banner,

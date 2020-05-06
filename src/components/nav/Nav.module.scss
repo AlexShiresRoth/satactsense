@@ -519,6 +519,9 @@
 								max-height: 20vh;
 								transition: all 1s ease-in-out;
 								opacity: 1;
+								& a {
+									text-decoration: none;
+								}
 								& button {
 									width: 100%;
 									font-size: 1rem;

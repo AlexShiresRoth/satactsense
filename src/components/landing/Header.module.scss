@@ -65,3 +65,96 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1200px) {
+	.header {
+		min-height: 40rem;
+		position: relative;
+		& .overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: linear-gradient(65deg, rgba(255, 255, 255, 0.637) 75%, transparent 75.1%);
+		}
+		& .col {
+			z-index: 1;
+			& h1 {
+				color: lighten($brand-main, 5%);
+				font-weight: 700;
+				font-size: 2.8rem;
+				font-family: 'Wotfard', sans-serif;
+				margin: 1rem 0;
+			}
+			& h2 {
+				font-size: 2rem;
+				font-weight: 700;
+				color: $text-color;
+				margin: 1rem 0;
+			}
+			& p {
+				font-size: 1rem;
+				margin: 0.5rem 0;
+				font-weight: 700;
+			}
+			& button {
+				min-height: 3rem;
+				min-width: 12rem;
+				font-size: 1rem;
+				&:hover {
+					cursor: pointer;
+					background: $alert;
+					box-shadow: 0 2px 25px $alert;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 900px) {
+	.header {
+		min-height: 40rem;
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		align-content: center;
+		align-items: center;
+		& .overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: linear-gradient(65deg, rgba(255, 255, 255, 0.637) 100%, transparent 95.1%);
+		}
+		& .col {
+			z-index: 1;
+			text-align: center;
+			& h1 {
+				color: lighten($brand-main, 5%);
+				font-weight: 700;
+				font-size: 2.5rem;
+				font-family: 'Wotfard', sans-serif;
+				margin: 1rem 0;
+			}
+			& h2 {
+				font-size: 2rem;
+				font-weight: 700;
+				color: $text-color;
+				margin: 1rem 0;
+			}
+			& p {
+				font-size: 1rem;
+				margin: 0.5rem 0;
+				font-weight: 700;
+			}
+			& button {
+				min-height: 3rem;
+				min-width: 12rem;
+				font-size: 1rem;
+				&:hover {
+					cursor: pointer;
+					background: $alert;
+					box-shadow: 0 2px 25px $alert;
+				}
+			}
+		}
+	}
+}
