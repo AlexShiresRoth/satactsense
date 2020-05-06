@@ -1,6 +1,10 @@
 //White tabs under the blue
 export const subjectArray = [
 	{
+		id: 'LANDING',
+		types: [],
+	},
+	{
 		id: 'AP',
 		types: [
 			{ title: 'AP Math', dropdown: ['AP Calculus & Statistics'] },
@@ -93,28 +97,29 @@ export const subjectArray = [
 
 //First set of tabs(Blue)
 export const serviceLinks = [
+	{ title: 'Home', path: '/landing', id: 'LANDING', dropdown: [] },
 	{
 		title: 'AP/SAT II Subject Testing',
 		path: '/ap',
 		id: 'AP',
 		dropdown: [
-			{ title: 'AP Testing', dropid: 'AP' },
-			{ title: 'SAT II Subject Testing', dropid: 'SUBJECT' },
+			{ title: 'AP Testing', dropid: 'AP', path: '/ap' },
+			{ title: 'SAT II Subject Testing', dropid: 'SUBJECT', path: '/sattwo' },
 		],
 	},
 	{
 		title: 'PSAT/PLAN',
-		path: '/psat',
+		path: '/psatandplan',
 		id: 'PSAT/PLAN',
 		dropdown: [],
 	},
 	{
 		title: 'SAT/ACT Prep',
-		path: '/satact',
+		path: '/satandact',
 		id: 'SAT/ACT',
 		dropdown: [
-			{ title: 'SAT', dropid: 'SAT' },
-			{ title: 'ACT', dropid: 'ACT' },
+			{ title: 'SAT', dropid: 'SAT', path: '/sat' },
+			{ title: 'ACT', dropid: 'ACT', path: '/act' },
 		],
 	},
 	{
@@ -125,13 +130,13 @@ export const serviceLinks = [
 	},
 	{
 		title: 'Johns Hopkins Program for Advanced Testing',
-		path: '/jht',
+		path: '/johnshopkins',
 		id: 'CTY',
 		dropdown: [],
 	},
 	{
 		title: 'College Consulting and Life Coaching',
-		path: '/CCLC',
+		path: '/collegeconsulting',
 		id: 'CCLC',
 		dropdown: [],
 	},

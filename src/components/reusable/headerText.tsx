@@ -2,6 +2,12 @@
 import React from 'react';
 export const headerText = [
 	{
+		title: 'Landing',
+		id: 'LANDING',
+		banner: 'Not sure what to do about upcoming exams?',
+		text: [{ par: <p>We Can Help.</p> }],
+	},
+	{
 		title: 'AP Testing',
 		id: 'AP',
 		banner: 'Are you ready for the new VIRTUAL AP exam in May 2020?',

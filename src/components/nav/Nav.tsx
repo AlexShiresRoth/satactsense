@@ -12,6 +12,7 @@ import { serviceLinks, subjectArray } from './subjectArray';
 import { setHeaderData } from '../../actions/headerData';
 import { setModalState, setCategory } from '../../actions/modal';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 interface NavProps {
 	setHeaderData: (current: string) => any;
@@ -31,18 +32,7 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 		/>
 	);
 
-	const [current, setCurrent] = useState('AP');
-
 	const [isMobile, setMobile] = useState(window.innerWidth <= 600);
-
-	const handleCurrentChange = (e: React.MouseEvent, item: string) => {
-		e.stopPropagation();
-		setCurrent(item);
-	};
-
-	useEffect(() => {
-		setHeaderData(current);
-	}, [current, data, setHeaderData]);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -58,7 +48,7 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 			<div className={navStyle.nav__inner}>
 				<div className={navStyle.tier}>
 					<div className={navStyle.left}>
-						{logo}
+						<Link to="/landing">{logo}</Link>
 						<div>
 							<h2>SATACTSENSE</h2>
 							<p>Making Sense of the SAT/ACT</p>
@@ -101,7 +91,7 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 						)}
 					</div>
 				</div>
-				<MobileNav subjectTabs={serviceLinks} handleCurrentChange={handleCurrentChange} />
+				<MobileNav subjectTabs={serviceLinks} />
 
 				<div className={navStyle.tier}>
 					<ul className={navStyle.grid}>
@@ -109,26 +99,20 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 							return (
 								<li
 									className={
-										current === link.id
+										data === link.id
 											? `${navStyle.list_link} ${navStyle.active}`
 											: navStyle.list_link
 									}
-									onClick={(e) => {
-										handleCurrentChange(e, link.id);
-									}}
 								>
-									<button>{link.title}</button>
+									<Link to={link.path}>
+										<button>{link.title}</button>
+									</Link>
 									<div className={navStyle.dropdown_container}>
 										{link.dropdown.map((item, i) => {
 											return item.title !== '' ? (
-												<button
-													key={i}
-													onClick={(e) => {
-														handleCurrentChange(e, item.dropid);
-													}}
-												>
-													{item.title}
-												</button>
+												<Link to={item.path}>
+													<button key={i}>{item.title}</button>
+												</Link>
 											) : null;
 										})}
 									</div>
@@ -158,7 +142,7 @@ const Nav = ({ setHeaderData, headerData: { data, bannerData }, setModalState, s
 				</div>
 
 				<div className={navStyle.tier}>
-					<Menu current={current} />
+					<Menu current={data} />
 				</div>
 			</div>
 		</nav>

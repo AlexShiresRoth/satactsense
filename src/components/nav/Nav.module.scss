@@ -198,7 +198,7 @@
 			& .grid {
 				display: grid;
 				grid-template-rows: 1fr;
-				grid-template-columns: repeat(6, auto);
+				grid-template-columns: repeat(7, auto);
 				list-style: none;
 				padding: 0;
 				background: $brand-main;
@@ -217,6 +217,11 @@
 					position: relative;
 					transition: all 0.3s ease;
 					z-index: 1;
+					& a {
+						text-decoration: none;
+						height: 100%;
+						width: 100%;
+					}
 					& button {
 						color: #fff;
 						height: 100%;

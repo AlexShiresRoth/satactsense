@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import headerStyle from './Header.module.scss';
 import Copy from './Copy';
 import LoadingSpinner from '../reusable/LoadingSpinner';
-import { headerText } from './headerText';
+import { headerText } from '../reusable/headerText';
 import { setBanner, setRef } from '../../actions/headerData';
 import { setModalState, setCategory } from '../../actions/modal';
 import { connect } from 'react-redux';
@@ -15,6 +15,7 @@ interface HeaderProps {
 	headerData: {
 		data: any;
 		loading: boolean;
+		bannerData: string;
 	};
 	setRef: (val: any) => any;
 	modal: {
@@ -24,7 +25,7 @@ interface HeaderProps {
 const Header = ({
 	setBanner,
 	setRef,
-	headerData: { data, loading },
+	headerData: { data, loading, bannerData },
 	modal: { modalState },
 	setModalState,
 	setCategory,
@@ -43,11 +44,10 @@ const Header = ({
 	};
 
 	useEffect(() => {
-		setBanner(headerText.filter((item) => item.id === data)[0].banner);
 		setRef(headerRef);
 		setSlideStart(0);
 		handleModalOpen();
-	}, [data, setBanner, headerRef, setRef, modalState]);
+	}, [data, setBanner, bannerData, headerRef, setRef, modalState]);
 
 	return (
 		<header className={headerStyle.header} ref={headerRef}>
@@ -87,6 +87,7 @@ const Header = ({
 };
 
 const mapStateToProps = (state: any) => {
+	console.log(state);
 	return {
 		headerData: state.headerData,
 		bannerData: state.headerData.banner,

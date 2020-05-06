@@ -1,7 +1,7 @@
 import { SET_DATA, SET_BANNER, SET_REF } from '../actions/types';
 
 const initialState = {
-	data: 'AP',
+	data: '',
 	bannerData: '',
 	ref: null,
 	loading: true,
