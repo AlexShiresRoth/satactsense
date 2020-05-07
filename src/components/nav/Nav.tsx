@@ -50,7 +50,7 @@ const Nav = ({ headerData: { data, bannerData }, setModalState, setCategory }: N
 			<div className={navStyle.nav__inner}>
 				<div className={navStyle.tier}>
 					<div className={navStyle.left}>
-						<Link to="/landing">{logo}</Link>
+						<Link to="/">{logo}</Link>
 						<div>
 							<h2>SATACTSENSE</h2>
 							<p>Making Sense of the SAT/ACT</p>

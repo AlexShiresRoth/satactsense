@@ -19,7 +19,7 @@
 		& img {
 			max-width: 10rem;
 			border-radius: 10px;
-			box-shadow: 0 5px 5px darken(#eee, 5%);
+			border: 5px solid #eee;
 		}
 	}
 	& .container {
@@ -63,6 +63,7 @@
 				width: 50%;
 				transition: all 0.3s ease;
 				margin: 1rem 0;
+				font-size: 1rem;
 				&:active {
 					outline: 0px solid transparent;
 				}
@@ -91,6 +92,9 @@
 			& img {
 				max-width: 9rem;
 			}
+			& p {
+				text-align: center;
+			}
 		}
 		& .container {
 			display: flex;
@@ -98,6 +102,7 @@
 			max-width: 70%;
 			& h2 {
 				color: $alert;
+				text-align: center;
 			}
 			& .copy {
 				max-height: 300vh;
@@ -127,8 +132,7 @@
 	.section {
 		& .img_container {
 			& img {
-				max-width: 6rem;
-				border: 2px solid #eee;
+				max-width: 9rem;
 			}
 		}
 		& .container {
