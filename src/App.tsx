@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './components/pages/Home';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import ReactGA from 'react-ga';
 import store from './store';
@@ -18,6 +18,15 @@ import SatAndActPage from './components/pages/SatAndActPage';
 
 ReactGA.initialize('UA-165289420-1');
 ReactGA.pageview('/');
+ReactGA.pageview('/ap');
+ReactGA.pageview('/general');
+ReactGA.pageview('/sattwo');
+ReactGA.pageview('/act');
+ReactGA.pageview('/sat');
+ReactGA.pageview('/johnshopkins');
+ReactGA.pageview('/psatandplan');
+ReactGA.pageview('/collegeconsulting');
+ReactGA.pageview('/satanact');
 ReactGA.pageview('/landing');
 
 const App: React.FunctionComponent = () => {
