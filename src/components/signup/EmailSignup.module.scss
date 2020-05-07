@@ -125,18 +125,24 @@
 				margin: 0.5rem 0;
 				font-size: 1rem;
 				text-align: center;
+				max-width: 90%;
+				line-height: 1.5;
 			}
 			& .form_container {
 				display: flex;
 				justify-content: center;
 				& form {
-					width: 80%;
+					display: flex;
+					flex-wrap: wrap;
+					align-items: center;
+					justify-content: center;
 					& input {
-						padding: 0.5rem 0;
+						padding: 0.5rem;
 					}
 					& button {
 						margin: 0;
-						padding: 0.5rem 3rem;
+						padding: 0.5rem 0;
+						min-width: 7rem;
 					}
 				}
 			}

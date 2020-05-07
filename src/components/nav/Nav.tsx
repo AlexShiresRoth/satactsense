@@ -57,40 +57,22 @@ const Nav = ({ headerData: { data, bannerData }, setModalState, setCategory }: N
 						</div>
 					</div>
 					<div className={navStyle.nav_contact}>
-						<Faq logo={logo} isMobile={isMobile} />
-						{!isMobile ? (
-							<>
-								<button
-									onClick={() => {
-										setModalState(true);
-										setCategory('General Tutoring');
-									}}
-								>
-									{' '}
-									<GoMail /> Book Now
-								</button>
-								<a href="tel:516-509-3186">
-									<MdPhoneInTalk />
-									516-509-3186
-								</a>
-							</>
-						) : (
-							<>
-								<button
-									onClick={() => {
-										setModalState(true);
-										setCategory('General Tutoring');
-									}}
-								>
-									{' '}
-									<GoMail />
-								</button>
-								<a href="tel:516-509-3186">
-									<MdPhoneInTalk />
-									516-509-3186
-								</a>
-							</>
-						)}
+						<Faq logo={logo} />
+						<>
+							<button
+								onClick={() => {
+									setModalState(true);
+									setCategory('General Tutoring');
+								}}
+							>
+								{' '}
+								<GoMail /> Book Now
+							</button>
+							<a href="tel:516-509-3186">
+								<MdPhoneInTalk />
+								516-509-3186
+							</a>
+						</>
 					</div>
 				</div>
 				<MobileNav subjectTabs={serviceLinks} />

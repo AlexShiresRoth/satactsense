@@ -198,7 +198,7 @@
 			& .grid {
 				display: grid;
 				grid-template-rows: 1fr;
-				grid-template-columns: repeat(7, auto);
+				grid-template-columns: repeat(7, 1fr);
 				list-style: none;
 				padding: 0;
 				background: $brand-main;
@@ -234,6 +234,8 @@
 						transition: all 0.3s ease-in-out;
 						background: $brand-main;
 						border-right: 1px solid lighten($brand-main, 2%);
+						font-size: 0.85rem;
+						padding: 1rem 0.5rem;
 						&:hover {
 							background: lighten($brand-main, 5%);
 							cursor: pointer;
@@ -312,7 +314,7 @@
 				min-height: 3rem;
 				& .subject {
 					width: 100%;
-					padding: 0.5rem 0;
+					padding: 1rem;
 					display: flex;
 					justify-content: center;
 					transition: all 0.3s ease-in-out;
@@ -324,6 +326,7 @@
 						color: $brand-main;
 						transition: all 0.3s ease-in-out;
 						font-weight: 500;
+						font-size: 0.85rem;
 					}
 					&:hover {
 						background: $brand-secondary;
@@ -409,7 +412,7 @@
 					& h2 {
 						font-family: 'Wotfard';
 						margin: 0;
-						font-size: 1rem;
+						font-size: 1.1rem;
 						font-weight: 500;
 						color: #fff;
 						display: flex;
@@ -419,14 +422,13 @@
 							font-size: 1.2rem;
 							border-radius: 10px;
 							padding: 1rem;
-							margin: 0 0.5rem;
-							box-shadow: 0 2px 2px $alert;
+							margin-right: 0.5rem;
 						}
 					}
 					& p {
 						font-family: 'Wotfard';
 						margin: 0.5rem 0;
-						font-size: 0.9rem;
+						font-size: 1.1rem;
 						font-weight: 100;
 						color: $brand-main;
 						display: flex;
@@ -452,7 +454,7 @@
 				visibility: visible;
 				width: 100%;
 				background: $brand-main;
-				padding: 0;
+				padding: 0rem;
 				max-height: 100vh;
 				& .container {
 					width: 100%;
@@ -460,16 +462,16 @@
 					flex-direction: column;
 					& button {
 						width: 100%;
-						padding: 0.5rem;
+						padding: 1rem;
 						background: transparent;
 						border: 1px solid transparent;
-						border-bottom: 1px solid lighten($brand-main, 5%);
+						border-bottom: 1px solid lighten($brand-main, 2%);
 						color: #fff;
-						font-size: 1.2rem;
+						font-size: 1.4rem;
 						display: flex;
 						align-items: center;
 						& svg {
-							font-size: 2rem;
+							font-size: 2.2rem;
 						}
 					}
 					& .dropdown_mobile_hidden {
@@ -492,6 +494,9 @@
 								max-height: 0;
 								transition: all 0.5s ease-in-out;
 								opacity: 0;
+								& a {
+									text-decoration: none;
+								}
 								& button {
 									font-size: 1rem;
 								}
@@ -524,7 +529,7 @@
 								}
 								& button {
 									width: 100%;
-									font-size: 1rem;
+									font-size: 1.2rem;
 								}
 							}
 						}
@@ -630,6 +635,7 @@
 						& button {
 							width: 100%;
 							text-align: center;
+							font-size: 1rem;
 						}
 					}
 				}
@@ -641,18 +647,252 @@
 						width: 100%;
 						justify-content: center;
 						& h2 {
-							font-size: 0.9rem;
+							font-size: 1.2rem;
 							font-weight: 100;
+							margin: 0.5rem 0;
 							& svg {
 								padding: 0.5rem;
 							}
 						}
 						& p {
-							color: $brand-secondary;
 							font-weight: 100;
-							font-size: 0.8rem;
+							font-size: 1.2rem;
+							margin: 0.5rem 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 600px) {
+	.nav {
+		& .nav__inner {
+			& .mobile_nav {
+				display: flex;
+				flex-direction: column;
+				visibility: visible;
+				width: 100%;
+				background: $brand-main;
+				max-height: 100vh;
+				& .container {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					& button {
+						width: 100%;
+						padding: 1rem 0.5rem;
+						background: transparent;
+						color: #fff;
+						font-size: 1.3rem;
+						display: flex;
+						align-items: center;
+						& svg {
+							font-size: 2.2rem;
+						}
+					}
+					& .dropdown_mobile_hidden {
+						max-height: 0vh;
+						width: 100%;
+						visibility: hidden;
+						transition: all 0.5s ease-in-out;
+						display: flex;
+						& ul {
+							width: 100%;
+							visibility: hidden;
+							transition: all 0.5s ease-in-out;
+							display: flex;
+							flex-direction: column;
+							padding: 0;
+							& li {
+								width: 100%;
+								list-style: none;
+								visibility: hidden;
+								max-height: 0;
+								transition: all 0.5s ease-in-out;
+								opacity: 0;
+								& a {
+									text-decoration: none;
+								}
+								& button {
+									font-size: 1rem;
+								}
+							}
+						}
+					}
+					& .dropdown_mobile {
+						max-height: 100vh;
+						visibility: visible;
+						transition: all 1s ease-in-out;
+						z-index: 9999;
+						background: $brand-main;
+						display: flex;
+						& ul {
+							display: flex;
+							flex-direction: column;
+							padding: 0;
+							width: 100%;
+							transition: all 1s ease-in-out;
+							visibility: visible;
+							& li {
+								width: 100%;
+								list-style: none;
+								visibility: visible;
+								max-height: 20vh;
+								transition: all 1s ease-in-out;
+								opacity: 1;
+								& a {
+									text-decoration: none;
+								}
+								& button {
+									width: 100%;
+									font-size: 1rem;
+								}
+							}
+						}
+					}
+				}
+			}
+			& .tier:nth-of-type(1) {
+				display: flex;
+				flex-direction: column;
+			}
+			& .tier {
+				& .left {
+					display: flex;
+					flex-direction: row;
+					justify-content: flex-start;
+					align-items: center;
+					flex-wrap: nowrap;
+					& h2 {
+						font-size: 1.2rem;
+					}
+					& p {
+						font-size: 1rem;
+					}
+				}
+				& .nav_contact {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					& a {
+						visibility: hidden;
+						max-width: 0;
+						padding: 0;
+						margin: 0;
+						max-height: 0;
+					}
+					& button:not(:last-child) {
+						margin: 0.2rem 0.5rem;
+						width: 100%;
+						min-width: 7rem;
+						padding: 0.5rem;
+						justify-content: space-around;
+						& svg {
+							margin: 0;
+							font-size: 1.3rem;
+						}
+					}
+					& .faq_container {
+						padding: 0.5rem 0;
+						width: 100%;
+						& .faq {
+							max-width: 80vw;
+							display: flex;
+							flex-direction: column;
+							justify-content: flex-start;
+							overflow-y: scroll;
+							& .heading {
+								display: flex;
+								flex-direction: row;
+								justify-content: space-between;
+								align-items: center;
+								& h2 {
+									color: $brand-main;
+									font-size: 1rem;
+								}
+								& img {
+									max-width: 4rem;
+								}
+							}
+							& ul {
+								padding: 0;
+								& li {
+									box-shadow: 0 2px 2px #eee;
+									list-style: none;
+									padding: 0.5rem;
+									& .question {
+										font-size: 1rem;
+										line-height: 1.5;
+									}
+									& .answer {
+										font-size: 0.9rem;
+										line-height: 1.5;
+									}
+								}
+							}
+						}
+					}
+					& .hidden {
+						& .faq {
+							max-width: 80vw;
+						}
+					}
+				}
+				& .grid {
+					visibility: hidden;
+					max-height: 0;
+					display: none;
+				}
+				& .row {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					flex-wrap: wrap;
+					& .subject {
+						min-width: 7rem;
+						width: 100%;
+						flex: 1;
+						border: 1px solid #eee;
+						& button {
+							width: 100%;
+							text-align: center;
+						}
+					}
+				}
+				& .banner {
+					padding: 1rem 0.5rem;
+					background: linear-gradient(45deg, $alert 100%, transparent 90%);
+					& .banner_container {
+						padding: 0;
+						width: 100%;
+						justify-content: center;
+						align-items: center;
+						text-align: center;
+						& h2 {
+							font-size: 1.1rem;
+							font-weight: 100;
+							margin: 0.5rem;
+							line-height: 1.5;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
 							& svg {
-								fill: $brand-secondary;
+								padding: 0rem;
+								min-width: 2rem;
+								font-size: 2rem;
+								box-shadow: 0 0 0 transparent;
+							}
+						}
+						& p {
+							font-weight: 100;
+							font-size: 1.1rem;
+							margin: 0.5rem;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							& svg {
+								font-size: 1.5rem;
 							}
 						}
 					}

@@ -7,17 +7,21 @@ import Video from '../video/Video';
 import Bio from '../bio/Bio';
 import Testimonials from '../testimonials/Testimonials';
 import Footer from '../footer/Footer';
-import { setHeaderData } from '../../actions/headerData';
+import { headerText } from '../reusable/headerText';
+import { setHeaderData, setBanner } from '../../actions/headerData';
 import { connect } from 'react-redux';
 
 interface HopkinsProps {
 	setHeaderData: (val: string) => any;
+	setBanner: (val: string) => any;
 }
 
-const HopkinsPage = ({ setHeaderData }: HopkinsProps) => {
+const HopkinsPage = ({ setHeaderData, setBanner }: HopkinsProps) => {
 	useEffect(() => {
 		setHeaderData('CTY');
-	}, [setHeaderData]);
+		const findBannerData = headerText.filter((item) => item.id === 'CTY')[0].banner;
+		setBanner(findBannerData);
+	}, [setHeaderData, setBanner]);
 
 	return (
 		<Layout>
@@ -32,4 +36,4 @@ const HopkinsPage = ({ setHeaderData }: HopkinsProps) => {
 	);
 };
 
-export default connect(null, { setHeaderData })(HopkinsPage);
+export default connect(null, { setHeaderData, setBanner })(HopkinsPage);

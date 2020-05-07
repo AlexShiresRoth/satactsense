@@ -11,8 +11,6 @@ const PopUp = (props: any) => {
 		email: '',
 	});
 
-	const [time, setTime] = useState(10000);
-
 	const [message, setMessage] = useState({
 		msg: 'Send us your email to get started!',
 		loading: false,
@@ -26,9 +24,10 @@ const PopUp = (props: any) => {
 
 	useEffect(() => {
 		setTimeout(() => {
-			window.localStorage.getItem('email') !== '' ? setPopUpState(false) : setPopUpState(true);
-		}, time);
-	}, [time]);
+			window.localStorage.getItem('email') !== null ? setPopUpState(false) : setPopUpState(true);
+		}, 10000);
+		console.log(window.localStorage.getItem('email'));
+	}, []);
 
 	const logo = (
 		<img
@@ -71,7 +70,7 @@ const PopUp = (props: any) => {
 			});
 
 			window.localStorage.setItem('email', email);
-			setTime(9999999999999);
+
 			setTimeout(() => {
 				setPopUpState(false);
 			}, 1000);
