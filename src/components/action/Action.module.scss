@@ -17,14 +17,21 @@
 		height: 3rem;
 		background: $alert;
 		border: 1px solid $alert;
-		box-shadow: 0 2px 2px darken($alert, 10%);
+		box-shadow: 0 1px 5px darken($alert, 10%);
 		border-radius: 2px;
 		color: #fff;
 		text-transform: uppercase;
 		transition: all 0.3s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		&:hover {
 			cursor: pointer;
-			box-shadow: 0 10px 10px darken($alert, 10%);
+			box-shadow: 0 1px 20px darken($alert, 10%);
+		}
+		& svg {
+			font-size: 1.2rem;
+			margin-right: 0.5rem;
 		}
 	}
 }

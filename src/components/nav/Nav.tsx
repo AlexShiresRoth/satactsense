@@ -33,11 +33,11 @@ const Nav = ({ headerData: { data, bannerData }, setModalState, setCategory }: N
 		/>
 	);
 
-	const [isMobile, setMobile] = useState(window.innerWidth <= 600);
+	const [isMobile, setMobile] = useState(window.innerWidth <= 1200);
 
 	useEffect(() => {
 		const handleResize = () => {
-			setMobile(window.innerWidth <= 600);
+			setMobile(window.innerWidth <= 1200);
 		};
 		window.addEventListener('resize', handleResize);
 		return () => window.removeEventListener('resize', handleResize);
@@ -89,7 +89,11 @@ const Nav = ({ headerData: { data, bannerData }, setModalState, setCategory }: N
 									}
 								>
 									<Link to={link.path}>
-										<button>{link.title}</button>
+										<button>
+											{isMobile && link.title.length > 18
+												? link.title.substr(0, 18) + '...'
+												: link.title}
+										</button>
 									</Link>
 									<div className={navStyle.dropdown_container}>
 										{link.dropdown.map((item, i) => {

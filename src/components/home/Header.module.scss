@@ -61,7 +61,7 @@
 				}
 			}
 			& p {
-				line-height: 1.5;
+				line-height: 2;
 				color: $brand-secondary;
 				font-size: 1.1rem;
 				font-weight: 100;
@@ -118,7 +118,7 @@
 				min-height: 3rem;
 				background: $alert;
 				border: 1px solid $alert;
-				box-shadow: 0 1px 22px darken($alert, 5%);
+				box-shadow: 0 1px 12px darken($alert, 5%);
 				border-radius: 150px;
 				color: #fff;
 				text-transform: uppercase;
@@ -127,7 +127,7 @@
 					cursor: pointer;
 					background: lighten($alert, 5%);
 					border: 1px solid lighten($alert, 5%);
-					box-shadow: 0 1px 40px lighten($alert, 2%);
+					box-shadow: 0 1px 22px lighten($alert, 2%);
 				}
 			}
 			& .social {

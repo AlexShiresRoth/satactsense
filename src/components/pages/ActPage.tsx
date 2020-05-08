@@ -10,6 +10,7 @@ import Footer from '../footer/Footer';
 import { headerText } from '../reusable/headerText';
 import { setHeaderData, setBanner } from '../../actions/headerData';
 import { connect } from 'react-redux';
+import Action from '../action/Action';
 
 interface ActPageProps {
 	setHeaderData: (val: string) => any;
@@ -30,6 +31,7 @@ const ActPage = ({ setHeaderData, setBanner }: ActPageProps) => {
 			<Video />
 			<Bio />
 			<Testimonials />
+			<Action />
 			<Footer />
 		</Layout>
 	);

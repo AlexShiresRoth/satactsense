@@ -2,7 +2,7 @@ import React from 'react';
 import { setCategory, setModalState } from '../../actions/modal';
 import { connect } from 'react-redux';
 import actionStyle from './Action.module.scss';
-
+import { GoMail } from 'react-icons/go';
 interface ActioProps {
 	setCategory: (val: string) => any;
 	setModalState: (val: boolean) => any;
@@ -18,6 +18,7 @@ const Action = ({ setCategory, setModalState }: ActioProps) => {
 					setCategory('Virtual Tutoring Consultations');
 				}}
 			>
+				<GoMail />
 				Book now!
 			</button>
 		</section>
