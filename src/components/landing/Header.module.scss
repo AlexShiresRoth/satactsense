@@ -4,7 +4,8 @@
 	src: url('../fonts/wotfard.ttf');
 }
 .header {
-	background: url('https://res.cloudinary.com/snackmanproductions/image/upload/c_scale,w_1568/v1588702758/satactsense/jeshoots-com--2vD8lIhdnw-unsplash_1_l086gp.jpg');
+	background-color: $brand-main;
+	background: url('https://res.cloudinary.com/snackmanproductions/image/upload/c_scale,q_54,w_2541/v1589042263/satactsense/shutterstock_704245198_vswibb.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -15,6 +16,7 @@
 	align-items: center;
 	min-height: 40rem;
 	position: relative;
+	animation: fadein 2s cubic-bezier(0.19, 1, 0.22, 1);
 	& .overlay {
 		position: absolute;
 		top: 0;
@@ -23,26 +25,33 @@
 		display: block;
 		height: 100%;
 		width: 100%;
+		animation: slidein 1.5s cubic-bezier(1, 0.2, 0.5, 1);
 	}
 	& .col {
 		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		& h1 {
 			color: lighten($brand-main, 5%);
 			font-weight: 700;
 			font-size: 3.2rem;
 			font-family: 'Wotfard', sans-serif;
 			margin: 1rem 0;
+			animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 		}
 		& h2 {
 			font-size: 2.2rem;
 			font-weight: 700;
 			color: $text-color;
 			margin: 1rem 0;
+			animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 		}
 		& p {
 			font-size: 1.2rem;
 			margin: 0.5rem 0;
 			font-weight: 700;
+			animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 		}
 		& button {
 			min-height: 3.5rem;
@@ -57,10 +66,18 @@
 			box-shadow: 0 1px 15px lighten($alert, 5%);
 			transition: all 0.3s ease;
 			margin: 1rem 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 			&:hover {
 				cursor: pointer;
 				background: $alert;
 				box-shadow: 0 2px 25px $alert;
+			}
+			& svg {
+				font-size: 1.3rem;
+				margin-right: 0.5rem;
 			}
 		}
 	}
@@ -123,6 +140,7 @@
 			top: 0;
 			left: 0;
 			background: linear-gradient(65deg, rgba(255, 255, 255, 0.637) 100%, transparent 95.1%);
+			animation: slidedown 1.5s cubic-bezier(1, 0.2, 0.5, 1);
 		}
 		& .col {
 			z-index: 1;
@@ -156,5 +174,31 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes slidein {
+	0% {
+		max-width: 0;
+	}
+	100% {
+		max-width: 100%;
+	}
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes slidedown {
+	0% {
+		max-height: 0;
+	}
+	100% {
+		max-height: 100vh;
 	}
 }

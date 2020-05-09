@@ -34,8 +34,8 @@ const App: React.FunctionComponent = () => {
 		<Provider store={store}>
 			<Router>
 				<Switch>
-					{/* <Route exact path="/" component={Landing} /> */}
-					<Route exact path="/" component={APPage} />
+					<Route exact path="/" component={Landing} />
+					{/* <Route exact path="/" component={APPage} /> */}
 					<Route exact path="/ap" component={APPage} />
 					<Route exact path="/general" component={GeneralPage} />
 					<Route exact path="/sat" component={SatPage} />
