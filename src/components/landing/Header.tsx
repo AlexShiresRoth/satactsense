@@ -3,6 +3,7 @@ import landingStyle from './Header.module.scss';
 import { setModalState, setCategory } from '../../actions/modal';
 import { connect } from 'react-redux';
 import { GoMail } from 'react-icons/go';
+import { Link } from 'react-router-dom';
 
 interface Props {
 	setModalState: (val: boolean) => any;
@@ -30,21 +31,29 @@ const Landing = ({ setModalState, setCategory, modal: { modalState } }: Props) =
 		<header className={landingStyle.header}>
 			<div className={landingStyle.overlay}></div>
 			<div className={landingStyle.col}>
-				<h1>Stressed about upcoming tests?</h1>
-				<h2>We can help.</h2>
-
-				<button
-					onClick={() => {
-						setModalState(true);
-						setCategory('Virtual Tutoring Consultations');
-					}}
-				>
-					<GoMail /> Book Now
-				</button>
-
-				<p>We offer virtual tutoring sessions.</p>
-				<p>We tutor a vast majority of subjects.</p>
+				<div>
+					<h1>Complete Test Preparation, Made Easy.</h1>
+					<p>
+						SAT/ACT Sense gives students a daily itinerary for everything leading up to test day so you’re
+						totally prepared, no matter your availability.{' '}
+					</p>
+					<p>Book your first No-Commitment Virtual Lesson Today.</p>
+				</div>
+				<div className={landingStyle.btn_row}>
+					<Link to="/ap">
+						<button>Learn More</button>
+					</Link>
+					<button
+						onClick={() => {
+							setModalState(true);
+							setCategory('Virtual Tutoring Consultations');
+						}}
+					>
+						<GoMail /> Get Your Itinerary
+					</button>
+				</div>
 			</div>
+			<div></div>
 		</header>
 	);
 };
