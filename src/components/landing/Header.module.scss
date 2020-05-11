@@ -185,20 +185,21 @@
 }
 @media screen and (max-width: 600px) {
 	.header {
-		padding: 0;
-
+		padding: 1rem 0;
+		min-height: 45rem;
 		& .col {
 			z-index: 1;
 			max-width: 85%;
 			& h1 {
 				color: lighten($brand-main, 5%);
 				font-weight: 700;
-				font-size: 2.5rem;
+				font-size: 2.8rem;
 				font-family: 'Wotfard', sans-serif;
 				margin: 1rem 0;
 			}
 			& p {
-				font-size: 1rem;
+				font-size: 1.1rem;
+				line-height: 2;
 				margin: 0.5rem 0;
 				font-weight: 700;
 			}
@@ -226,13 +227,17 @@
 					margin: 1rem 0;
 					font-size: 1rem;
 					max-width: 100%;
-					min-height: 3.2rem;
+					min-height: 3.5rem;
 
 					&:hover {
 						cursor: pointer;
 						background: $alert;
 						box-shadow: 0 2px 25px $alert;
 					}
+				}
+				& button:nth-child(2) {
+					background: $brand-accent;
+					color: #fff;
 				}
 			}
 		}
