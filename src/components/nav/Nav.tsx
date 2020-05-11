@@ -22,10 +22,13 @@ interface NavProps {
 	bannerData?: string;
 	setModalState: (val: boolean) => any;
 	setCategory: (item: string) => any;
+	modal: {
+		modalState: boolean;
+	};
 	ref?: any;
 }
 
-const Nav = ({ headerData: { data, bannerData }, setModalState, setCategory }: NavProps) => {
+const Nav = ({ headerData: { data, bannerData }, modal: { modalState }, setModalState, setCategory }: NavProps) => {
 	const logo = (
 		<img
 			src="https://res.cloudinary.com/snackmanproductions/image/upload/v1586538815/satactsense/sat_logo_lpezq0.png"
@@ -46,7 +49,7 @@ const Nav = ({ headerData: { data, bannerData }, setModalState, setCategory }: N
 	return (
 		<nav className={navStyle.nav}>
 			<Modal />
-			<PopUp />
+			{!modalState ? <PopUp modalState={modalState} /> : null}
 			<div className={navStyle.nav__inner}>
 				<div className={navStyle.tier}>
 					<div className={navStyle.left}>
@@ -143,8 +146,10 @@ Nav.propTypes = {
 };
 
 const mapStateToProps = (state: any) => {
+	console.log(state);
 	return {
 		headerData: state.headerData,
+		modal: state.modal,
 	};
 };
 

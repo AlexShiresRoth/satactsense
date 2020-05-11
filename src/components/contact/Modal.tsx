@@ -6,6 +6,7 @@ import { MdClose, MdKeyboardArrowRight } from 'react-icons/md';
 import { socialIcons } from '../reusable/icons';
 import { setModalState } from '../../actions/modal';
 import { connect } from 'react-redux';
+import { categories } from '../nav/subjectArray';
 
 type NavProps = {
 	setModalState: Function;
@@ -41,10 +42,12 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 
 	const { status, error, loading, success } = modalMessage;
 
-	const { email, name, phone, message, grade } = formData;
+	const { email, name, phone, message, grade, subject } = formData;
 
 	const onChange = (e: React.FormEvent<HTMLInputElement>) =>
 		setFormData({ ...formData, [e.currentTarget.name]: e.currentTarget.value });
+	const onSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) =>
+		setFormData({ ...formData, subject: e.currentTarget.value });
 	const onTextChange = (e: React.FormEvent<HTMLTextAreaElement>) =>
 		setFormData({ ...formData, [e.currentTarget.name]: e.currentTarget.value });
 
@@ -74,6 +77,7 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 				loading: false,
 				error: false,
 			});
+			sendConfirmationEmail();
 			setTimeout(() => {
 				closeModal();
 			}, 7000);
@@ -98,7 +102,7 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 	};
 	const closeModal = () => {
 		setFormData({
-			subject: '',
+			subject: category,
 			email: '',
 			name: '',
 			phone: '',
@@ -115,7 +119,22 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 		return () => clearInterval();
 	};
 
+	const sendConfirmationEmail = async () => {
+		const res = await axios({
+			method: 'POST',
+			url: `https://asrserver.herokuapp.com/api/satactsense/send-email/confirm`,
+			data: {
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded',
+					'Access-Control-Allow-Origin': 'http://localhost:3000/',
+				},
+				...formData,
+			},
+		});
+	};
+
 	useEffect(() => {
+		setFormData({ ...formData, subject: category });
 		setMessage({
 			status: [`Please Contact us for more information regarding "${category}."`],
 			error: false,
@@ -123,6 +142,7 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 			loading: false,
 		});
 	}, [category, setMessage]);
+
 	return (
 		<div className={modalState ? modalStyle.container : modalStyle.container_hidden}>
 			<div className={modalStyle.background}></div>
@@ -168,11 +188,23 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 				</div>
 				<form onSubmit={(e) => onSubmit(e)}>
 					<div className={modalStyle.input_row}>
-						<label>Category</label>
-						<input type="text" name="subject" value={category} required onChange={(e) => onChange(e)} />
+						<label>
+							Category<span>*</span>
+						</label>
+						<select name="subject" value={subject} onChange={(e) => onSelectChange(e)} required>
+							{categories.map((item, i) => {
+								return (
+									<option key={i} value={item}>
+										{item}
+									</option>
+								);
+							})}
+						</select>
 					</div>
 					<div className={modalStyle.input_row}>
-						<label>Email</label>
+						<label>
+							Email<span>*</span>
+						</label>
 						<input
 							name="email"
 							type="email"
@@ -180,10 +212,13 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 							required
 							onChange={(e) => onChange(e)}
 							placeholder="Enter your email"
+							disabled={loading || success ? true : false}
 						/>
 					</div>
 					<div className={modalStyle.input_row}>
-						<label>Name</label>
+						<label>
+							Name<span>*</span>
+						</label>
 						<input
 							name="name"
 							value={name}
@@ -191,10 +226,13 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 							required
 							onChange={(e) => onChange(e)}
 							placeholder="Enter your name"
+							disabled={loading || success ? true : false}
 						/>
 					</div>
 					<div className={modalStyle.input_row}>
-						<label>Student Grade Level</label>
+						<label>
+							Student Grade Level<span>*</span>
+						</label>
 						<input
 							name="grade"
 							value={grade}
@@ -202,10 +240,13 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 							required
 							onChange={(e) => onChange(e)}
 							placeholder="Enter student grade"
+							disabled={loading || success ? true : false}
 						/>
 					</div>
 					<div className={modalStyle.input_row}>
-						<label>Phone #</label>
+						<label>
+							Phone #<span>*</span>
+						</label>
 						<input
 							name="phone"
 							value={phone}
@@ -213,6 +254,7 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 							required
 							onChange={(e) => onChange(e)}
 							placeholder="Enter your phone number"
+							disabled={loading || success ? true : false}
 						/>
 					</div>
 
@@ -221,13 +263,13 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 						<textarea
 							name="message"
 							value={message}
-							required
 							onChange={(e) => onTextChange(e)}
 							placeholder="Enter your message here"
+							disabled={loading || success ? true : false}
 						></textarea>
 					</div>
 					<div className={modalStyle.input_row}>
-						<button onClick={(e) => onSubmit(e)}>
+						<button onClick={(e) => onSubmit(e)} disabled={loading || success ? true : false}>
 							Submit
 							<MdKeyboardArrowRight />
 						</button>

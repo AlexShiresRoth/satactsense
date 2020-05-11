@@ -4,7 +4,11 @@ import axios from 'axios';
 import { MdClose } from 'react-icons/md';
 import LoadingSpinner from '../reusable/LoadingSpinner';
 
-const PopUp = (props: any) => {
+interface Props {
+	modalState: boolean;
+}
+
+const PopUp = ({ modalState }: Props) => {
 	const [isShowing, setPopUpState] = useState(false);
 
 	const [formData, setFormData] = useState({
@@ -27,7 +31,7 @@ const PopUp = (props: any) => {
 			window.localStorage.getItem('email') !== null ? setPopUpState(false) : setPopUpState(true);
 		}, 10000);
 		console.log(window.localStorage.getItem('email'));
-	}, []);
+	}, [modalState]);
 
 	const logo = (
 		<img

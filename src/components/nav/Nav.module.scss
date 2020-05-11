@@ -122,14 +122,19 @@
 						max-width: 1000px;
 						display: flex;
 						flex-direction: column;
+						align-items: center;
 						overflow-y: scroll;
 						& .heading {
 							display: flex;
 							flex-direction: row;
-							justify-content: space-between;
+							justify-content: space-around;
 							align-items: center;
+							width: 100%;
+							margin-top: 1rem;
 							& h2 {
 								color: $brand-main;
+								font-family: 'Wotfard';
+								font-weight: 700;
 							}
 							& img {
 								max-width: 4rem;
@@ -137,17 +142,31 @@
 						}
 						& ul {
 							padding: 0;
+							max-width: 70%;
 							& li {
-								box-shadow: 0 2px 2px #eee;
+								margin: 1rem 0;
+								box-shadow: 0 1px 12px #eee;
 								list-style: none;
-								padding: 0.5rem;
+								padding: 1rem;
 								& .question {
-									font-size: 1.2rem;
+									line-height: 1.5;
+									font-size: 1.1rem;
 									color: $brand-main;
 									font-weight: 500;
+									border-bottom: 1px solid #eee;
+									& span {
+										font-weight: 700;
+										margin-right: 0.5rem;
+										font-size: 1.1rem;
+									}
 								}
 								& .answer {
-									font-size: 1rem;
+									font-size: 0.9rem;
+									& span {
+										font-weight: 700;
+										margin-right: 0.5rem;
+										font-size: 1.1rem;
+									}
 								}
 							}
 						}
@@ -593,11 +612,7 @@
 								}
 							}
 							& ul {
-								padding: 0;
 								& li {
-									box-shadow: 0 2px 2px #eee;
-									list-style: none;
-									padding: 0.5rem;
 									& .question {
 										font-size: 1rem;
 										line-height: 1.5;
@@ -799,7 +814,7 @@
 						padding: 0.5rem 0;
 						width: 100%;
 						& .faq {
-							max-width: 80vw;
+							max-width: 90vw;
 							display: flex;
 							flex-direction: column;
 							justify-content: flex-start;
@@ -819,16 +834,18 @@
 							}
 							& ul {
 								padding: 0;
+								max-width: 90%;
 								& li {
-									box-shadow: 0 2px 2px #eee;
+									margin: 1rem 0;
+
 									list-style: none;
-									padding: 0.5rem;
+									padding: 1rem;
 									& .question {
-										font-size: 1rem;
+										font-size: 1.1rem;
 										line-height: 1.5;
 									}
 									& .answer {
-										font-size: 0.9rem;
+										font-size: 0.8rem;
 										line-height: 1.5;
 									}
 								}

@@ -30,9 +30,12 @@ const Faq = ({ logo }: FaqProps) => {
 						{faq.map((item, i) => {
 							return (
 								<li>
-									<p className={faqStyle.question}>Q. {item.question}</p>
+									<p className={faqStyle.question}>
+										<span>Q.</span> {item.question}
+									</p>
 									<p className={faqStyle.answer}>
-										<MdQuestionAnswer /> A. {item.answer}
+										<span>A.</span>
+										{` `} {item.answer}
 									</p>
 								</li>
 							);
