@@ -24,8 +24,14 @@ const HopkinsPage = ({ setHeaderData, setBanner }: HopkinsProps) => {
 		setBanner(findBannerData);
 	}, [setHeaderData, setBanner]);
 
+	const pageInfo = {
+		pageTitle: 'Johns Hopkins',
+		description: 'Tutoring for Johns Hopkins program for talented youth.',
+		path: 'johnshopkins',
+	};
+
 	return (
-		<Layout>
+		<Layout pageInfo={pageInfo}>
 			<Nav />
 			<Header />
 			<EmailSignup />

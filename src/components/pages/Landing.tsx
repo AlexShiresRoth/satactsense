@@ -23,8 +23,14 @@ const Landing = ({ setHeaderData, setBanner }: Props) => {
 		const findBannerData = headerText.filter((item) => item.id === 'LANDING')[0].banner;
 		setBanner(findBannerData);
 	}, [setHeaderData]);
+
+	const pageInfo = {
+		pageTitle: 'Home',
+		description: 'Landing Page for SATACTSENSE',
+		path: '',
+	};
 	return (
-		<Layout>
+		<Layout pageInfo={pageInfo}>
 			<Nav />
 			<Header />
 			<EmailSignup />

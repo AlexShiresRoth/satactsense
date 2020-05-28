@@ -23,8 +23,15 @@ const GeneralPage = ({ setHeaderData, setBanner }: GeneralProps) => {
 		const findBannerData = headerText.filter((item) => item.id === 'GENERAL')[0].banner;
 		setBanner(findBannerData);
 	}, [setHeaderData, setBanner]);
+
+	const pageInfo = {
+		pageTitle: 'General Tutoring',
+		description: 'Tutoring for any subject',
+		path: 'general',
+	};
+
 	return (
-		<Layout>
+		<Layout pageInfo={pageInfo}>
 			<Nav />
 			<Header />
 			<EmailSignup />

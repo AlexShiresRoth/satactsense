@@ -23,8 +23,15 @@ const SatTwoPage = ({ setHeaderData, setBanner }: Props) => {
 		const findBannerData = headerText.filter((item) => item.id === 'SUBJECT')[0].banner;
 		setBanner(findBannerData);
 	}, [setBanner, setHeaderData]);
+
+	const pageInfo = {
+		pageTitle: 'SAT II Subject Test',
+		description: 'Tutoring for the SAT II Subject Test',
+		path: 'sattwo',
+	};
+
 	return (
-		<Layout>
+		<Layout pageInfo={pageInfo}>
 			<Nav />
 			<Header />
 			<EmailSignup />

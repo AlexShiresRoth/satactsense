@@ -23,8 +23,14 @@ const ActPage = ({ setHeaderData, setBanner }: ActPageProps) => {
 		setHeaderData('ACT');
 		setBanner(findBannerData);
 	}, [setHeaderData, setBanner]);
+
+	const pageInfo = {
+		pageTitle: 'ACT',
+		description: 'ACT test tutoring',
+		path: 'act',
+	};
 	return (
-		<Layout>
+		<Layout pageInfo={pageInfo}>
 			<Nav />
 			<Header />
 			<EmailSignup />

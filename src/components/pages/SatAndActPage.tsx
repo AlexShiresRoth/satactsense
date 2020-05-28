@@ -24,8 +24,13 @@ const SatAndActPage = ({ setHeaderData, setBanner }: Props) => {
 		setBanner(findBannerData);
 	}, [setHeaderData, setBanner]);
 
+	const pageInfo = {
+		pageTitle: 'SAT&ACT',
+		description: 'General tutoring for the SAT & ACT tests',
+		path: 'satandact',
+	};
 	return (
-		<Layout>
+		<Layout pageInfo={pageInfo}>
 			<Nav />
 			<Header />
 			<EmailSignup />

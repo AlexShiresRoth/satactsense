@@ -23,8 +23,14 @@ const SatPage = ({ setHeaderData, setBanner }: Props) => {
 		const findBannerData = headerText.filter((item) => item.id === 'SAT')[0].banner;
 		setBanner(findBannerData);
 	}, [setHeaderData]);
+
+	const pageInfo = {
+		pageTitle: 'SAT',
+		description: 'SAT test tutoring',
+		path: 'sat',
+	};
 	return (
-		<Layout>
+		<Layout pageInfo={pageInfo}>
 			<Nav />
 			<Header />
 			<EmailSignup />

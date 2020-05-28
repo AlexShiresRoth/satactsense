@@ -23,8 +23,15 @@ const APPage = ({ setHeaderData, setBanner }: ApProps) => {
 		setHeaderData('AP');
 		setBanner(findBannerData);
 	}, [setHeaderData]);
+
+	const pageInfo = {
+		pageTitle: 'AP',
+		description: 'AP tests tutoring',
+		path: 'ap',
+	};
+
 	return (
-		<Layout>
+		<Layout pageInfo={pageInfo}>
 			<Nav />
 			<Header />
 			<EmailSignup />

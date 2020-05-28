@@ -23,8 +23,15 @@ const CollegeConsultingPage = ({ setHeaderData, setBanner }: CollegeProps) => {
 		const findBannerData = headerText.filter((item) => item.id === 'CCLC')[0].banner;
 		setBanner(findBannerData);
 	}, [setHeaderData, setBanner]);
+
+	const pageInfo = {
+		pageTitle: 'College Consulting & Life Coaching',
+		description: 'College consulting and life coaching',
+		path: 'collegeconsulting',
+	};
+
 	return (
-		<Layout>
+		<Layout pageInfo={pageInfo}>
 			<Nav />
 			<Header />
 			<EmailSignup />

@@ -8,9 +8,16 @@ import EmailSignup from '../signup/EmailSignup';
 import Testimonials from '../testimonials/Testimonials';
 import Action from '../action/Action';
 import Footer from '../footer/Footer';
+
 const Home = () => {
+	const pageInfo = {
+		pageTitle: 'Home',
+		description: 'Landing page',
+		path: '',
+	};
+
 	return (
-		<Layout>
+		<Layout pageInfo={pageInfo}>
 			<Nav />
 			<Header />
 			<EmailSignup />

@@ -23,8 +23,14 @@ const PsatPlanPage = ({ setHeaderData, setBanner }: Props) => {
 		const findBannerData = headerText.filter((item) => item.id === 'PSAT/PLAN')[0].banner;
 		setBanner(findBannerData);
 	}, [setHeaderData, setBanner]);
+
+	const pageInfo = {
+		pageTitle: 'PSAT&PLAN',
+		description: 'Tutoring for the PSAT & PLAN tests.',
+		path: 'psatandplan',
+	};
 	return (
-		<Layout>
+		<Layout pageInfo={pageInfo}>
 			<Nav />
 			<Header />
 			<EmailSignup />
