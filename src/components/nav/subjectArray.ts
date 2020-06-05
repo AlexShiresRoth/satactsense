@@ -70,6 +70,10 @@ export const subjectArray = [
 		types: [],
 	},
 	{
+		id: 'ACTMAT',
+		types: [],
+	},
+	{
 		id: 'GENERAL',
 		types: [
 			{ title: 'Mathematics', dropdown: ['Mathematics (General)'] },
@@ -120,6 +124,7 @@ export const serviceLinks = [
 		dropdown: [
 			{ title: 'SAT', dropid: 'SAT', path: '/sat' },
 			{ title: 'ACT', dropid: 'ACT', path: '/act' },
+			{ title: 'ACT Materials', dropid: 'ACTMAT', path: '/actmaterials' },
 		],
 	},
 	{

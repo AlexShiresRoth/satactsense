@@ -15,6 +15,7 @@ import SatTwoPage from './components/pages/SatTwoPage';
 import PsatPlanPage from './components/pages/PsatPlanPage';
 import CollegeConsultingPage from './components/pages/CollegeConsultingPage';
 import SatAndActPage from './components/pages/SatAndActPage';
+import ACTMaterials from './components/pages/ACTMaterials';
 
 ReactGA.initialize('UA-165289420-1');
 ReactGA.pageview('/');
@@ -39,6 +40,7 @@ const App: React.FunctionComponent = () => {
 					<Route exact path="/general" component={GeneralPage} />
 					<Route exact path="/sat" component={SatPage} />
 					<Route exact path="/act" component={ActPage} />
+					<Route exact path="/actmaterials" component={ACTMaterials} />
 					<Route exact path="/johnshopkins" component={HopkinsPage} />
 					<Route exact path="/sattwo" component={SatTwoPage} />
 					<Route exact path="/psatandplan" component={PsatPlanPage} />

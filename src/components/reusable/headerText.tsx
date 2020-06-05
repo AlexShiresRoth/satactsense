@@ -209,6 +209,12 @@ export const headerText = [
 		],
 	},
 	{
+		title: 'ACT Materials',
+		id: 'ACTMAT',
+		banner: 'Products we recommend.',
+		text: [],
+	},
+	{
 		title: 'College Consulting and Life Coaching',
 		id: 'CCLC',
 		banner: `Not sure where to start your college application process? We can help.
