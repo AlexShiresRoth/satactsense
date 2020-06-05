@@ -32,7 +32,7 @@ export const materials = [
 	{
 		title: `iOS: OutRead`,
 		url: `https://apps.apple.com/us/app/outread-speed-reading-trainer/id778846279`,
-		img: `https://res-console.cloudinary.com/snackmanproductions/thumbnails/transform/v1/image/upload/Y19zY2FsZSxxXzYzLHdfOTk0/v1591314079/c2F0YWN0c2Vuc2UvMjAyMC0wNi0wNF9oNG51aHU=/template_primary`,
+		img: `https://res.cloudinary.com/snackmanproductions/image/upload/c_scale,q_61,w_443/v1591314079/satactsense/2020-06-04_h4nuhu.png`,
 	},
 	{
 		title: `Android: Speed Reading`,
