@@ -211,7 +211,7 @@ export const headerText = [
 	{
 		title: 'ACT Materials',
 		id: 'ACTMAT',
-		banner: 'Products we recommend.',
+		banner: 'As an Amazon Associate we earn from qualifying purchases.',
 		text: [],
 	},
 	{

@@ -1,46 +1,72 @@
 @import '../../../sass/variables';
-
+@font-face {
+	font-family: 'Wotfard';
+	src: url('../fonts/wotfard.ttf');
+}
 .header {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: auto;
-	gap: 1rem;
-	justify-items: center;
 	background: #eee;
-	padding: 2rem 0;
-	& .item {
-		min-width: 20vw;
-		max-width: 20vw;
-		background: #fff;
-		box-shadow: 0 1px 10px darken(#eee, 5%);
-		padding: 1rem;
-		border-radius: 5px;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		& img {
-			max-width: 14rem;
-			margin: 0 1rem;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	& h2 {
+		color: $brand-main;
+		font-weight: 700;
+		font-family: 'Wotfard';
+	}
+	& .grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto;
+		gap: 2rem;
+		justify-items: center;
+		& .item {
+			width: 100%;
+			background: #fff;
+			box-shadow: 0 1px 15px darken(#eee, 10%);
+			padding: 1rem 0rem;
 			border-radius: 5px;
-		}
-		& .content {
 			display: flex;
 			flex-direction: column;
-			align-items: flex-end;
-			width: 100%;
-			& p {
-				font-weight: 700;
-				font-family: 'Muli';
-				text-align: end;
-				font-size: 1.2rem;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			& img {
+				max-width: 14rem;
+				height: 100%;
+				max-height: 10rem;
+				border-radius: 5px;
 			}
-			& a {
+			& svg {
+				width: 100%;
+				font-size: 9rem;
+				color: $brand-accent;
+			}
+			& .content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+				& p {
+					font-weight: 900;
+					font-family: 'Lato';
+					text-align: end;
+					font-size: 1.2rem;
+					text-align: start;
+					color: #333;
+					text-align: center;
+					padding: 0 1rem;
+				}
+
 				& button {
 					background: $brand-main;
 					border: 1px solid $brand-main;
 					border-radius: 5px;
 					color: #fff;
-					height: 2.5rem;
+					height: 3rem;
+					width: 15rem;
+					font-size: 1rem;
 					transition: all 0.3s ease;
 					&:hover {
 						background: lighten($brand-main, 5%);
@@ -49,6 +75,32 @@
 						cursor: pointer;
 					}
 				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.header {
+		& .grid {
+			grid-template-columns: repeat(2, 1fr);
+			& .item {
+				padding: 2rem;
+				width: 35vw;
+			}
+		}
+	}
+}
+@media screen and (max-width: 700px) {
+	.header {
+		& h2 {
+			text-align: center;
+		}
+		& .grid {
+			grid-template-columns: 1fr;
+			& .item {
+				padding: 2rem;
+				width: 80%;
 			}
 		}
 	}

@@ -150,6 +150,7 @@ export const serviceLinks = [
 export const categories = [
 	'SAT Prep',
 	'ACT Prep',
+	'ACT English Manual PDF',
 	'AP Math',
 	'AP Calculus & Statistics',
 	'AP History',
