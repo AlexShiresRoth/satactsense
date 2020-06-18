@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Layout from '../layout/Layout';
 import Nav from '../nav/Nav';
-import Header from '../home/Header';
 import EmailSignup from '../signup/EmailSignup';
 import Video from '../video/Video';
 import Bio from '../bio/Bio';
@@ -25,9 +24,15 @@ const ACTMaterials = ({ setHeaderData, setBanner }: ActPageProps) => {
 		setBanner(findBannerData);
 	}, [setHeaderData, setBanner]);
 
+	useEffect(() => {
+		setTimeout(() => {
+			window.scrollTo({ top: 0 });
+		}, 300);
+	}, []);
+
 	const pageInfo = {
 		pageTitle: 'ACT',
-		description: 'ACT test tutoring',
+		description: 'ACT materials for tutoring',
 		path: 'act',
 	};
 	return (

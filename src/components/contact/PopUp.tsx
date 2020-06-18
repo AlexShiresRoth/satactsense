@@ -30,7 +30,6 @@ const PopUp = ({ modalState }: Props) => {
 		setTimeout(() => {
 			window.localStorage.getItem('email') !== null ? setPopUpState(false) : setPopUpState(true);
 		}, 10000);
-		console.log(window.localStorage.getItem('email'));
 	}, [modalState]);
 
 	const logo = (

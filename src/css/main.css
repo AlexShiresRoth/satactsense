@@ -1,24 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Muli|Lato|Montserrat&display=swap");
+@import url("https://use.typekit.net/fiy0bzb.css");
 html,
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif, serif;
-  font-weight: 100;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 300;
+  font-style: normal;
   color: #1b262c;
   overflow-x: hidden; }
 
 p,
 input,
 label,
-textarea {
+textarea,
+button {
   font-size: 16px;
   font-weight: 100;
-  font-family: 'Montserrat', sans-serif, serif; }
+  font-family: proxima-nova, sans-serif, serif; }
 
 h1,
-h2,
-button {
-  font-family: 'Montserrat';
-  font-weight: 300; }
+h2 {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 500;
+  font-style: normal; }

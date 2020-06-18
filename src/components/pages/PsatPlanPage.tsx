@@ -24,6 +24,12 @@ const PsatPlanPage = ({ setHeaderData, setBanner }: Props) => {
 		setBanner(findBannerData);
 	}, [setHeaderData, setBanner]);
 
+	useEffect(() => {
+		setTimeout(() => {
+			window.scrollTo({ top: 0 });
+		}, 300);
+	}, []);
+
 	const pageInfo = {
 		pageTitle: 'PSAT&PLAN',
 		description: 'Tutoring for the PSAT & PLAN tests.',

@@ -18,7 +18,7 @@ const Bio = () => {
 				<h2>About SATACTSENSE</h2>
 				<div className={reduced ? bioStyle.copy_reduced : bioStyle.copy}>
 					{content.slice(0, reduced ? 2 : content.length).map((item, i) => {
-						return <>{item.par}</>;
+						return <div key={i}>{item.par}</div>;
 					})}
 				</div>
 				<div className={bioStyle.copy_button_container}>

@@ -24,6 +24,12 @@ const HopkinsPage = ({ setHeaderData, setBanner }: HopkinsProps) => {
 		setBanner(findBannerData);
 	}, [setHeaderData, setBanner]);
 
+	useEffect(() => {
+		setTimeout(() => {
+			window.scrollTo({ top: 0 });
+		}, 300);
+	}, []);
+
 	const pageInfo = {
 		pageTitle: 'Johns Hopkins',
 		description: 'Tutoring for Johns Hopkins program for talented youth.',

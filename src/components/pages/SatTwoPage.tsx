@@ -24,6 +24,12 @@ const SatTwoPage = ({ setHeaderData, setBanner }: Props) => {
 		setBanner(findBannerData);
 	}, [setBanner, setHeaderData]);
 
+	useEffect(() => {
+		setTimeout(() => {
+			window.scrollTo({ top: 0 });
+		}, 300);
+	}, []);
+
 	const pageInfo = {
 		pageTitle: 'SAT II Subject Test',
 		description: 'Tutoring for the SAT II Subject Test',

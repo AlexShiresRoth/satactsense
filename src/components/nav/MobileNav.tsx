@@ -23,7 +23,7 @@ const MobileNav = ({ subjectTabs }: MobileProps) => {
 					<ul>
 						{subjectTabs.map((subject, i) => {
 							return subject.dropdown.length > 0 ? (
-								<>
+								<div key={i}>
 									<li>
 										<Link to={subject.path}>
 											<button
@@ -35,9 +35,9 @@ const MobileNav = ({ subjectTabs }: MobileProps) => {
 											</button>
 										</Link>
 									</li>
-									<li key={i}>
-										{subject.dropdown.map((item: any) => {
-											return (
+									{subject.dropdown.map((item: any, i: number) => {
+										return (
+											<li key={i}>
 												<Link to={item.path}>
 													<button
 														onClick={(e) => {
@@ -47,10 +47,10 @@ const MobileNav = ({ subjectTabs }: MobileProps) => {
 														{item.title}
 													</button>
 												</Link>
-											);
-										})}
-									</li>
-								</>
+											</li>
+										);
+									})}
+								</div>
 							) : (
 								<li key={i}>
 									<Link to={subject.path}>

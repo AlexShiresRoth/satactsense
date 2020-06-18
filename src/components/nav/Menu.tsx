@@ -15,9 +15,9 @@ const Menu = ({ current, setModalState, setCategory }: NavProps) => {
 		<>
 			{subjectArray
 				.filter((subject) => current === subject.id)
-				.map((type) => {
+				.map((type, i) => {
 					return (
-						<div className={type.types.length > 0 ? menuStyle.row : menuStyle.row_hidden}>
+						<div className={type.types.length > 0 ? menuStyle.row : menuStyle.row_hidden} key={i}>
 							{type.types.map((subject, i) => {
 								return (
 									<div className={menuStyle.subject} key={i}>
@@ -26,7 +26,7 @@ const Menu = ({ current, setModalState, setCategory }: NavProps) => {
 											{subject.dropdown.length > 0
 												? subject.dropdown.map((item, i) => {
 														return (
-															<ul>
+															<ul key={i}>
 																<li
 																	key={i}
 																	onClick={(e) => {

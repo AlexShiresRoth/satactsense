@@ -24,6 +24,12 @@ const GeneralPage = ({ setHeaderData, setBanner }: GeneralProps) => {
 		setBanner(findBannerData);
 	}, [setHeaderData, setBanner]);
 
+	useEffect(() => {
+		setTimeout(() => {
+			window.scrollTo({ top: 0 });
+		}, 300);
+	}, []);
+
 	const pageInfo = {
 		pageTitle: 'General Tutoring',
 		description: 'Tutoring for any subject',

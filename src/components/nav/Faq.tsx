@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import faqStyle from './Nav.module.scss';
 import { faq } from './faqArr';
-import { MdClose, MdQuestionAnswer } from 'react-icons/md';
+import { MdClose } from 'react-icons/md';
 import { AiOutlineQuestionCircle } from 'react-icons/ai';
 
 interface FaqProps {
@@ -29,7 +29,7 @@ const Faq = ({ logo }: FaqProps) => {
 					<ul>
 						{faq.map((item, i) => {
 							return (
-								<li>
+								<li key={i}>
 									<p className={faqStyle.question}>
 										<span>Q.</span> {item.question}
 									</p>

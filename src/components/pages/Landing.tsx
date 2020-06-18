@@ -22,7 +22,13 @@ const Landing = ({ setHeaderData, setBanner }: Props) => {
 		setHeaderData('LANDING');
 		const findBannerData = headerText.filter((item) => item.id === 'LANDING')[0].banner;
 		setBanner(findBannerData);
-	}, [setHeaderData]);
+	}, [setHeaderData, setBanner]);
+
+	useEffect(() => {
+		setTimeout(() => {
+			window.scrollTo({ top: 0 });
+		}, 300);
+	}, []);
 
 	const pageInfo = {
 		pageTitle: 'Home',

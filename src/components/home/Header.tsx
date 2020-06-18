@@ -34,16 +34,15 @@ const Header = ({
 
 	const headerRef = useRef(null);
 
-	const handleModalOpen = () => {
-		const html = document.querySelector('html');
-		return modalState && html !== null
-			? (html.style.overflowY = 'hidden')
-			: html !== null
-			? (html.style.overflowY = 'scroll')
-			: null;
-	};
-
 	useEffect(() => {
+		const handleModalOpen = () => {
+			const html = document.querySelector('html');
+			return modalState && html !== null
+				? (html.style.overflowY = 'hidden')
+				: html !== null
+				? (html.style.overflowY = 'scroll')
+				: null;
+		};
 		setRef(headerRef);
 		setSlideStart(0);
 		handleModalOpen();

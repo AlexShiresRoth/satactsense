@@ -14,16 +14,16 @@ interface Props {
 }
 
 const Landing = ({ setModalState, setCategory, modal: { modalState } }: Props) => {
-	const handleModalOpen = () => {
-		const html = document.querySelector('html');
-		return modalState && html !== null
-			? (html.style.overflowY = 'hidden')
-			: html !== null
-			? (html.style.overflowY = 'scroll')
-			: null;
-	};
-
 	useEffect(() => {
+		//hide background scrolling on modal being open
+		const handleModalOpen = () => {
+			const html = document.querySelector('html');
+			return modalState && html !== null
+				? (html.style.overflowY = 'hidden')
+				: html !== null
+				? (html.style.overflowY = 'scroll')
+				: null;
+		};
 		handleModalOpen();
 	}, [modalState]);
 

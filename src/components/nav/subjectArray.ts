@@ -74,6 +74,10 @@ export const subjectArray = [
 		types: [],
 	},
 	{
+		id: 'SATMAT',
+		types: [],
+	},
+	{
 		id: 'GENERAL',
 		types: [
 			{ title: 'Mathematics', dropdown: ['Mathematics (General)'] },
@@ -125,6 +129,7 @@ export const serviceLinks = [
 			{ title: 'SAT', dropid: 'SAT', path: '/sat' },
 			{ title: 'ACT', dropid: 'ACT', path: '/act' },
 			{ title: 'ACT Materials', dropid: 'ACTMAT', path: '/actmaterials' },
+			{ title: 'SAT Materials', dropid: 'SATMAT', path: '/satmaterials' },
 		],
 	},
 	{
@@ -151,6 +156,7 @@ export const categories = [
 	'SAT Prep',
 	'ACT Prep',
 	'ACT English Manual PDF',
+	'SAT Manual for Writing and Language Section',
 	'AP Math',
 	'AP Calculus & Statistics',
 	'AP History',

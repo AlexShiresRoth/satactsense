@@ -1,6 +1,6 @@
 import React from 'react';
-import { materials } from './materials';
 import style from './Materials.module.scss';
+import { materials } from './materials';
 import { GoBook } from 'react-icons/go';
 import { setModalState, setCategory } from '../../actions/modal';
 import { connect } from 'react-redux';
@@ -10,10 +10,10 @@ interface Props {
 	setCategory: (val: string) => any;
 }
 
-const ActMaterials = ({ setModalState, setCategory }: Props) => {
+const SATMaterialsComponent = ({ setModalState, setCategory }: Props) => {
 	return (
-		<header className={style.header}>
-			<h2>Products we recommend for ACT test preparation.</h2>
+		<section className={style.section}>
+			<h2>Products we recommend for SAT test preparation.</h2>
 			<div className={style.grid}>
 				{materials.map((item, i) => {
 					return (
@@ -29,7 +29,7 @@ const ActMaterials = ({ setModalState, setCategory }: Props) => {
 									<button
 										onClick={(e) => {
 											setModalState(true);
-											setCategory('ACT English Manual PDF');
+											setCategory('SAT Manual for Writing and Language Section');
 										}}
 									>
 										Get Your Book
@@ -40,8 +40,8 @@ const ActMaterials = ({ setModalState, setCategory }: Props) => {
 					);
 				})}
 			</div>
-		</header>
+		</section>
 	);
 };
 
-export default connect(null, { setModalState, setCategory })(ActMaterials);
+export default connect(null, { setModalState, setCategory })(SATMaterialsComponent);

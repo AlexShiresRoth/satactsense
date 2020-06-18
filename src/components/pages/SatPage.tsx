@@ -22,7 +22,13 @@ const SatPage = ({ setHeaderData, setBanner }: Props) => {
 		setHeaderData('SAT');
 		const findBannerData = headerText.filter((item) => item.id === 'SAT')[0].banner;
 		setBanner(findBannerData);
-	}, [setHeaderData]);
+	}, [setHeaderData, setBanner]);
+
+	useEffect(() => {
+		setTimeout(() => {
+			window.scrollTo({ top: 0 });
+		}, 300);
+	}, []);
 
 	const pageInfo = {
 		pageTitle: 'SAT',

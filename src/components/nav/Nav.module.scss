@@ -67,7 +67,9 @@
 					padding: 0 0.5rem;
 					border-left: 1px solid darken(#fff, 5%);
 					margin: 0 0.5rem;
-					font-family: 'Muli';
+					font-family: proxima-nova, sans-serif;
+					font-weight: 100;
+					font-style: normal;
 					& svg {
 						margin: 0 0.5rem;
 						color: $brand-main;

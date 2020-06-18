@@ -22,7 +22,13 @@ const APPage = ({ setHeaderData, setBanner }: ApProps) => {
 		const findBannerData = headerText.filter((item) => item.id === 'AP')[0].banner;
 		setHeaderData('AP');
 		setBanner(findBannerData);
-	}, [setHeaderData]);
+	}, [setHeaderData, setBanner]);
+
+	useEffect(() => {
+		setTimeout(() => {
+			window.scrollTo({ top: 0 });
+		}, 300);
+	}, []);
 
 	const pageInfo = {
 		pageTitle: 'AP',

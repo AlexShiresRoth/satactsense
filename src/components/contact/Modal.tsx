@@ -59,10 +59,12 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 			success: false,
 			loading: true,
 		});
+		// const development = 'http://localhost:5000';
+		const production = 'https://asrserver.herokuapp.com';
 		try {
 			await axios({
 				method: 'POST',
-				url: `https://asrserver.herokuapp.com/api/satactsense/send-email`,
+				url: `${production}/api/satactsense/send-email`,
 				data: {
 					headers: {
 						'Content-Type': 'application/x-www-form-urlencoded',
@@ -120,9 +122,11 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 	};
 
 	const sendConfirmationEmail = async () => {
-		const res = await axios({
+		// const development = 'http://localhost:5000';
+		const production = 'https://asrserver.herokuapp.com';
+		await axios({
 			method: 'POST',
-			url: `https://asrserver.herokuapp.com/api/satactsense/send-email/confirm`,
+			url: `${production}/api/satactsense/send-email/confirm`,
 			data: {
 				headers: {
 					'Content-Type': 'application/x-www-form-urlencoded',
@@ -134,7 +138,6 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 	};
 
 	useEffect(() => {
-		setFormData({ ...formData, subject: category });
 		setMessage({
 			status: [`Please Contact us for more information regarding "${category}."`],
 			error: false,
@@ -142,6 +145,10 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 			loading: false,
 		});
 	}, [category, setMessage]);
+
+	useEffect(() => {
+		setFormData({ ...formData, subject: category });
+	}, [setFormData, category]);
 
 	return (
 		<div className={modalState ? modalStyle.container : modalStyle.container_hidden}>
@@ -164,9 +171,9 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 
 					<div className={modalStyle.heading}>
 						<div className={modalStyle.status}>
-							{status.map((text) => {
+							{status.map((text, i) => {
 								return loading ? (
-									<LoadingSpinner />
+									<LoadingSpinner key={i} />
 								) : (
 									<h2
 										className={
@@ -178,6 +185,7 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 												? modalStyle.success
 												: ''
 										}
+										key={i}
 									>
 										{text}
 									</h2>

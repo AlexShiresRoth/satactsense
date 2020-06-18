@@ -14,26 +14,27 @@ interface CopyProps {
 const Copy = ({ headerText, setCategory, setModalState, setSlideStart, slideStart, data }: CopyProps) => {
 	useEffect(() => {
 		setSlideStart(0);
-	}, []);
+	}, [setSlideStart]);
+
 	return headerText
 		.filter((item: any) => {
 			return item.id === data;
 		})
-		.map((item: any) => {
+		.map((item: any, i: number) => {
 			return (
-				<>
+				<div key={i}>
 					<h2>{item.title}</h2>
 					{item.text.length > 4
 						? item.text
 								.slice(slideStart, slideStart !== 0 ? item.text.length : 4)
 								.map((par: any, i: number) => {
-									return par.par;
+									return <div key={i}>{par.par}</div>;
 								})
 						: item.text.map((par: any, i: number) => {
 								return !par.link ? (
-									par.par
+									<div key={i}>{par.par}</div>
 								) : (
-									<>
+									<div key={i}>
 										{par.par}
 										<button
 											onClick={() => {
@@ -43,7 +44,7 @@ const Copy = ({ headerText, setCategory, setModalState, setSlideStart, slideStar
 										>
 											{par.link}
 										</button>
-									</>
+									</div>
 								);
 						  })}
 
@@ -67,7 +68,7 @@ const Copy = ({ headerText, setCategory, setModalState, setSlideStart, slideStar
 							</button>
 						</>
 					) : null}
-				</>
+				</div>
 			);
 		});
 };

@@ -24,6 +24,12 @@ const CollegeConsultingPage = ({ setHeaderData, setBanner }: CollegeProps) => {
 		setBanner(findBannerData);
 	}, [setHeaderData, setBanner]);
 
+	useEffect(() => {
+		setTimeout(() => {
+			window.scrollTo({ top: 0 });
+		}, 300);
+	}, []);
+
 	const pageInfo = {
 		pageTitle: 'College Consulting & Life Coaching',
 		description: 'College consulting and life coaching',

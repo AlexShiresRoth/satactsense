@@ -24,6 +24,11 @@ const ActPage = ({ setHeaderData, setBanner }: ActPageProps) => {
 		setBanner(findBannerData);
 	}, [setHeaderData, setBanner]);
 
+	useEffect(() => {
+		setTimeout(() => {
+			window.scrollTo({ top: 0 });
+		}, 300);
+	}, []);
 	const pageInfo = {
 		pageTitle: 'ACT',
 		description: 'ACT test tutoring',

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import navStyle from './Nav.module.scss';
 import Menu from './Menu';
 import Modal from '../contact/Modal';
@@ -90,6 +89,7 @@ const Nav = ({ headerData: { data, bannerData }, modal: { modalState }, setModal
 											? `${navStyle.list_link} ${navStyle.active}`
 											: navStyle.list_link
 									}
+									key={i}
 								>
 									<Link to={link.path}>
 										<button>
@@ -101,7 +101,7 @@ const Nav = ({ headerData: { data, bannerData }, modal: { modalState }, setModal
 									<div className={navStyle.dropdown_container}>
 										{link.dropdown.map((item, i) => {
 											return item.title !== '' ? (
-												<Link to={item.path}>
+												<Link to={item.path} key={i}>
 													<button key={i}>{item.title}</button>
 												</Link>
 											) : null;
@@ -120,9 +120,9 @@ const Nav = ({ headerData: { data, bannerData }, modal: { modalState }, setModal
 							</h2>
 							{subjectArray
 								.filter((item) => item.id === data)
-								.map((item) => {
+								.map((item, i) => {
 									return item.types.length > 0 ? (
-										<p>
+										<p key={i}>
 											<MdModeComment />
 											Select a tab below to contact us on that particular subject.
 										</p>
@@ -140,13 +140,7 @@ const Nav = ({ headerData: { data, bannerData }, modal: { modalState }, setModal
 	);
 };
 
-Nav.propTypes = {
-	data: PropTypes.string.isRequired,
-	bannerData: PropTypes.string.isRequired,
-};
-
 const mapStateToProps = (state: any) => {
-	console.log(state);
 	return {
 		headerData: state.headerData,
 		modal: state.modal,
