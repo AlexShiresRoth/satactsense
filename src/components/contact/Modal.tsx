@@ -147,8 +147,8 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 	}, [category, setMessage]);
 
 	useEffect(() => {
-		setFormData({ ...formData, subject: category });
-	}, [setFormData, category]);
+		setFormData({ email, name, phone, message, grade, subject: category });
+	}, [setFormData, category, email, name, phone, message, grade]);
 
 	return (
 		<div className={modalState ? modalStyle.container : modalStyle.container_hidden}>
