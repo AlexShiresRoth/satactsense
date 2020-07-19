@@ -59,7 +59,6 @@ const Landing = ({ setModalState, setCategory, modal: { modalState } }: Props) =
 };
 
 const mapStateToProps = (state: any) => {
-	console.log(state);
 	return {
 		modal: state.modal,
 	};

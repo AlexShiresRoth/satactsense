@@ -10,6 +10,7 @@ interface Props {
 
 const PopUp = ({ modalState }: Props) => {
 	const [isShowing, setPopUpState] = useState(false);
+	const [canceled, cancel] = useState(false);
 
 	const [formData, setFormData] = useState({
 		email: '',
@@ -28,9 +29,11 @@ const PopUp = ({ modalState }: Props) => {
 
 	useEffect(() => {
 		setTimeout(() => {
-			window.localStorage.getItem('email') !== null ? setPopUpState(false) : setPopUpState(true);
+			window.localStorage.getItem('email') !== null || canceled ? setPopUpState(false) : setPopUpState(true);
 		}, 10000);
-	}, [modalState]);
+
+		return () => clearTimeout();
+	}, [modalState, canceled]);
 
 	const logo = (
 		<img
@@ -103,6 +106,7 @@ const PopUp = ({ modalState }: Props) => {
 					<button
 						onClick={(e) => {
 							setPopUpState(!isShowing);
+							cancel(true);
 						}}
 					>
 						<MdClose />
