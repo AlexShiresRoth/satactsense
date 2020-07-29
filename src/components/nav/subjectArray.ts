@@ -65,6 +65,7 @@ export const subjectArray = [
 		id: 'SAT',
 		types: [],
 	},
+	{ id: 'SSAT', types: [] },
 	{
 		id: 'ACT',
 		types: [],
@@ -128,6 +129,7 @@ export const serviceLinks = [
 		dropdown: [
 			{ title: 'SAT', dropid: 'SAT', path: '/sat' },
 			{ title: 'ACT', dropid: 'ACT', path: '/act' },
+			{ title: 'SSAT', dropid: 'SSAT', path: '/satandact' },
 			{ title: 'ACT Materials', dropid: 'ACTMAT', path: '/actmaterials' },
 			{ title: 'SAT Materials', dropid: 'SATMAT', path: '/satmaterials' },
 		],
@@ -154,6 +156,7 @@ export const serviceLinks = [
 
 export const categories = [
 	'SAT Prep',
+	'SSAT Prep',
 	'ACT Prep',
 	'ACT English Manual PDF',
 	'SAT Manual for Writing and Language Section',

@@ -274,7 +274,7 @@
 						visibility: hidden;
 						opacity: 0;
 						max-height: 0;
-						z-index: 9;
+						z-index: 99999999;
 						transition: all 0.3s ease;
 						& button {
 							display: flex;
@@ -380,7 +380,7 @@
 						width: 100%;
 						background: $brand-secondary;
 						transition: all 0.3s ease-in-out;
-						z-index: 999;
+						z-index: 333;
 						& ul {
 							display: flex;
 							flex-direction: column;

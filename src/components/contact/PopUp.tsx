@@ -27,14 +27,6 @@ const PopUp = ({ modalState }: Props) => {
 
 	const { email } = formData;
 
-	useEffect(() => {
-		setTimeout(() => {
-			window.localStorage.getItem('email') !== null || canceled ? setPopUpState(false) : setPopUpState(true);
-		}, 10000);
-
-		return () => clearTimeout();
-	}, [modalState, canceled]);
-
 	const logo = (
 		<img
 			src="https://res.cloudinary.com/snackmanproductions/image/upload/v1586538815/satactsense/sat_logo_lpezq0.png"
@@ -93,6 +85,15 @@ const PopUp = ({ modalState }: Props) => {
 			});
 		}
 	};
+
+	//if user gave email, stop the popup
+	useEffect(() => {
+		const handlePopup = setTimeout(() => {
+			localStorage.getItem('email') !== null || canceled ? setPopUpState(false) : setPopUpState(true);
+		}, 10000);
+
+		return () => clearTimeout(handlePopup);
+	}, [modalState, canceled]);
 
 	return isShowing ? (
 		<div className={popupStyle.popup_container}>
