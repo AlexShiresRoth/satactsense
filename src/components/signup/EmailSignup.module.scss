@@ -139,7 +139,7 @@
   .section {
     & .grid {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
       & h3 {
         margin: 0.5rem 0;
         font-size: 1rem;
@@ -148,13 +148,13 @@
         line-height: 1.5;
       }
       & .form_container {
-        display: flex;
-        justify-content: center;
+        width:90%;
         & form {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: center;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(2,auto);
+          width:100%;
+          gap:1rem;
           & input {
             padding: 0.5rem;
           }
