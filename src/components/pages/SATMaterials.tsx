@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Layout from '../layout/Layout';
 import Nav from '../nav/Nav';
 import EmailSignup from '../signup/EmailSignup';
-import Video from '../video/Video';
 import Bio from '../bio/Bio';
 import Testimonials from '../testimonials/Testimonials';
 import Footer from '../footer/Footer';
@@ -11,6 +10,7 @@ import { setHeaderData, setBanner } from '../../actions/headerData';
 import { connect } from 'react-redux';
 import Action from '../action/Action';
 import SATMaterialsComponent from '../satmaterials/SATMaterialsComponent';
+import Video from '../video/Video';
 
 interface Props {
 	setHeaderData: (val: string) => any;
@@ -40,9 +40,9 @@ const SATMaterials = ({ setHeaderData, setBanner }: Props) => {
 			<Nav />
 			<SATMaterialsComponent />
 			<EmailSignup />
+			<Testimonials />
 			<Video />
 			<Bio />
-			<Testimonials />
 			<Action />
 			<Footer />
 		</Layout>

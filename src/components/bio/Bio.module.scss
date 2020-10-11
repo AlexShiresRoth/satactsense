@@ -55,7 +55,7 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: center;
-			background: darken($bg-color, 2%);
+			background: $brand-bg;
 			& button {
 				background: transparent;
 				border: 0px solid transparent;

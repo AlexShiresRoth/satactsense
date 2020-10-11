@@ -3,7 +3,6 @@ import Layout from '../layout/Layout';
 import Nav from '../nav/Nav';
 import Header from '../home/Header';
 import EmailSignup from '../signup/EmailSignup';
-import Video from '../video/Video';
 import Bio from '../bio/Bio';
 import Testimonials from '../testimonials/Testimonials';
 import Footer from '../footer/Footer';
@@ -11,6 +10,7 @@ import { headerText } from '../reusable/headerText';
 import { setHeaderData, setBanner } from '../../actions/headerData';
 import { connect } from 'react-redux';
 import Action from '../action/Action';
+import Video from '../video/Video';
 
 interface ApProps {
 	setHeaderData: (val: string) => any;
@@ -41,9 +41,9 @@ const APPage = ({ setHeaderData, setBanner }: ApProps) => {
 			<Nav />
 			<Header />
 			<EmailSignup />
+			<Testimonials />
 			<Video />
 			<Bio />
-			<Testimonials />
 			<Action />
 			<Footer />
 		</Layout>
