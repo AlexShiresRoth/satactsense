@@ -6,12 +6,13 @@
 	align-items: center;
 	justify-content: center;
 	width: 100vw;
-	background: $background;
+	background: #fbfbfbd8;
 	& .main__container {
 		width: 80vw;
 		max-width: 1400px;
+		border:1.6px solid #eee;
 		& section {
-			margin:.5rem 0;
+			border-top:1.6px solid #eee;
 		}
 	}
 }
