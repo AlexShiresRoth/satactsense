@@ -1,0 +1,256 @@
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fff;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.section .alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 0;
+  visibility: hidden;
+}
+
+.section .error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(246, 67, 67, 0.431);
+  padding: 0.5rem 0;
+  max-height: 10vh;
+  visibility: visible;
+  color: #fff;
+}
+
+.section .success {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(54, 224, 20, 0.431);
+  padding: 0.5rem 0;
+  max-height: 10vh;
+  visibility: visible;
+  color: #fff;
+}
+
+.section .loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 10vh;
+  visibility: visible;
+  padding: 0.5rem 0;
+  color: #fff;
+  -webkit-animation: loading 0.3s linear infinite;
+          animation: loading 0.3s linear infinite;
+  color: #fff;
+}
+
+.section .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 2fr;
+      grid-template-rows: 2fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  width: 100%;
+}
+
+.section .grid h3 {
+  margin-left: 1rem;
+  color: #1a3a6d;
+  text-align: center;
+}
+
+.section .grid form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  height: 100%;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.section .grid form .form_col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.section .grid form .form_col label {
+  margin-bottom: .2rem;
+}
+
+.section .grid form .form_col label::after {
+  content: "*";
+  color: rgba(252, 56, 56, 0.87);
+}
+
+.section .grid form .form_col input {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 2px solid #1a3a6d;
+  font-size: 16px;
+  color: #1b262c;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+}
+
+.section .grid form .form_col input::-webkit-input-placeholder {
+  color: #1a3a6d;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.section .grid form .form_col input:-ms-input-placeholder {
+  color: #1a3a6d;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.section .grid form .form_col input::-ms-input-placeholder {
+  color: #1a3a6d;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.section .grid form .form_col input::placeholder {
+  color: #1a3a6d;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.section .grid form .form_col input:focus {
+  border-radius: 3px;
+  outline: 2px solid #a5c0f1;
+}
+
+.section .grid form .form_col input:hover {
+  border: 2px solid #a5c0f1;
+}
+
+.section .grid form .form_col input:hover::-webkit-input-placeholder {
+  color: #a5c0f1;
+}
+
+.section .grid form .form_col input:hover:-ms-input-placeholder {
+  color: #a5c0f1;
+}
+
+.section .grid form .form_col input:hover::-ms-input-placeholder {
+  color: #a5c0f1;
+}
+
+.section .grid form .form_col input:hover::placeholder {
+  color: #a5c0f1;
+}
+
+.section .grid form .form_col button {
+  margin: 0 1rem;
+  border: 2px solid #1a3a6d;
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+  justify-self: flex-end;
+  color: #fff;
+  background: linear-gradient(45deg, #1a3a6d 50%, #152f58 30%);
+  font-size: 16px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+}
+
+.section .grid form .form_col button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 5px 5px #152f58;
+          box-shadow: 0 5px 5px #152f58;
+}
+
+@media screen and (max-width: 900px) {
+  .section .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+  }
+  .section .grid h3 {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    text-align: center;
+    max-width: 90%;
+    line-height: 1.5;
+  }
+  .section .grid .form_container {
+    width: 90%;
+  }
+  .section .grid .form_container form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+    width: 100%;
+    gap: 1rem;
+  }
+  .section .grid .form_container form input {
+    padding: 0.5rem;
+  }
+  .section .grid .form_container form button {
+    margin: 0;
+    padding: 0.5rem 0;
+    min-width: 7rem;
+  }
+}
+/*# sourceMappingURL=EmailSignup.module.css.map */

@@ -1,0 +1,294 @@
+@font-face {
+  font-family: 'Wotfard';
+  src: url("../fonts/wotfard.ttf");
+}
+
+.popup_container {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 66666;
+}
+
+.popup_container .popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+}
+
+.popup_container .popup .heading {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  gap: 3rem;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.popup_container .popup .heading img {
+  max-width: 5rem;
+}
+
+.popup_container .popup .heading h2 {
+  margin: 0;
+  font-weight: 700;
+  color: #1a3a6d;
+  font-family: 'Wotfard';
+}
+
+.popup_container .popup .heading p {
+  margin: 0;
+}
+
+.popup_container .popup .heading button {
+  padding: 1rem;
+  background: #1a3a6d;
+  border-radius: 50%;
+  border: 1px solid #1a3a6d;
+  color: #fff;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 1px 15px #1f4582;
+          box-shadow: 0 1px 15px #1f4582;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.popup_container .popup .heading button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 1px 5px #1f4582;
+          box-shadow: 0 1px 5px #1f4582;
+}
+
+.popup_container .popup .msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup_container .popup .msg p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #1a3a6d;
+}
+
+.popup_container .popup .msg .error {
+  background: rgba(241, 74, 74, 0.39);
+  color: #fff;
+}
+
+.popup_container .popup .msg .success {
+  background: rgba(33, 149, 33, 0.712);
+  color: #fff;
+}
+
+.popup_container .popup form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem 0;
+}
+
+.popup_container .popup form input {
+  padding: 0.5rem 1rem;
+  border: 2px solid #eee;
+}
+
+.popup_container .popup form button {
+  padding: 0.5rem 1rem;
+  border: 2px solid #1a3a6d;
+  background: #1a3a6d;
+  color: #fff;
+  font-size: 16px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.popup_container .popup form button:hover {
+  cursor: pointer;
+  background: #1f4582;
+}
+
+@media screen and (max-width: 900px) {
+  .popup_container {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+  }
+  .popup_container .popup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #fff;
+    padding: 2rem;
+  }
+  .popup_container .popup .heading {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    gap: 0.5rem;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .popup_container .popup .heading img {
+    max-width: 5rem;
+  }
+  .popup_container .popup .heading h2 {
+    margin: 0;
+    font-weight: 700;
+    color: #1a3a6d;
+    font-family: 'Wotfard';
+  }
+  .popup_container .popup .heading p {
+    margin: 0;
+  }
+  .popup_container .popup .heading button {
+    padding: 1rem;
+    background: #1a3a6d;
+    border-radius: 50%;
+    border: 1px solid #1a3a6d;
+    color: #fff;
+    font-size: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 0 1px 15px #1f4582;
+            box-shadow: 0 1px 15px #1f4582;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .popup_container .popup .heading button:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0 1px 5px #1f4582;
+            box-shadow: 0 1px 5px #1f4582;
+  }
+  .popup_container .popup .msg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .popup_container .popup .msg p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  .popup_container .popup .msg .error {
+    background: rgba(241, 74, 74, 0.39);
+    color: #fff;
+  }
+  .popup_container .popup .msg .success {
+    background: rgba(33, 149, 33, 0.712);
+    color: #fff;
+  }
+  .popup_container .popup form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 1rem 0;
+  }
+  .popup_container .popup form input {
+    padding: 0.5rem 1rem;
+    border: 2px solid #eee;
+  }
+  .popup_container .popup form button {
+    padding: 0.5rem 1rem;
+    border: 2px solid #1a3a6d;
+    background: #1a3a6d;
+    color: #fff;
+    font-size: 16px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .popup_container .popup form button:hover {
+    cursor: pointer;
+    background: #1f4582;
+  }
+}
+/*# sourceMappingURL=PopUp.module.css.map */

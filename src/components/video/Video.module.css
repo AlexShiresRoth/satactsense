@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "Wotfard";
+  src: url("../fonts/wotfard.ttf");
+}
+
+.section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  padding: 0rem 0 4rem 0;
+  background: #fff;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section h2 {
+  color: #1a3a6d;
+  font-family: "Wotfard";
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.section h4 {
+  color: #222;
+  margin: 0.5rem 0;
+}
+
+.section .text_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem 4rem;
+  justify-items: center;
+}
+
+.section .text_container p {
+  color: #444;
+  max-width: 90%;
+}
+
+.section .video_container {
+  width: 100%;
+  background: url("https://res.cloudinary.com/snackmanproductions/image/upload/v1602445005/satactsense/First_We_Test_Then_We_Assess_zx1xni.jpg");
+  background-position: 50% 80%;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+}
+
+.section .video_container .heading {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.801);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 4rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .section h2 {
+    color: #1a3a6d;
+    font-size: 1.5rem;
+  }
+  .section .text_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section .text_container svg {
+    max-width: 6rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .section {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+    gap: 2rem;
+  }
+  .section h2 {
+    color: #1a3a6d;
+    font-size: 1.3rem;
+  }
+  .section .text_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .section .text_container svg {
+    max-width: 5rem;
+  }
+  .section .video_container {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section {
+    padding: 2rem;
+  }
+  .section h2 {
+    color: #1a3a6d;
+    font-size: 1.2rem;
+  }
+  .section .text_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem;
+  }
+  .section .text_container p {
+    max-width: 100%;
+  }
+}
+/*# sourceMappingURL=Video.module.css.map */

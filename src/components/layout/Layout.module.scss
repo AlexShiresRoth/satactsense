@@ -10,7 +10,9 @@
 	& .main__container {
 		width: 80vw;
 		max-width: 1400px;
-		box-shadow: 0 10px 10px #eee;
+		& section {
+			margin:.5rem 0;
+		}
 	}
 }
 

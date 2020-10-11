@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,CAAC;EACL,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,KAAK,EAAE,KAAK;EACZ,UAAU,ECFC,OAAO;CDUlB;;AAdD,AAOC,KAPI,CAOF,gBAAgB,CAAC;EAClB,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,MAAM;CAIjB;;AAbF,AAUE,KAVG,CAOF,gBAAgB,CAGf,OAAO,CAAC;EACT,MAAM,EAAC,OAAO;CACd;;AAIH,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,MAAM;EACnC,AACC,KADI,CACF,gBAAgB,CAAC;IAClB,KAAK,EAAE,IAAI;GACX",
+    "sources": [
+        "Layout.module.scss",
+        "../../../sass/_variables.scss"
+    ],
+    "names": [],
+    "file": "Layout.module.css"
+}

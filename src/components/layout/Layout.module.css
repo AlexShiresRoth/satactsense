@@ -1,0 +1,33 @@
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  background: #F0FFF1;
+}
+
+.main .main__container {
+  width: 80vw;
+  max-width: 1400px;
+}
+
+.main .main__container section {
+  margin: .5rem 0;
+}
+
+@media screen and (max-width: 1300px) {
+  .main .main__container {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=Layout.module.css.map */

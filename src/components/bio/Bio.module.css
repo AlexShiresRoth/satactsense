@@ -1,0 +1,225 @@
+.section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  background: #fff;
+  padding: 4rem;
+}
+
+.section .img_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section .img_container p {
+  font-weight: 700;
+}
+
+.section .img_container img {
+  max-width: 10rem;
+  border-radius: 10px;
+  border: 5px solid #eee;
+}
+
+.section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.section .container h2 {
+  color: #f8823e;
+}
+
+.section .container .copy {
+  max-height: 100vh;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.section .container .copy p {
+  color: #1a3a6d;
+  line-height: 2;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section .container .copy_reduced {
+  max-height: 7rem;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.section .container .copy_reduced p {
+  color: #1a3a6d;
+  line-height: 2;
+  font-weight: 500;
+}
+
+.section .container .copy_button_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fff;
+}
+
+.section .container .copy_button_container button {
+  background: transparent;
+  border: 0px solid transparent;
+  color: #f8823e;
+  width: 50%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.section .container .copy_button_container button:active {
+  outline: 0px solid transparent;
+}
+
+.section .container .copy_button_container button:focus {
+  outline: 0px solid transparent;
+}
+
+.section .container .copy_button_container button:hover {
+  cursor: pointer;
+}
+
+.section .container .copy_button_container span {
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  display: block;
+}
+
+@media screen and (max-width: 900px) {
+  .section {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+  }
+  .section .img_container img {
+    max-width: 9rem;
+  }
+  .section .img_container p {
+    text-align: center;
+  }
+  .section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 70%;
+  }
+  .section .container h2 {
+    color: #f8823e;
+    text-align: center;
+  }
+  .section .container .copy {
+    max-height: 300vh;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  .section .container .copy p {
+    color: #1a3a6d;
+    line-height: 2;
+    max-width: 100%;
+    font-weight: 500;
+  }
+  .section .container .copy_reduced {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    max-height: 10rem;
+  }
+  .section .container .copy_reduced p {
+    color: #1a3a6d;
+    line-height: 2;
+    max-width: 100%;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section .img_container img {
+    max-width: 9rem;
+  }
+  .section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 90vw;
+  }
+  .section .container h2 {
+    color: #f8823e;
+  }
+  .section .container .copy {
+    max-height: 300vh;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  .section .container .copy p {
+    color: #1a3a6d;
+    line-height: 2;
+    max-width: 100%;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  .section .container .copy_reduced {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    max-height: 10rem;
+  }
+  .section .container .copy_reduced p {
+    color: #1a3a6d;
+    line-height: 2;
+    max-width: 100%;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+}
+/*# sourceMappingURL=Bio.module.css.map */

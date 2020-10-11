@@ -1,0 +1,27 @@
+.spinner {
+  height: 2rem;
+  width: 2rem;
+  display: block;
+  border-top: 5px solid #f8823e;
+  border-bottom: 5px solid #f8823e;
+  border-left: 5px solid #1f4582;
+  border-right: 5px solid #1f4582;
+  border-radius: 50%;
+  -webkit-animation: spin 0.5s linear infinite;
+          animation: spin 0.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=LoadingSpinner.module.css.map */

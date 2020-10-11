@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,QAAQ,CAAC;EACR,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,KAAK;EACd,UAAU,EAAE,GAAG,CAAC,KAAK,CCCd,OAAO;EDAd,aAAa,EAAE,GAAG,CAAC,KAAK,CCAjB,OAAO;EDCd,WAAW,EAAE,GAAG,CAAC,KAAK,CAAC,OAAwB;EAC/C,YAAY,EAAE,GAAG,CAAC,KAAK,CAAC,OAAwB;EAChD,aAAa,EAAE,GAAG;EAClB,SAAS,EAAE,yBAAyB;CACpC;;AAED,UAAU,CAAV,IAAU;EACT,IAAI;IACH,SAAS,EAAE,cAAc",
+    "sources": [
+        "LoadingSpinner.module.scss",
+        "../../../sass/_variables.scss"
+    ],
+    "names": [],
+    "file": "LoadingSpinner.module.css"
+}
