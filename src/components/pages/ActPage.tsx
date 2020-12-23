@@ -1,16 +1,9 @@
 import React, { useEffect } from 'react';
 import Layout from '../layout/Layout';
-import Nav from '../nav/Nav';
 import Header from '../home/Header';
-import EmailSignup from '../signup/EmailSignup';
-import Bio from '../bio/Bio';
-import Testimonials from '../testimonials/Testimonials';
-import Footer from '../footer/Footer';
 import { headerText } from '../reusable/headerText';
 import { setHeaderData, setBanner } from '../../actions/headerData';
 import { connect } from 'react-redux';
-import Action from '../action/Action';
-import Video from '../video/Video';
 
 interface ActPageProps {
 	setHeaderData: (val: string) => any;
@@ -36,14 +29,7 @@ const ActPage = ({ setHeaderData, setBanner }: ActPageProps) => {
 	};
 	return (
 		<Layout pageInfo={pageInfo}>
-			<Nav />
 			<Header />
-			<EmailSignup />
-			<Testimonials />
-			<Video />
-			<Bio />
-			<Action />
-			<Footer />
 		</Layout>
 	);
 };

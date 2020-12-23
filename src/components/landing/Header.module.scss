@@ -59,16 +59,17 @@
 				text-decoration: none;
 			}
 			& button {
-				min-height: 3.6rem;
+				min-height: 3.4rem;
 				width: 14rem;
 				background: lighten($alert, 5%);
-				border: 5px solid transparent;
-				border-radius: 100px;
+				border-radius: 60px;
 				color: #fff;
 				font-family: 'Wotfard';
+				font-weight: 700;
 				text-transform: uppercase;
 				font-size: 1rem;
-				box-shadow: 0 1px 15px lighten($alert, 5%);
+				border: 0;
+				box-shadow: 0 0 0 1px lighten($alert, 15%);
 				transition: all 0.3s ease;
 				margin: 1rem 2rem 0 0;
 				display: flex;
@@ -79,8 +80,7 @@
 				&:hover {
 					cursor: pointer;
 					background: $alert;
-					box-shadow: 0 2px 25px $alert;
-					border: 5px solid lighten($alert, 5%);
+					box-shadow: 0 0px 0 5px lighten($alert, 15%);
 				}
 				& svg {
 					font-size: 1.5rem;
@@ -90,12 +90,11 @@
 			& button:nth-child(2) {
 				background: transparent;
 				color: $brand-accent;
-				border: 5px solid $brand-accent;
-				box-shadow: 0 0 0;
+				box-shadow: 0 0 0 3px lighten($brand-accent, 5%);
 				&:hover {
 					background: $brand-accent;
 					color: #fff;
-					border: 5px solid lighten($brand-accent, 5%);
+					box-shadow: 0 0 0 5px lighten($brand-accent, 5%);
 				}
 			}
 		}
