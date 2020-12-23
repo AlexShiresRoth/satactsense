@@ -31,7 +31,7 @@
 		& .col {
 			background: #fff;
 			border-radius: 3px;
-			box-shadow: 0 1px 25px rgba(110, 110, 110, 0.411);
+			box-shadow: 0 1px 35px rgba(110, 110, 110, 0.239);
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -55,8 +55,40 @@
 			}
 			& .details {
 				padding: 1rem;
+				width: 100%;
+				transition: all 0.3s ease;
+				background: $brand-accent;
+				box-shadow: 0 1px 20px rgba(65, 64, 64, 0.322);
+				border-top-right-radius: 3px;
+				border-bottom-right-radius: 3px;
+				&:hover {
+					background: $brand-accent;
+				}
+				& .icon {
+					font-size: 2.5rem;
+					color: $alert;
+				}
 				& p {
 					margin-top: 0;
+					color: #fff;
+					padding: 0.5rem 0;
+				}
+				& a {
+					display: flex;
+					align-items: center;
+					transition: all 0.3s ease;
+					color: $alert;
+					& svg {
+						transition: all 0.3s ease;
+					}
+					&:hover {
+						cursor: pointer;
+						color: $brand-main;
+					}
+					&:hover svg {
+						margin-left: 0.5rem;
+						color: $brand-main;
+					}
 				}
 			}
 			& .button_container {

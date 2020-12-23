@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import style from './ClassSchedule.module.scss';
 import { FaChevronRight } from 'react-icons/fa';
+import { AiFillSchedule, AiOutlineSchedule } from 'react-icons/ai';
 
+//TODO make 40 hrs card look more appealing
 const ClassSchedule = (props: any) => {
 	const [deetsVisible, showDeets] = useState(false);
 
@@ -23,6 +25,8 @@ const ClassSchedule = (props: any) => {
 						<div className={style.divider}></div>
 					</div>
 					<div className={style.details}>
+						<AiOutlineSchedule className={style.icon} />
+
 						<p>
 							Weekdays, 6-week, SAT CLASS <br /> Twice a Week (Monday & Wednesday)
 						</p>
@@ -45,12 +49,13 @@ const ClassSchedule = (props: any) => {
 						<div className={style.divider}></div>
 					</div>
 					<div className={style.details}>
+						<AiFillSchedule className={style.icon} />
 						<p>
 							Weekday, 10-week, SAT CLASS <br /> Twice a Week (Monday & Wednesday)
 						</p>
-						<p>
+						<a onPointerDown={(e) => showDeets(!deetsVisible)}>
 							More Details <FaChevronRight />
-						</p>
+						</a>
 					</div>
 
 					<div className={style.button_container}>
