@@ -1,170 +1,165 @@
-@import "../../../sass/variables";
+@import '../../../sass/variables';
 .section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background: $brand-bg;
-  padding: 2rem 0;
-  position: relative;
-  & .alert {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    max-height: 0;
-    visibility: hidden;
-  }
-  & .error {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background: rgba(246, 67, 67, 0.431);
-    padding: 0.5rem 0;
-    max-height: 10vh;
-    visibility: visible;
-    color: #fff;
-  }
-  & .success {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background: rgba(54, 224, 20, 0.431);
-    padding: 0.5rem 0;
-    max-height: 10vh;
-    visibility: visible;
-    color: #fff;
-  }
-  & .loading {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    max-height: 10vh;
-    visibility: visible;
-    padding: 0.5rem 0;
-    color: #fff;
-    animation: loading 0.3s linear infinite;
-    color: #fff;
-  }
-  & .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr;
-    align-content: center;
-    justify-items: center;
-    width: 100%;
-    & h3 {
-      margin-left: 1rem;
-      color: $brand-main;
-      text-align: center;
-    }
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background: $brand-bg;
+	padding: 2rem 0;
+	position: relative;
+	& .alert {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		max-height: 0;
+		visibility: hidden;
+	}
+	& .error {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		background: rgba(246, 67, 67, 0.431);
+		padding: 0.5rem 0;
+		max-height: 10vh;
+		visibility: visible;
+		color: #fff;
+	}
+	& .success {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		background: rgba(54, 224, 20, 0.431);
+		padding: 0.5rem 0;
+		max-height: 10vh;
+		visibility: visible;
+		color: #fff;
+	}
+	& .loading {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		max-height: 10vh;
+		visibility: visible;
+		padding: 0.5rem 0;
+		color: #fff;
+		animation: loading 0.3s linear infinite;
+		color: #fff;
+	}
+	& .grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 2fr;
+		align-content: center;
+		justify-items: center;
+		width: 100%;
+		& h3 {
+			margin-left: 1rem;
+			color: $brand-main;
+			text-align: center;
+		}
 
-    & form {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0.5rem;
-      height: 100%;
-      width: 100%;
-      margin-top: 1rem;
-      & .form_col {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        & label {
-			margin-bottom:.2rem;
-          &::after {
-            content: "*";
-            color: rgba(252, 56, 56, 0.87);
-          }
-        }
-        & input {
-          padding: 0.5rem 1rem;
-          background: transparent;
-          border: 2px solid $brand-main;
-          font-size: 16px;
-          color: $text-color;
-          transition: all 0.3s ease-in-out;
-          border-radius: 3px;
-          &::placeholder {
-            color: $brand-main;
-            transition: all 0.3s ease-in-out;
-          }
-          &:focus {
-            border-radius: 3px;
-            outline: 2px solid $brand-secondary;
-          }
-          &:hover {
-            border: 2px solid $brand-secondary;
-            &::placeholder {
-              color: $brand-secondary;
-            }
-          }
-        }
-        & button {
-          margin: 0 1rem;
-          border: 2px solid $brand-main;
-          font-size: 16px;
-          padding: 0.5rem 1rem;
-          justify-self: flex-end;
-          color: #fff;
-          background: linear-gradient(
-            45deg,
-            $brand-main 50%,
-            darken($brand-main, 5%) 30%
-          );
-          font-size: 16px;
-          transition: all 0.3s ease-in-out;
-          border-radius: 3px;
-          &:hover {
-            cursor: pointer;
-            box-shadow: 0 5px 5px darken($brand-main, 5%);
-          }
-        }
-      }
-    }
-  }
+		& form {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 0.5rem;
+			height: 100%;
+			width: 100%;
+			& .form_col {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				& label {
+					margin-bottom: 0.2rem;
+					&::after {
+						content: '*';
+						color: rgba(252, 56, 56, 0.87);
+					}
+				}
+				& input {
+					padding: 0.5rem 1rem;
+					background: transparent;
+					border: 2px solid $brand-main;
+					font-size: 16px;
+					color: $text-color;
+					transition: all 0.3s ease-in-out;
+					border-radius: 3px;
+					&::placeholder {
+						color: $brand-main;
+						transition: all 0.3s ease-in-out;
+					}
+					&:focus {
+						border-radius: 3px;
+						outline: 2px solid $brand-secondary;
+					}
+					&:hover {
+						border: 2px solid $brand-secondary;
+						&::placeholder {
+							color: $brand-secondary;
+						}
+					}
+				}
+				& button {
+					margin: 0 1rem;
+					border: 2px solid $brand-main;
+					font-size: 16px;
+					padding: 0.5rem 1rem;
+					justify-self: flex-end;
+					color: #fff;
+					background: linear-gradient(45deg, $brand-main 50%, darken($brand-main, 5%) 30%);
+					font-size: 16px;
+					transition: all 0.3s ease-in-out;
+					border-radius: 3px;
+					&:hover {
+						cursor: pointer;
+						box-shadow: 0 5px 5px darken($brand-main, 5%);
+					}
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 900px) {
-  .section {
-    & .grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(2, auto);
-      & h3 {
-        margin: 0.5rem 0;
-        font-size: 1rem;
-        text-align: center;
-        max-width: 90%;
-        line-height: 1.5;
-      }
-      & .form_container {
-        width:90%;
-        & form {
-          display: grid;
-          grid-template-columns: 1fr;
-          grid-template-rows: repeat(2,auto);
-          width:100%;
-          gap:1rem;
-          & input {
-            padding: 0.5rem;
-          }
-          & button {
-            margin: 0;
-            padding: 0.5rem 0;
-            min-width: 7rem;
-          }
-        }
-      }
-    }
-  }
+	.section {
+		& .grid {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(2, auto);
+			& h3 {
+				margin: 0.5rem 0;
+				font-size: 1rem;
+				text-align: center;
+				max-width: 90%;
+				line-height: 1.5;
+			}
+			& .form_container {
+				width: 90%;
+				& form {
+					display: grid;
+					grid-template-columns: 1fr;
+					grid-template-rows: repeat(2, auto);
+					width: 100%;
+					gap: 1rem;
+					& input {
+						padding: 0.5rem;
+					}
+					& button {
+						margin: 0;
+						padding: 0.5rem 0;
+						min-width: 7rem;
+					}
+				}
+			}
+		}
+	}
 }

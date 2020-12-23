@@ -1,14 +1,75 @@
 @import '../../../sass/variables';
 
 .section {
-	min-height: 50vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
+	padding: 6rem 0;
+	background: linear-gradient(185deg, #fbfbfb 60%, $brand-main 60.3%);
+	& .heading {
+		margin-bottom: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		& h2 {
+			font-weight: 700;
+			color: $alert;
+		}
+		& .divider {
+			height: 3px;
+			width: 20%;
+			display: block;
+			background: $brand-main;
+		}
+	}
 	& .inner_grid {
-		width: 90%;
+		width: 60%;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+		& .col {
+			background: #fff;
+			border-radius: 3px;
+			box-shadow: 0 1px 25px rgba(110, 110, 110, 0.411);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			min-width: 17rem;
+			&__heading {
+				background: $brand-main;
+				padding: 1rem;
+				border-top-right-radius: 3px;
+				border-top-left-radius: 3px;
+				display: flex;
+				flex-direction: column;
+				& h3 {
+					color: #fff;
+				}
+				& .divider {
+					height: 3px;
+					width: 70%;
+					display: block;
+					background: $brand-accent;
+				}
+			}
+			& .details {
+				padding: 1rem;
+				& p {
+					margin-top: 0;
+				}
+			}
+			& .button_container {
+				padding: 1rem;
+				border-top: 1px solid #eee;
+				& button {
+					background: $brand-main;
+					color: #fff;
+					border-radius: 3px;
+					padding: 0.5rem 1rem;
+					border: 0;
+				}
+			}
+		}
 	}
 }
