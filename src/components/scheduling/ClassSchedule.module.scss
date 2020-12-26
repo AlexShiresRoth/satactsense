@@ -36,6 +36,7 @@
 			flex-direction: column;
 			justify-content: space-between;
 			min-width: 17rem;
+			transition: all 1s ease;
 			&__heading {
 				background: $brand-main;
 				padding: 1rem;
@@ -71,11 +72,13 @@
 					color: #fff;
 					padding: 0.5rem 0;
 				}
-				& a {
+				& button {
 					display: flex;
 					align-items: center;
 					transition: all 0.3s ease;
 					color: $alert;
+					background: transparent;
+					border: 0;
 					& svg {
 						transition: all 0.3s ease;
 					}
@@ -99,6 +102,11 @@
 					border-radius: 3px;
 					padding: 0.5rem 1rem;
 					border: 0;
+					transition: all 0.3s ease;
+					&:hover {
+						cursor: pointer;
+						box-shadow: 0 1px 10px $brand-main;
+					}
 				}
 			}
 		}
@@ -114,6 +122,71 @@
 				background: #fff;
 				box-shadow: 0px 0px 0px 5px #fff;
 				border-radius: 5px;
+			}
+			& button {
+				color: $brand-main;
+				&:hover {
+					cursor: pointer;
+					color: $alert;
+				}
+				&:hover svg {
+					margin-left: 0.5rem;
+					color: $alert;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		padding: 4rem 0;
+		background: linear-gradient(185deg, #fbfbfb 60%, $brand-main 60.3%);
+		& .heading {
+			& h2 {
+				font-weight: 700;
+				color: $alert;
+				text-align: center;
+			}
+		}
+		& .inner_grid {
+			width: 95%;
+			display: flex;
+			flex-direction: column;
+			justify-items: center;
+			align-items: center;
+			& .col {
+				background: #fff;
+				border-radius: 3px;
+				box-shadow: 0 1px 35px rgba(110, 110, 110, 0.239);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				min-width: 70%;
+				max-width: 80%;
+				transition: all 1s ease;
+				margin: 2rem 0;
+				&__heading {
+					background: $brand-main;
+					padding: 1rem;
+					border-top-right-radius: 3px;
+					border-top-left-radius: 3px;
+					display: flex;
+					flex-direction: column;
+					& h3 {
+						color: #fff;
+					}
+					& .divider {
+						height: 3px;
+						width: 70%;
+						display: block;
+						background: $brand-accent;
+					}
+				}
 			}
 		}
 	}

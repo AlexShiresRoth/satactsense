@@ -88,7 +88,7 @@
 				border: 0px solid $alert;
 				font-weight: 700;
 				border-radius: 5px;
-				box-shadow: 0 5px 5px darken($brand-main, 5%);
+				box-shadow: 0 1px 5px darken($brand-main, 5%);
 				transition: all 0.3s ease;
 				display: flex;
 				align-items: center;
@@ -118,7 +118,7 @@
 				min-height: 3rem;
 				background: $alert;
 				border: 1px solid $alert;
-				box-shadow: 0 1px 12px darken($alert, 5%);
+				box-shadow: 0 1px 32px rgba(102, 102, 102, 0.281);
 				border-radius: 150px;
 				color: #fff;
 				text-transform: uppercase;
@@ -127,7 +127,7 @@
 					cursor: pointer;
 					background: lighten($alert, 5%);
 					border: 1px solid lighten($alert, 5%);
-					box-shadow: 0 1px 22px lighten($alert, 2%);
+					box-shadow: 0 1px 52px rgba(102, 102, 102, 0.63);
 				}
 			}
 			& .social {

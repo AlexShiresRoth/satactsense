@@ -1,0 +1,175 @@
+@import '../../../sass/variables';
+
+.panel {
+	display: flex;
+	flex-direction: column;
+	width: 25rem;
+	transform: translate(0, 0);
+	position: fixed;
+	top: 0;
+	right: 0;
+	transition: all 0.8s ease;
+	background: #fff;
+	box-shadow: 0 1px 100px #6666666e;
+	min-height: 100vh;
+	max-height: 100vh;
+	z-index: 99999;
+	overflow-y: scroll;
+	&__inner {
+		display: flex;
+		flex-direction: column;
+
+		& .close_btn {
+			margin-top: 1rem;
+			margin-left: 1rem;
+			& button {
+				background: transparent;
+				border: 2px solid #eee;
+				display: flex;
+				align-items: center;
+				transition: all 0.3s ease;
+				padding: 0.5rem;
+				font-size: 0.9rem;
+				border-radius: 3px;
+				&:hover {
+					cursor: pointer;
+					background: $brand-main;
+					color: #fff;
+					border: 2px solid $brand-main;
+				}
+			}
+		}
+		& .heading {
+			border-bottom: 1px solid #eee;
+			padding: 0 1rem;
+			& h1 {
+				font-size: 1.5rem;
+			}
+			& h2 {
+				font-size: 1.2rem;
+			}
+			& h3 {
+				font-size: 1.1rem;
+			}
+		}
+		& .body {
+			display: grid;
+			grid-template-columns: 1fr;
+
+			& .week_box {
+				background: #fbfbfb;
+				border-bottom: 1px solid #eee;
+				padding: 0.5rem 1rem;
+				& p {
+					color: #666;
+					& strong {
+						color: $brand-main;
+					}
+				}
+			}
+		}
+	}
+}
+
+.panel_hidden {
+	display: flex;
+	flex-direction: column;
+	width: 30vw;
+	transform: translate(50vw, 0);
+	position: fixed;
+	min-height: 100vh;
+	top: 0;
+	right: 0;
+	transition: all 0.8s ease;
+	background: #fff;
+	box-shadow: 0 1px 60px #6666666e;
+	padding: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+	.panel {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		transform: translate(0, 0);
+		position: fixed;
+		top: 0;
+		right: 0;
+		transition: all 0.8s ease;
+		background: #fff;
+		box-shadow: 0 1px 100px #6666666e;
+		min-height: 100vh;
+		max-height: 100vh;
+		z-index: 99999;
+		overflow-y: scroll;
+		&__inner {
+			display: flex;
+			flex-direction: column;
+
+			& .close_btn {
+				margin-top: 1rem;
+				margin-left: 1rem;
+				& button {
+					background: transparent;
+					border: 2px solid #eee;
+					display: flex;
+					align-items: center;
+					transition: all 0.3s ease;
+					padding: 0.5rem;
+					font-size: 0.9rem;
+					border-radius: 3px;
+					&:hover {
+						cursor: pointer;
+						background: $brand-main;
+						color: #fff;
+						border: 2px solid $brand-main;
+					}
+				}
+			}
+			& .heading {
+				border-bottom: 1px solid #eee;
+				padding: 0 1rem;
+				& h1 {
+					font-size: 1.5rem;
+				}
+				& h2 {
+					font-size: 1.2rem;
+				}
+				& h3 {
+					font-size: 1.1rem;
+				}
+			}
+			& .body {
+				display: grid;
+				grid-template-columns: 1fr;
+
+				& .week_box {
+					background: #fbfbfb;
+					border-bottom: 1px solid #eee;
+					padding: 0.5rem 1rem;
+					& p {
+						color: #666;
+						& strong {
+							color: $brand-main;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.panel_hidden {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		transform: translate(150vw, 0);
+		position: fixed;
+		min-height: 100vh;
+		top: 0;
+		right: 0;
+		transition: all 0.8s ease;
+		background: #fff;
+		box-shadow: 0 1px 60px #6666666e;
+		padding: 1rem;
+	}
+}

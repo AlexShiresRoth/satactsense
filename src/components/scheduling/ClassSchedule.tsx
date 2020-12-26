@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import style from './ClassSchedule.module.scss';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaChevronRight } from 'react-icons/fa';
 import { AiFillSchedule, AiOutlineSchedule } from 'react-icons/ai';
 import TwentyFiveHoursPanel from './TwentyFiveHoursPanel';
+import FortyHourClass from './FortyHourClass';
+import { setCategory, setModalState } from '../../actions/modal';
+import { connect } from 'react-redux';
 
-//TODO make 40 hrs card look more appealing
-const ClassSchedule = (props: any) => {
+interface Props {
+	setModalState: (val: boolean) => any;
+	setCategory: (category: string) => any;
+}
+
+const ClassSchedule = ({ setModalState, setCategory }: Props) => {
 	const [deetsVisible, showDeets] = useState<any>({
 		classOne: false,
 		classTwo: false,
@@ -15,13 +21,14 @@ const ClassSchedule = (props: any) => {
 	return (
 		<>
 			<TwentyFiveHoursPanel visible={classOne} handlePanel={showDeets} />
+			<FortyHourClass visible={classTwo} handlePanel={showDeets} />
 			<section className={style.section}>
 				<div className={style.heading}>
 					<h2>We offer two SAT prep classes</h2>
 					<div className={style.divider}></div>
 				</div>
 				<div className={style.inner_grid}>
-					<div className={style.col}>
+					<div className={style.col} style={classOne ? { boxShadow: '0 0px 0px 10px #1a3a6d94' } : {}}>
 						<div className={style.col__heading}>
 							<h3>
 								25 hours
@@ -36,7 +43,7 @@ const ClassSchedule = (props: any) => {
 							<p>
 								Weekdays, 6-week, SAT CLASS <br /> Twice a Week (Monday & Wednesday)
 							</p>
-							<a
+							<button
 								onPointerDown={(e) =>
 									showDeets((prevState: { classOne: boolean; classTwo: boolean }) => ({
 										classOne: !prevState.classOne,
@@ -51,14 +58,21 @@ const ClassSchedule = (props: any) => {
 										transition: 'all 1s ease',
 									}}
 								/>
-							</a>
+							</button>
 						</div>
 
 						<div className={style.button_container}>
-							<button>Contact Us</button>
+							<button
+								onPointerDown={(e) => {
+									setModalState(true);
+									setCategory('25 Hour SAT Class');
+								}}
+							>
+								Contact Us
+							</button>
 						</div>
 					</div>
-					<div className={style.col}>
+					<div className={style.col} style={classTwo ? { boxShadow: '0 0px 0px 10px #44cf6bb9' } : {}}>
 						<div className={style.col__heading}>
 							<h3>
 								40 hours
@@ -72,20 +86,33 @@ const ClassSchedule = (props: any) => {
 							<p>
 								Weekday, 10-week, SAT CLASS <br /> Twice a Week (Monday & Wednesday)
 							</p>
-							<a
+							<button
 								onPointerDown={(e) =>
 									showDeets((prevState: { classOne: boolean; classTwo: boolean }) => ({
 										classOne: false,
-										classTwo: true,
+										classTwo: !prevState.classTwo,
 									}))
 								}
 							>
-								Schedule <FaChevronRight />
-							</a>
+								Schedule{' '}
+								<FaChevronRight
+									style={{
+										transform: `${classTwo ? 'rotate(180deg)' : 'rotate(0deg)'} `,
+										transition: 'all 1s ease',
+									}}
+								/>
+							</button>
 						</div>
 
 						<div className={style.button_container}>
-							<button>Contact Us</button>
+							<button
+								onPointerDown={(e) => {
+									setModalState(true);
+									setCategory('40 Hour SAT Class');
+								}}
+							>
+								Contact Us
+							</button>
 						</div>
 					</div>
 				</div>
@@ -94,6 +121,4 @@ const ClassSchedule = (props: any) => {
 	);
 };
 
-ClassSchedule.propTypes = {};
-
-export default ClassSchedule;
+export default connect(null, { setModalState, setCategory })(ClassSchedule);

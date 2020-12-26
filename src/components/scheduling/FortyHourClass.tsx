@@ -2,13 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './SidePanel.module.scss';
 import { MdClose } from 'react-icons/md';
-
 interface Props {
 	visible: boolean;
 	handlePanel: (val: any) => any;
 }
 
-const TwentyFiveHoursPanel = ({ visible, handlePanel }: Props) => {
+const FortyHourClass = ({ visible, handlePanel }: Props) => {
 	return (
 		<div className={!visible ? style.panel_hidden : style.panel}>
 			<div className={style.panel__inner}>
@@ -25,9 +24,9 @@ const TwentyFiveHoursPanel = ({ visible, handlePanel }: Props) => {
 					</button>
 				</div>
 				<div className={style.heading}>
-					<h1>25- Hour SAT Class</h1>
-					<h2>Weekday 6-week SAT CLASS Twice a Week (Monday & Wednesday)</h2>
-					<h3>(18 hours of instruction, 7 hours testing)</h3>
+					<h1>40- Hour SAT Class</h1>
+					<h2>Weekday 10-week SAT Class Twice a Week (Monday & Wednesday)</h2>
+					<h3>(30 hours of instruction, 10 hours testing)</h3>
 				</div>
 				<div className={style.body}>
 					<div className={style.week_box}>
@@ -67,10 +66,41 @@ const TwentyFiveHoursPanel = ({ visible, handlePanel }: Props) => {
 						</p>
 						<p>1.5 Hour Class (Monday 3:30pm-5:00pm)</p>
 						<p>1.5 Hour Class (Wednesday 3:30pm-5:00pm)</p>
+						<p>
+							<strong>3.5 Hour Full-Length Diagnostic exam </strong>(Saturday)
+						</p>
 					</div>
 					<div className={style.week_box}>
 						<p>
 							<strong>Week 6-</strong>
+						</p>
+						<p>1.5 Hour Class (Monday 3:30pm-5:00pm)</p>
+						<p>1.5 Hour Class (Wednesday 3:30pm-5:00pm)</p>
+					</div>
+					<div className={style.week_box}>
+						<p>
+							<strong>Week 7-</strong>
+						</p>
+						<p>1.5 Hour Class (Monday 3:30pm-5:00pm)</p>
+						<p>1.5 Hour Class (Wednesday 3:30pm-5:00pm)</p>
+					</div>
+					<div className={style.week_box}>
+						<p>
+							<strong>Week 8-</strong>
+						</p>
+						<p>1.5 Hour Class (Monday 3:30pm-5:00pm)</p>
+						<p>1.5 Hour Class (Wednesday 3:30pm-5:00pm)</p>
+					</div>
+					<div className={style.week_box}>
+						<p>
+							<strong>Week 9-</strong>
+						</p>
+						<p>1.5 Hour Class (Monday 3:30pm-5:00pm)</p>
+						<p>1.5 Hour Class (Wednesday 3:30pm-5:00pm)</p>
+					</div>
+					<div className={style.week_box}>
+						<p>
+							<strong>Week 10-</strong>
 						</p>
 						<p>1.5 Hour Class (Monday 3:30pm-5:00pm)</p>
 						<p>1.5 Hour Class (Wednesday 3:30pm-5:00pm)</p>
@@ -84,8 +114,9 @@ const TwentyFiveHoursPanel = ({ visible, handlePanel }: Props) => {
 	);
 };
 
-TwentyFiveHoursPanel.propTypes = {
-	visible: PropTypes.bool.isRequired,
+FortyHourClass.propTypes = {
+	visible: PropTypes.bool,
+	handlePanel: PropTypes.func,
 };
 
-export default TwentyFiveHoursPanel;
+export default FortyHourClass;

@@ -155,6 +155,8 @@ export const serviceLinks = [
 ];
 
 export const categories = [
+	'25 Hour SAT Class',
+	'40 Hour SAT Class',
 	'SAT Prep',
 	'SSAT Prep',
 	'ACT Prep',
