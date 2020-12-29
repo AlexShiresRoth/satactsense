@@ -24,9 +24,9 @@ const FortyHourClass = ({ visible, handlePanel }: Props) => {
 					</button>
 				</div>
 				<div className={style.heading}>
-					<h1>40- Hour SAT Class</h1>
-					<h2>Weekday 10-week SAT Class Twice a Week (Monday & Wednesday)</h2>
-					<h3>(30 hours of instruction, 10 hours testing)</h3>
+					<h1>10 Week Course</h1>
+					<h2>40 Hours of Instructional Time</h2>
+					<h3>30 Hours of Instruction, 10 Hours of Testing</h3>
 				</div>
 				<div className={style.body}>
 					<div className={style.week_box}>

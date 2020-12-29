@@ -5,16 +5,16 @@
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	padding: 6rem 0;
-	background: linear-gradient(185deg, #fbfbfb 60%, $brand-main 60.3%);
+	padding: 3rem 0;
 	& .heading {
 		margin-bottom: 2rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		& h2 {
-			font-weight: 700;
+			font-weight: 100;
 			color: $alert;
+			margin-top: 0;
 		}
 		& .divider {
 			height: 3px;
@@ -27,11 +27,12 @@
 		width: 60%;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+		gap: 8rem;
 		justify-items: center;
 		& .col {
 			background: #fff;
 			border-radius: 3px;
-			box-shadow: 0 1px 35px rgba(110, 110, 110, 0.239);
+			box-shadow: 0 1px 65px rgba(110, 110, 110, 0.239);
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -39,13 +40,19 @@
 			transition: all 1s ease;
 			&__heading {
 				background: $brand-main;
-				padding: 1rem;
+				padding: 2rem;
 				border-top-right-radius: 3px;
 				border-top-left-radius: 3px;
 				display: flex;
 				flex-direction: column;
-				& h3 {
+				& h3,
+				& h4 {
 					color: #fff;
+					margin: 0rem 0;
+				}
+				& h4 {
+					color: #eee;
+					margin-bottom: 0.5rem;
 				}
 				& .divider {
 					height: 3px;
@@ -55,40 +62,48 @@
 				}
 			}
 			& .details {
-				padding: 1rem;
+				padding: 2rem 1rem;
 				width: 100%;
 				transition: all 0.3s ease;
 				background: $brand-accent;
 				box-shadow: 0 1px 20px rgba(65, 64, 64, 0.322);
 				border-top-right-radius: 3px;
 				border-bottom-right-radius: 3px;
-
-				& .icon {
-					font-size: 2.5rem;
-					color: $alert;
-				}
-				& p {
-					margin-top: 0;
-					color: #fff;
-					padding: 0.5rem 0;
-				}
-				& button {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				&__inner {
 					display: flex;
-					align-items: center;
-					transition: all 0.3s ease;
-					color: $alert;
-					background: transparent;
-					border: 0;
-					& svg {
+					flex-direction: column;
+					width: 90%;
+					& .icon {
+						font-size: 2.5rem;
+						color: $alert;
+					}
+					& p {
+						margin-top: 0;
+						color: #fff;
+						padding: 0.5rem 0;
+						line-height: 1.5;
+					}
+					& button {
+						display: flex;
+						align-items: center;
 						transition: all 0.3s ease;
-					}
-					&:hover {
-						cursor: pointer;
-						color: $brand-main;
-					}
-					&:hover svg {
-						margin-left: 0.5rem;
-						color: $brand-main;
+						color: $alert;
+						background: transparent;
+						border: 0;
+						& svg {
+							transition: all 0.3s ease;
+						}
+						&:hover {
+							cursor: pointer;
+							color: $brand-main;
+						}
+						&:hover svg {
+							margin-left: 0.5rem;
+							color: $brand-main;
+						}
 					}
 				}
 			}
@@ -96,16 +111,21 @@
 			& .button_container {
 				padding: 1rem;
 				border-top: 1px solid #eee;
-				& button {
-					background: $brand-main;
-					color: #fff;
-					border-radius: 3px;
-					padding: 0.5rem 1rem;
-					border: 0;
-					transition: all 0.3s ease;
-					&:hover {
-						cursor: pointer;
-						box-shadow: 0 1px 10px $brand-main;
+				display: flex;
+				justify-content: center;
+				&__inner {
+					width: 90%;
+					& button {
+						background: $brand-main;
+						color: #fff;
+						border-radius: 3px;
+						padding: 0.5rem 1rem;
+						border: 0;
+						transition: all 0.3s ease;
+						&:hover {
+							cursor: pointer;
+							box-shadow: 0 1px 10px $brand-main;
+						}
 					}
 				}
 			}
@@ -116,9 +136,9 @@
 			background: #eee;
 		}
 		& .details {
-			background: #44cf6c;
+			background: $alert;
 			& .icon {
-				color: #44cf6c;
+				color: $alert;
 				background: #fff;
 				box-shadow: 0px 0px 0px 5px #fff;
 				border-radius: 5px;
@@ -127,11 +147,11 @@
 				color: $brand-main;
 				&:hover {
 					cursor: pointer;
-					color: $alert;
+					color: $brand-accent;
 				}
 				&:hover svg {
 					margin-left: 0.5rem;
-					color: $alert;
+					color: $brand-accent;
 				}
 			}
 		}
@@ -145,7 +165,6 @@
 		align-items: center;
 		width: 100%;
 		padding: 4rem 0;
-		background: linear-gradient(185deg, #fbfbfb 60%, $brand-main 60.3%);
 		& .heading {
 			& h2 {
 				font-weight: 700;
@@ -157,8 +176,9 @@
 			width: 95%;
 			display: flex;
 			flex-direction: column;
-			justify-items: center;
+			justify-content: space-around;
 			align-items: center;
+			gap: 0;
 			& .col {
 				background: #fff;
 				border-radius: 3px;
@@ -167,7 +187,7 @@
 				flex-direction: column;
 				justify-content: space-between;
 				min-width: 70%;
-				max-width: 80%;
+				max-width: 100%;
 				transition: all 1s ease;
 				margin: 2rem 0;
 				&__heading {
@@ -186,6 +206,16 @@
 						display: block;
 						background: $brand-accent;
 					}
+				}
+				& .details {
+					padding: 2rem 0;
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+					& p {
+					}
+				}
+				& .button_container {
+					padding: 1rem 0;
 				}
 			}
 		}
