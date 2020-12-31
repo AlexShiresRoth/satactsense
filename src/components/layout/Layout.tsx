@@ -8,7 +8,7 @@ import Video from '../video/Video';
 import Bio from '../bio/Bio';
 import Action from '../action/Action';
 import Footer from '../footer/Footer';
-import ClassSchedule from '../scheduling/ClassSchedule';
+// import ClassSchedule from '../scheduling/ClassSchedule';
 interface LayoutProps {
 	children: ReactNode;
 	pageInfo: {
@@ -35,7 +35,7 @@ const Layout = ({ children, pageInfo: { pageTitle, description, path } }: Layout
 					<Nav />
 					{children}
 					<EmailSignup />
-					<ClassSchedule />
+					{/* <ClassSchedule /> */}
 					<Testimonials />
 					<Video />
 					<Bio />
