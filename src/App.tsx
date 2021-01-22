@@ -10,7 +10,7 @@ import GeneralPage from './components/pages/GeneralPage';
 import SatPage from './components/pages/SatPage';
 import ActPage from './components/pages/ActPage';
 import HopkinsPage from './components/pages/HopkinsPage';
-import SatTwoPage from './components/pages/SatTwoPage';
+// import SatTwoPage from './components/pages/SatTwoPage';
 import PsatPlanPage from './components/pages/PsatPlanPage';
 import CollegeConsultingPage from './components/pages/CollegeConsultingPage';
 import SatAndActPage from './components/pages/SatAndActPage';
@@ -43,7 +43,7 @@ const App: React.FunctionComponent = () => {
 					<Route exact path="/actmaterials" component={ACTMaterials} />
 					<Route exact path="/satmaterials" component={SATMaterials} />
 					<Route exact path="/johnshopkins" component={HopkinsPage} />
-					<Route exact path="/sattwo" component={SatTwoPage} />
+					{/* <Route exact path="/sattwo" component={SatTwoPage} /> */}
 					<Route exact path="/psatandplan" component={PsatPlanPage} />
 					<Route exact path="/collegeconsulting" component={CollegeConsultingPage} />
 					<Route exact path="/satandact" component={SatAndActPage} />

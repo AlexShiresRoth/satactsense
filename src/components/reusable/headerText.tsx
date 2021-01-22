@@ -1,5 +1,9 @@
 //All content for header section
 import React from 'react';
+
+const currentYear = new Date();
+const year = currentYear.getFullYear();
+console.log(year);
 export const headerText = [
 	{
 		title: 'Landing',
@@ -10,7 +14,7 @@ export const headerText = [
 	{
 		title: 'AP Testing',
 		id: 'AP',
-		banner: 'Are you ready for the new VIRTUAL AP exam in May 2020?',
+		banner: `Are you ready for the new VIRTUAL AP exam in May ${year}?`,
 		text: [
 			{ par: <p>Are the new structures and formats confusing?</p> },
 			{

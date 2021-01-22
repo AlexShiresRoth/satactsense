@@ -5,6 +5,10 @@ export const subjectArray = [
 		types: [],
 	},
 	{
+		id: 'SAT/ACT',
+		types: [],
+	},
+	{
 		id: 'AP',
 		types: [
 			{ title: 'AP Math', dropdown: ['AP Calculus & Statistics'] },
@@ -22,32 +26,32 @@ export const subjectArray = [
 			{ title: 'AP Psychology', dropdown: ['AP Psychology'] },
 		],
 	},
-	{
-		id: 'SUBJECT',
-		types: [
-			{ title: 'Literature', dropdown: ['Literature (SAT II Subject Test)'] },
-			{
-				title: 'History',
-				dropdown: ['World History (SAT II Subject Test)', 'US History (SAT II Subject Test)'],
-			},
-			{
-				title: 'Mathematics',
-				dropdown: ['Math Level 1 (SAT II Subject Test)', 'Math Level 2 (SAT II Subject Test)'],
-			},
-			{
-				title: 'Sciences',
-				dropdown: [
-					'Biology: (Ecological and Molecular) (SAT II Subject Test)',
-					'Physics (SAT II Subject Test)',
-					'Chemistry (SAT II Subject Test)',
-				],
-			},
-			{
-				title: 'Languages',
-				dropdown: ['Spanish (SAT II Subject Test)', 'French (SAT II Subject Test)'],
-			},
-		],
-	},
+	// {
+	// 	id: 'SUBJECT',
+	// 	types: [
+	// 		{ title: 'Literature', dropdown: ['Literature (SAT II Subject Test)'] },
+	// 		{
+	// 			title: 'History',
+	// 			dropdown: ['World History (SAT II Subject Test)', 'US History (SAT II Subject Test)'],
+	// 		},
+	// 		{
+	// 			title: 'Mathematics',
+	// 			dropdown: ['Math Level 1 (SAT II Subject Test)', 'Math Level 2 (SAT II Subject Test)'],
+	// 		},
+	// 		{
+	// 			title: 'Sciences',
+	// 			dropdown: [
+	// 				'Biology: (Ecological and Molecular) (SAT II Subject Test)',
+	// 				'Physics (SAT II Subject Test)',
+	// 				'Chemistry (SAT II Subject Test)',
+	// 			],
+	// 		},
+	// 		{
+	// 			title: 'Languages',
+	// 			dropdown: ['Spanish (SAT II Subject Test)', 'French (SAT II Subject Test)'],
+	// 		},
+	// 	],
+	// },
 	{
 		id: 'PSAT/PLAN',
 		types: [
@@ -57,10 +61,7 @@ export const subjectArray = [
 			{ title: 'PLAN 11th Grade', dropdown: ['PLAN 11th Grade'] },
 		],
 	},
-	{
-		id: 'SAT/ACT',
-		types: [],
-	},
+	
 	{
 		id: 'SAT',
 		types: [],
@@ -108,21 +109,6 @@ export const subjectArray = [
 export const serviceLinks = [
 	{ title: 'Home', path: '/', id: 'LANDING', dropdown: [] },
 	{
-		title: 'AP/SAT II Subject Testing',
-		path: '/ap',
-		id: 'AP',
-		dropdown: [
-			{ title: 'AP Testing', dropid: 'AP', path: '/ap' },
-			{ title: 'SAT II Subject Testing', dropid: 'SUBJECT', path: '/sattwo' },
-		],
-	},
-	{
-		title: 'PSAT/PLAN',
-		path: '/psatandplan',
-		id: 'PSAT/PLAN',
-		dropdown: [],
-	},
-	{
 		title: 'SAT/ACT Prep',
 		path: '/satandact',
 		id: 'SAT/ACT',
@@ -134,6 +120,23 @@ export const serviceLinks = [
 			{ title: 'SAT Materials', dropid: 'SATMAT', path: '/satmaterials' },
 		],
 	},
+	{
+		title: 'AP Testing',
+		path: '/ap',
+		id: 'AP',
+		dropdown: [
+			{ title: 'AP Testing', dropid: 'AP', path: '/ap' },
+			// { title: 'SAT II Subject Testing', dropid: 'SUBJECT', path: '/sattwo' },
+		],
+	},
+	
+	{
+		title: 'PSAT/PLAN',
+		path: '/psatandplan',
+		id: 'PSAT/PLAN',
+		dropdown: [],
+	},
+	
 	{
 		title: 'General Tutoring',
 		path: '/general',
@@ -182,16 +185,16 @@ export const categories = [
 	'AP Spanish',
 	'AP Psychology',
 	'AP Psychology',
-	'Literature (SAT II Subject Test)',
-	'World History (SAT II Subject Test)',
-	'US History (SAT II Subject Test)',
-	'Math Level 1 (SAT II Subject Test)',
-	'Math Level 2 (SAT II Subject Test)',
-	'Biology: (Ecological and Molecular) (SAT II Subject Test)',
-	'Physics (SAT II Subject Test)',
-	'Chemistry (SAT II Subject Test)',
-	'Spanish (SAT II Subject Test)',
-	'French (SAT II Subject Test)',
+	// 'Literature (SAT II Subject Test)',
+	// 'World History (SAT II Subject Test)',
+	// 'US History (SAT II Subject Test)',
+	// 'Math Level 1 (SAT II Subject Test)',
+	// 'Math Level 2 (SAT II Subject Test)',
+	// 'Biology: (Ecological and Molecular) (SAT II Subject Test)',
+	// 'Physics (SAT II Subject Test)',
+	// 'Chemistry (SAT II Subject Test)',
+	// 'Spanish (SAT II Subject Test)',
+	// 'French (SAT II Subject Test)',
 	'PSAT 10th Grade',
 	'PSAT 11th Grade',
 	'PLAN 10th Grade',

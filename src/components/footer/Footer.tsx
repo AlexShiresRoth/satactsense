@@ -17,7 +17,7 @@ const Footer = (props: any) => {
 					<h4>SITE</h4>
 					<Link to="/">Home</Link>
 					<Link to="/ap">AP Testing</Link>
-					<Link to="/sattwo">SAT II Subject Test</Link>
+					{/* <Link to="/sattwo">SAT II Subject Test</Link> */}
 					<Link to="/sat">SAT prep</Link>
 					<Link to="/act">ACT Prep</Link>
 					<Link to="/general">General Tutoring</Link>
