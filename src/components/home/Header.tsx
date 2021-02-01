@@ -73,7 +73,7 @@ const Header = ({
 					<button
 						onClick={() => {
 							setModalState(true);
-							setCategory('Virtual Tutoring Consultations');
+							setCategory('Book Your Trial Lesson');
 						}}
 					>
 						Book now!

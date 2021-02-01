@@ -34,7 +34,7 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 	});
 
 	const [modalMessage, setMessage] = useState({
-		status: [`Please Contact us for more information regarding "${category}".`],
+		status: [`Contact Us to Schedule Your Free Trial Lesson Today!`],
 		error: false,
 		loading: false,
 		success: false,
@@ -112,7 +112,7 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 			grade: '',
 		});
 		setMessage({
-			status: [`Please Contact us for more information regarding "${category}."`],
+			status: [`Contact Us to Schedule Your Free Trial Lesson Today!`],
 			error: false,
 			success: false,
 			loading: false,
@@ -139,7 +139,7 @@ const Modal = ({ modal: { modalState, category }, setModalState }: NavProps) => 
 
 	useEffect(() => {
 		setMessage({
-			status: [`Please Contact us for more information regarding "${category}."`],
+			status: [`Contact Us to Schedule Your Free Trial Lesson Today!`],
 			error: false,
 			success: false,
 			loading: false,

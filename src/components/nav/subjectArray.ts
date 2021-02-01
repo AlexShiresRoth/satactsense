@@ -61,7 +61,7 @@ export const subjectArray = [
 			{ title: 'PLAN 11th Grade', dropdown: ['PLAN 11th Grade'] },
 		],
 	},
-	
+
 	{
 		id: 'SAT',
 		types: [],
@@ -129,14 +129,14 @@ export const serviceLinks = [
 			// { title: 'SAT II Subject Testing', dropid: 'SUBJECT', path: '/sattwo' },
 		],
 	},
-	
+
 	{
 		title: 'PSAT/PLAN',
 		path: '/psatandplan',
 		id: 'PSAT/PLAN',
 		dropdown: [],
 	},
-	
+
 	{
 		title: 'General Tutoring',
 		path: '/general',
@@ -209,6 +209,6 @@ export const categories = [
 	'Johns Hopkins SCAT (Grades 2-8)',
 	'Johns Hopkins PSAT & SCAT (Grades 5-6)',
 	'Johns Hopkins SAT & SCAT (Grades 7-8)',
-	'Virtual Tutoring Consultations',
+	'Book Your Trial Lesson',
 	'General',
 ];

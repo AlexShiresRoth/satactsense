@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import landingStyle from './Header.module.scss';
 import { setModalState, setCategory } from '../../actions/modal';
 import { connect } from 'react-redux';
-import { GoMail } from 'react-icons/go';
+// import { GoMail } from 'react-icons/go';
 import { Link } from 'react-router-dom';
 
 interface Props {
@@ -32,15 +32,16 @@ const Landing = ({ setModalState, setCategory, modal: { modalState } }: Props) =
 			<div className={landingStyle.overlay}></div>
 			<div className={landingStyle.col}>
 				<div>
-					<h1>Complete Test Preparation, Made Easy.</h1>
+					<h1>Tired of wasting time with “free tutoring consultations?”</h1>
 					<p>
-						SAT/ACT Sense gives students a daily itinerary for everything leading up to test day so you’re
-						totally prepared, no matter your availability.{' '}
+						If your son or daughter is serious about preparing for the SAT or ACT? Schedule your FREE 30
+						minute trial lesson, and see if they qualify for our intensive SAT/ACT Complete Preparation
+						Program.{' '}
 					</p>
 					<p>Book your first No-Commitment Virtual Lesson Today.</p>
 				</div>
 				<div className={landingStyle.btn_row}>
-					<Link to="/ap">
+					<Link to="/satandact">
 						<button>Learn More</button>
 					</Link>
 					<button
@@ -49,7 +50,7 @@ const Landing = ({ setModalState, setCategory, modal: { modalState } }: Props) =
 							setCategory('Virtual Tutoring Consultations');
 						}}
 					>
-						<GoMail /> Get Your Itinerary
+						Book Your Free Lesson
 					</button>
 				</div>
 			</div>
