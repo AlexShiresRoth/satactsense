@@ -1,271 +1,286 @@
-@import '../../../sass/variables';
+@import "../../../sass/variables";
 @font-face {
-	font-family: 'Wotfard';
-	src: url('../fonts/wotfard.ttf');
+  font-family: "Wotfard";
+  src: url("../fonts/wotfard.ttf");
 }
 .header {
-	background-color: $brand-main;
-	background: url('https://res.cloudinary.com/snackmanproductions/image/upload/c_scale,q_54,w_2541/v1589042263/satactsense/shutterstock_704245198_vswibb.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	justify-items: center;
-	align-content: center;
-	align-items: center;
-	min-height: 40rem;
-	position: relative;
-	animation: fadein 2s cubic-bezier(0.19, 1, 0.22, 1);
-	padding: 0 4rem;
-	& .overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		background: linear-gradient(65deg, rgba(255, 255, 255, 0.8) 70%, transparent 70.1%);
-		display: block;
-		height: 100%;
-		width: 100%;
-		animation: slidein 1.2s cubic-bezier(1, 0.2, 0.5, 1);
-	}
-	& .col {
-		z-index: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		& h1 {
-			color: lighten($brand-main, 5%);
-			font-weight: 700;
-			font-size: 3.2rem;
-			font-family: 'Wotfard', sans-serif;
-			margin: 1rem 0;
-			animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-		}
+  background-color: $brand-main;
+  background: url("https://res.cloudinary.com/snackmanproductions/image/upload/c_scale,q_54,w_2541/v1589042263/satactsense/shutterstock_704245198_vswibb.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  min-height: 40rem;
+  position: relative;
+  animation: fadein 2s cubic-bezier(0.19, 1, 0.22, 1);
+  padding: 0 4rem;
+  & .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      65deg,
+      rgba(255, 255, 255, 0.8) 70%,
+      transparent 70.1%
+    );
+    display: block;
+    height: 100%;
+    width: 100%;
+    animation: slidein 1.2s cubic-bezier(1, 0.2, 0.5, 1);
+  }
+  & .col {
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & h1 {
+      color: lighten($brand-main, 5%);
+      font-weight: 700;
+      font-size: 3.2rem;
+      font-family: "Wotfard", sans-serif;
+      margin: 1rem 0;
+      animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+    & h3 {
+      font-weight: 700;
+      font-size: 1.2rem;
+      font-family: "Wotfard", sans-serif;
+      margin: 0.5rem 0;
+      animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
 
-		& p {
-			font-size: 1rem;
-			line-height: 1.5;
-			margin: 0.5rem 0;
-			font-weight: 700;
-			animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-		}
-		& .btn_row {
-			display: flex;
-			align-items: center;
-			width: 100%;
+    & p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0.5rem 0;
+      font-weight: 700;
+      animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+    & .btn_row {
+      display: flex;
+      align-items: center;
+      width: 100%;
 
-			& a {
-				text-decoration: none;
-			}
-			& button {
-				min-height: 3.4rem;
-				width: 14rem;
-				background: lighten($alert, 5%);
-				border-radius: 60px;
-				color: #fff;
-				font-family: 'Wotfard';
-				font-weight: 700;
-				text-transform: uppercase;
-				font-size: 1rem;
-				border: 0;
-				box-shadow: 0 0 0 1px lighten($alert, 15%);
-				transition: all 0.3s ease;
-				margin: 1rem 2rem 0 0;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+      & a {
+        text-decoration: none;
+      }
+      & button {
+        min-height: 3.4rem;
+        width: 14rem;
+        background: lighten($alert, 5%);
+        border-radius: 60px;
+        color: #fff;
+        font-family: "Wotfard";
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1rem;
+        border: 0;
+        box-shadow: 0 0 0 1px lighten($alert, 15%);
+        transition: all 0.3s ease;
+        margin: 1rem 2rem 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 
-				&:hover {
-					cursor: pointer;
-					background: $alert;
-					box-shadow: 0 0px 0 5px lighten($alert, 15%);
-				}
-				& svg {
-					font-size: 1.5rem;
-					margin-right: 0.5rem;
-				}
-			}
-			& button:nth-child(2) {
-				background: transparent;
-				color: $brand-accent;
-				box-shadow: 0 0 0 3px lighten($brand-accent, 5%);
-				&:hover {
-					background: $brand-accent;
-					color: #fff;
-					box-shadow: 0 0 0 5px lighten($brand-accent, 5%);
-				}
-			}
-		}
-	}
+        &:hover {
+          cursor: pointer;
+          background: $alert;
+          box-shadow: 0 0px 0 5px lighten($alert, 15%);
+        }
+        & svg {
+          font-size: 1.5rem;
+          margin-right: 0.5rem;
+        }
+      }
+      & button:nth-child(2) {
+        background: transparent;
+        color: $brand-accent;
+        box-shadow: 0 0 0 3px lighten($brand-accent, 5%);
+        &:hover {
+          background: $brand-accent;
+          color: #fff;
+          box-shadow: 0 0 0 5px lighten($brand-accent, 5%);
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1200px) {
-	.header {
-		min-height: 40rem;
-		position: relative;
+  .header {
+    min-height: 40rem;
+    position: relative;
 
-		& .col {
-			z-index: 1;
-			& h1 {
-				color: lighten($brand-main, 5%);
-				font-weight: 700;
-				font-size: 3rem;
-				font-family: 'Wotfard', sans-serif;
-				margin: 1rem 0;
-			}
+    & .col {
+      z-index: 1;
+      & h1 {
+        color: lighten($brand-main, 5%);
+        font-weight: 700;
+        font-size: 3rem;
+        font-family: "Wotfard", sans-serif;
+        margin: 1rem 0;
+      }
 
-			& p {
-				font-size: 1rem;
-				margin: 0.5rem 0;
-				font-weight: 700;
-				font-size: 1.2rem;
-			}
-			& button {
-				min-height: 3rem;
-				min-width: 12rem;
-				font-size: 1rem;
-				&:hover {
-					cursor: pointer;
-					background: $alert;
-					box-shadow: 0 2px 25px $alert;
-				}
-			}
-		}
-	}
+      & p {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+      & button {
+        min-height: 3rem;
+        min-width: 12rem;
+        font-size: 1rem;
+        &:hover {
+          cursor: pointer;
+          background: $alert;
+          box-shadow: 0 2px 25px $alert;
+        }
+      }
+    }
+  }
 }
 @media screen and (max-width: 900px) {
-	.header {
-		min-height: 40rem;
-		position: relative;
-		display: grid;
-		grid-template-columns: 1fr;
-		justify-items: center;
-		align-content: center;
-		align-items: center;
-		padding: 0 2rem;
-		& .overlay {
-			position: absolute;
-			top: 0;
-			left: 0;
-			background: linear-gradient(65deg, rgba(255, 255, 255, 0.8) 100%, transparent 95.1%);
-			animation: slidedown 1.5s cubic-bezier(1, 0.2, 0.5, 1);
-		}
-		& .col {
-			z-index: 1;
-			text-align: center;
-			align-items: center;
-			max-width: 80vw;
-			& h1 {
-				color: lighten($brand-main, 5%);
-				font-weight: 700;
-				font-size: 2.5rem;
-				font-family: 'Wotfard', sans-serif;
-				margin: 1rem 0;
-			}
-			& p {
-				font-size: 1rem;
-				margin: 0.5rem 0;
-				font-weight: 700;
-			}
-			& .btn_row {
-				justify-content: center;
-				& button {
-					max-width: 10rem;
-					font-size: 1rem;
-					&:hover {
-						cursor: pointer;
-						background: $alert;
-						box-shadow: 0 2px 25px $alert;
-					}
-				}
-			}
-		}
-	}
+  .header {
+    min-height: 40rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    & .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(
+        65deg,
+        rgba(255, 255, 255, 0.8) 100%,
+        transparent 95.1%
+      );
+      animation: slidedown 1.5s cubic-bezier(1, 0.2, 0.5, 1);
+    }
+    & .col {
+      z-index: 1;
+      text-align: center;
+      align-items: center;
+      max-width: 80vw;
+      & h1 {
+        color: lighten($brand-main, 5%);
+        font-weight: 700;
+        font-size: 2.5rem;
+        font-family: "Wotfard", sans-serif;
+        margin: 1rem 0;
+      }
+      & p {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        font-weight: 700;
+      }
+      & .btn_row {
+        justify-content: center;
+        & button {
+          max-width: 10rem;
+          font-size: 1rem;
+          &:hover {
+            cursor: pointer;
+            background: $alert;
+            box-shadow: 0 2px 25px $alert;
+          }
+        }
+      }
+    }
+  }
 }
 @media screen and (max-width: 600px) {
-	.header {
-		padding: 1rem 0;
-		min-height: 45rem;
-		& .col {
-			z-index: 1;
-			max-width: 85%;
-			& h1 {
-				color: lighten($brand-main, 5%);
-				font-weight: 700;
-				font-size: 2.8rem;
-				font-family: 'Wotfard', sans-serif;
-				margin: 1rem 0;
-			}
-			& p {
-				font-size: 1.1rem;
-				line-height: 2;
-				margin: 0.5rem 0;
-				font-weight: 700;
-			}
-			& .btn_row {
-				flex-direction: column;
-				align-items: stretch;
-				width: 100%;
-				margin: 1rem 0;
-				& a {
-					width: 100%;
-					display: flex;
-					& button {
-						width: 100%;
-						margin: 1rem 0;
-						font-size: 1rem;
-						&:hover {
-							cursor: pointer;
-							background: $alert;
-							box-shadow: 0 2px 25px $alert;
-						}
-					}
-				}
-				& button {
-					width: 100%;
-					margin: 1rem 0;
-					font-size: 1rem;
-					max-width: 100%;
-					min-height: 3.5rem;
-					&:hover {
-						cursor: pointer;
-						background: $alert;
-						box-shadow: 0 2px 25px $alert;
-					}
-				}
-				& button:nth-child(2) {
-					background: $brand-accent;
-					color: #fff;
-				}
-			}
-		}
-	}
+  .header {
+    padding: 1rem 0;
+    min-height: 45rem;
+    & .col {
+      z-index: 1;
+      max-width: 85%;
+      & h1 {
+        color: lighten($brand-main, 5%);
+        font-weight: 700;
+        font-size: 2.8rem;
+        font-family: "Wotfard", sans-serif;
+        margin: 1rem 0;
+      }
+      & p {
+        font-size: 1.1rem;
+        line-height: 2;
+        margin: 0.5rem 0;
+        font-weight: 700;
+      }
+      & .btn_row {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        margin: 1rem 0;
+        & a {
+          width: 100%;
+          display: flex;
+          & button {
+            width: 100%;
+            margin: 1rem 0;
+            font-size: 1rem;
+            &:hover {
+              cursor: pointer;
+              background: $alert;
+              box-shadow: 0 2px 25px $alert;
+            }
+          }
+        }
+        & button {
+          width: 100%;
+          margin: 1rem 0;
+          font-size: 1rem;
+          max-width: 100%;
+          min-height: 3.5rem;
+          &:hover {
+            cursor: pointer;
+            background: $alert;
+            box-shadow: 0 2px 25px $alert;
+          }
+        }
+        & button:nth-child(2) {
+          background: $brand-accent;
+          color: #fff;
+        }
+      }
+    }
+  }
 }
 
 @keyframes slidein {
-	0% {
-		max-width: 0;
-	}
-	100% {
-		max-width: 100%;
-	}
+  0% {
+    max-width: 0;
+  }
+  100% {
+    max-width: 100%;
+  }
 }
 
 @keyframes fadein {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes slidedown {
-	0% {
-		max-height: 0;
-	}
-	100% {
-		max-height: 100vh;
-	}
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 100vh;
+  }
 }
