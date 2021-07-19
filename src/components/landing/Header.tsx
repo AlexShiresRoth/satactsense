@@ -35,15 +35,15 @@ const Landing = ({
       <div className={landingStyle.overlay}></div>
       <div className={landingStyle.col}>
         <div>
-          <h1>Prep in the Summer. Test in the Fall.</h1>
-          <h3>- The fall SAT is October 2nd.</h3>
-          <h3>- The fall ACT is September 11th.</h3>
-          <p>Are you serious about preparing for the SAT or ACT?.</p>
+          <h1>Prep in the summer and test in the fall.</h1>
+          <h3>- The SAT is October 2nd.</h3>
+          <h3>- The ACT is September 11th.</h3>
+          <p>Are you serious about preparing for the SAT or ACT?</p>
           <p>
-            Find out if you qualify for our intensive SAT/ACT Complete
+            Find out if you qualify for our intensive SAT/ACT complete
             preparation program.
           </p>
-          <p>Book your first Trial Lesson today.</p>
+          <p>Book your first trial lesson today.</p>
         </div>
         <div className={landingStyle.btn_row}>
           <Link to="/satandact">
@@ -55,7 +55,7 @@ const Landing = ({
               setCategory("Virtual Tutoring Consultations");
             }}
           >
-            Book Your Free Lesson
+            Book Your Trial Lesson
           </button>
         </div>
       </div>
