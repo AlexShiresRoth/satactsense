@@ -1,170 +1,175 @@
-@import '../../../sass/variables';
+@import "../../../sass/variables";
 
 .section {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: 1fr;
-	justify-items: center;
-	align-items: center;
-	gap: 2rem;
-	background: $brand-bg;
-	padding: 4rem;
-	& .img_container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		& p {
-			font-weight: 700;
-		}
-		& img {
-			max-width: 10rem;
-			border-radius: 10px;
-			border: 5px solid #eee;
-		}
-	}
-	& .container {
-		display: flex;
-		flex-direction: column;
-		overflow: hidden;
-		& h2 {
-			color: $alert;
-		}
-		& .copy {
-			max-height: 100vh;
-			transition: all 1s ease;
-			& p {
-				color: $brand-main;
-				line-height: 2;
-				font-weight: 500;
-				display: flex;
-				align-items: center;
-			}
-		}
-		& .copy_reduced {
-			max-height: 7rem;
-			transition: all 1s ease;
-			& p {
-				color: $brand-main;
-				line-height: 2;
-				font-weight: 500;
-			}
-		}
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+  background: $brand-bg;
+  padding: 4rem;
+  & .img_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & p {
+      font-weight: 700;
+    }
+    & img {
+      max-width: 10rem;
+      border-radius: 10px;
+      border: 5px solid #eee;
+    }
+  }
+  & .container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    & h2 {
+      color: $alert;
+    }
+    & .copy {
+      max-height: 100vh;
+      transition: all 1s ease;
+      & p {
+        color: $brand-main;
+        line-height: 2;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+      }
+    }
+    & .copy_reduced {
+      max-height: 7rem;
+      transition: all 1s ease;
+      & p {
+        color: $brand-main;
+        line-height: 2;
+        font-weight: 500;
+      }
+    }
 
-		& .copy_button_container {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			background: $brand-bg;
-			& button {
-				background: transparent;
-				border: 0px solid transparent;
-				color: $alert;
-				width: 50%;
-				transition: all 0.3s ease;
-				margin: 1rem 0;
-				font-size: 1rem;
-				&:active {
-					outline: 0px solid transparent;
-				}
-				&:focus {
-					outline: 0px solid transparent;
-				}
-				&:hover {
-					cursor: pointer;
-				}
-			}
-			& span {
-				width: 100%;
-				height: 1px;
-				background: #fff;
-				display: block;
-			}
-		}
-	}
+    & .copy_button_container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      background: $brand-bg;
+      & button {
+        background: transparent;
+        border: 0px solid transparent;
+        color: $alert;
+        width: 50%;
+        transition: all 0.3s ease;
+        margin: 1rem 0;
+        font-size: 1rem;
+        &:active {
+          outline: 0px solid transparent;
+        }
+        &:focus {
+          outline: 0px solid transparent;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      & span {
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        display: block;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 900px) {
-	.section {
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(3, auto);
-		& .img_container {
-			& img {
-				max-width: 9rem;
-			}
-			& p {
-				text-align: center;
-			}
-		}
-		& .container {
-			display: flex;
-			flex-direction: column;
-			max-width: 70%;
-			& h2 {
-				color: $alert;
-				text-align: center;
-			}
-			& .copy {
-				max-height: 300vh;
-				transition: all 1s ease;
-				& p {
-					color: $brand-main;
-					line-height: 2;
-					max-width: 100%;
-					font-weight: 500;
-				}
-			}
-			& .copy_reduced {
-				transition: all 1s ease;
-				max-height: 10rem;
-				& p {
-					color: $brand-main;
-					line-height: 2;
-					max-width: 100%;
-					font-weight: 500;
-				}
-			}
-		}
-	}
+  .section {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    & .img_container {
+      & img {
+        max-width: 9rem;
+      }
+      & p {
+        text-align: center;
+      }
+    }
+    & .container {
+      display: flex;
+      flex-direction: column;
+      max-width: 70%;
+      & h2 {
+        color: $alert;
+        text-align: center;
+      }
+      & .copy {
+        max-height: 300vh;
+        transition: all 1s ease;
+        & p {
+          color: $brand-main;
+          line-height: 2;
+          max-width: 100%;
+          font-weight: 500;
+        }
+      }
+      & .copy_reduced {
+        transition: all 1s ease;
+        max-height: 10rem;
+        & p {
+          color: $brand-main;
+          line-height: 2;
+          max-width: 100%;
+          font-weight: 500;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 600px) {
-	.section {
-		& .img_container {
-			& img {
-				max-width: 9rem;
-			}
-		}
-		& .container {
-			display: flex;
-			flex-direction: column;
-			max-width: 90vw;
-			& h2 {
-				color: $alert;
-			}
+  .section {
+    & .img_container {
+      & img {
+        max-width: 9rem;
+      }
+    }
+    & .container {
+      display: flex;
+      flex-direction: column;
+      max-width: 90vw;
+      & h2 {
+        color: $alert;
+      }
 
-			& .copy {
-				max-height: 300vh;
-				transition: all 1s ease;
-				& p {
-					color: $brand-main;
-					line-height: 2;
-					max-width: 100%;
-					font-weight: 500;
-					font-size: 0.9rem;
-				}
-			}
-			& .copy_reduced {
-				transition: all 1s ease;
-				max-height: 10rem;
-				& p {
-					color: $brand-main;
-					line-height: 2;
-					max-width: 100%;
-					font-weight: 500;
-					font-size: 0.9rem;
-				}
-			}
-		}
-	}
+      & .copy {
+        max-height: 300vh;
+        transition: all 1s ease;
+        & p {
+          color: $brand-main;
+          line-height: 2;
+          max-width: 100%;
+          font-weight: 500;
+          font-size: 0.9rem;
+        }
+      }
+      & .copy_button_container {
+        & > button {
+          width: 100%;
+        }
+      }
+      & .copy_reduced {
+        transition: all 1s ease;
+        max-height: 10rem;
+        & p {
+          color: $brand-main;
+          line-height: 2;
+          max-width: 100%;
+          font-weight: 500;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
 }
