@@ -1,7 +1,7 @@
 export const materials = [
   {
-    title: `Princeton Review ACT Premium Prep, 2022`,
-    url: `https://amzn.to/3kLQJwH`,
+    title: `Princeton Review ACT Premium Prep, 2021`,
+    url: `https://amzn.to/3xCB45H`,
     img: `https://images-na.ssl-images-amazon.com/images/I/51siOqfBw8S._SX382_BO1,204,203,200_.jpg`,
   },
   {

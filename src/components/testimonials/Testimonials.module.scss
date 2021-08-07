@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   padding: 4rem;
-  background: $brand-bg;
+  background: #eeeeee33;
   & .heading {
     & h2 {
       color: $alert;
@@ -34,104 +34,110 @@
   & .inner {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     flex-wrap: nowrap;
-    & .arrow_container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+
+    & .container {
+      width: 90%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       justify-content: center;
-      height: 100%;
-      & svg {
-        fill: $brand-main;
-        font-size: 5rem;
-        padding: 0.5rem;
-        background: transparent;
-        border-radius: 50%;
-        transition: all 0.3s ease;
-        &:hover {
-          cursor: pointer;
-          box-shadow: 0 3px 3px #eee;
-          fill: $brand-secondary;
+      gap: 2rem;
+
+      & .col,
+      & .testimonial {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2rem;
+        border-radius: 5px;
+        background: #fff;
+        box-shadow: 0 1px 30px #eee;
+        position: relative;
+        transition: all 0.5s ease-in-out;
+        & svg {
+          color: $alert;
+        }
+        & > svg:nth-of-type(1) {
+          margin-bottom: -0.5rem;
+          align-self: flex-start;
+        }
+        & svg:nth-of-type(2) {
+          align-self: flex-end;
+          margin-top: -2rem;
+        }
+        & p {
+          line-height: 1.6;
+          color: #333;
+          margin: 1rem 0;
+          font-size: 16px;
+        }
+        & h4 {
+          font-size: 0.8rem;
+          color: #999;
+          font-weight: 300;
+          font-style: italic;
+          align-self: flex-start;
+        }
+        & button {
+          color: #fff;
+          padding: 0.5rem 1rem;
+          background: $brand-main;
+          border: 1px solid transparent;
+          transition: all 0.3s ease;
+          align-self: flex-start;
+          border-radius: 60px;
+          &:hover {
+            cursor: pointer;
+            color: darken($alert, 5%);
+          }
         }
       }
-    }
-    & .container {
-      width: 80%;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 30rem;
-      overflow: hidden;
-
-      & .testimonial {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, auto);
-        justify-items: center;
+      & .testimonial_full {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        position: absolute;
-        opacity: 0;
-        visibility: visible;
-        animation: slidedown 0.8s linear forwards;
-        transition: all 1s ease-in-out;
-        max-width: 80%;
-        z-index: 2;
-        & .col {
-          display: flex;
-          flex-direction: column;
-          & p {
-            line-height: 2;
-            color: $brand-main;
-            margin: 1rem 0;
-            font-size: 18px;
-            & button {
-              color: $alert;
-              background: transparent;
-              border: 1px solid transparent;
-              transition: all 0.3s ease;
-              &:hover {
-                cursor: pointer;
-                color: darken($alert, 5%);
-              }
-            }
-          }
-
-          & svg {
-            fill: $alert;
-            font-size: 1.5rem;
-          }
-          & svg:last-child {
-            align-self: flex-end;
-          }
+        padding: 2rem;
+        border-radius: 5px;
+        background: #00000022;
+        width: 100%;
+        height: 100%;
+        & .testimonial {
+          max-width: 500px;
+          background: #fff;
+          box-shadow: 0 1px 30px #66666633;
+          animation: slideup 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        & .col_two {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          & svg {
-            font-size: 2rem;
-            margin: 1rem 0;
-            color: $brand-secondary;
-          }
-          & span {
-            font-weight: 400;
-            color: $text-color;
-            opacity: 0.5;
-            font-style: italic;
-            font-size: 0.8rem;
+        @media screen and (max-width: 760px) {
+          padding: 0rem;
+          & .testimonial {
+            max-width: 90%;
+            width: 90%;
+            padding: 1rem;
+            align-items: center;
+            & > p {
+              font-size: 14px;
+              line-height: 2;
+              width: 95%;
+            }
           }
         }
       }
       & .testimonial_hidden {
-        visibility: visible;
-        animation: slideaway 1s linear forwards;
-        transition: all 1s ease-in-out;
-        z-index: -2;
+        opacity: 0;
+        max-width: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.2s ease-in-out;
+        z-index: -999999;
       }
     }
   }
@@ -152,7 +158,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 30rem;
         overflow: hidden;
       }
     }
@@ -174,7 +179,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 35rem;
         overflow: hidden;
         & .testimonial {
           & .col {
@@ -193,21 +197,6 @@
             }
             & svg:last-child {
               align-self: flex-end;
-            }
-          }
-          & .col_two {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            & svg {
-              font-size: 3rem;
-              margin: 1rem 0;
-              color: $brand-secondary;
-            }
-            & span {
-              font-weight: 700;
-              color: $text-color;
-              font-size: 0.9rem;
             }
           }
         }
@@ -229,82 +218,19 @@
           margin: 0 0.5rem;
         }
       }
-      & .container {
-        width: 85%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 37rem;
-        overflow: hidden;
-        & .testimonial {
-          max-width: 100%;
-          & .col {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            & p {
-              width: 100%;
-              line-height: 2;
-              color: $brand-main;
-            }
-
-            & svg {
-              fill: $alert;
-              font-size: 1.5rem;
-            }
-            & svg:last-child {
-              align-self: flex-end;
-            }
-          }
-          & .col_two {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            & svg {
-              font-size: 1.5rem;
-              margin: 0.5rem 0;
-              color: $brand-secondary;
-            }
-            & span {
-              font-weight: 700;
-              color: #999;
-              font-size: 0.6rem;
-              text-align: center;
-              font-style: italic;
-            }
-          }
-        }
-        & .testimonial_hidden {
-          visibility: visible;
-          animation: slideaway 1s linear forwards;
-          transition: all 1s ease-in-out;
-        }
-      }
     }
   }
 }
-@keyframes slidedown {
+@keyframes slideup {
   0% {
     opacity: 0;
-    transform: translateX(-100vw);
+    transform: translateY(10vw);
   }
-  90% {
-    transform: translateX(1vw);
+  80% {
+    transform: translateY(-3vw);
   }
   100% {
     opacity: 1;
-    transform: translateX(0vw);
-  }
-}
-@keyframes slideaway {
-  0% {
-    opacity: 1;
-    transform: translateX(0vh);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(100vw);
+    transform: translateY(0vw);
   }
 }

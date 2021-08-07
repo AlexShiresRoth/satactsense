@@ -1,9 +1,9 @@
 export const materials = [
-  {
-    title: `Official SAT Study Guide 2020 Edition`,
-    url: `https://www.amazon.com/Official-SAT-Study-Guide-2020/dp/1457312190/ref=as_li_ss_tl?ie=UTF8&linkCode=sl1&tag=satactsense0d-20&linkId=40df8f77b953dca4137076c2f2cece11&language=en_US`,
-    img: `https://images-na.ssl-images-amazon.com/images/I/41wBo8-XN7L._SX377_BO1,204,203,200_.jpg`,
-  },
+  // {
+  //   title: `Official SAT Study Guide 2020 Edition`,
+  //   url: `https://www.amazon.com/Official-SAT-Study-Guide-2020/dp/1457312190/ref=as_li_ss_tl?ie=UTF8&linkCode=sl1&tag=satactsense0d-20&linkId=40df8f77b953dca4137076c2f2cece11&language=en_US`,
+  //   img: `https://images-na.ssl-images-amazon.com/images/I/41wBo8-XN7L._SX377_BO1,204,203,200_.jpg`,
+  // },
   {
     title: `10 Practice Tests for the SAT, 2021`,
     url: `https://amzn.to/3rtWq3p`,
