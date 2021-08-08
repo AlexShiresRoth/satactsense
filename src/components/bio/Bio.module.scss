@@ -1,23 +1,29 @@
 @import "../../../sass/variables";
 
 .section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  justify-items: center;
-  align-items: center;
-  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 4rem 0;
   background: $brand-bg;
-  padding: 4rem;
+  & .inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 1rem;
+    max-width: 80%;
+  }
   & .img_container {
     display: flex;
     flex-direction: column;
     align-items: center;
     & p {
-      font-weight: 700;
+      font-weight: 400;
+      color: #999;
     }
     & img {
-      max-width: 10rem;
+      max-width: 11rem;
       border-radius: 10px;
       border: 5px solid #eee;
     }

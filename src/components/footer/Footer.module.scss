@@ -1,92 +1,90 @@
-@import '../../../sass/variables';
+@import "../../../sass/variables";
 
 .footer {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	padding: 2rem 0;
-	background: $brand-bg;
-	& .row {
-		display: flex;
-		justify-content: space-around;
-		justify-items: center;
-		width: 100%;
-		& p {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-			& svg {
-				font-size: 1.5rem;
-				color: $brand-main;
-				margin: 0 0.2rem;
-			}
-			& a {
-				color: $brand-main;
-				text-decoration: none;
-				display: flex;
-				align-items: center;
-				& img {
-					margin: 0 0.5rem;
-				}
-			}
-			& .link {
-				margin-left: 0.2rem;
-				color: #380070;
-			}
-		}
-	}
-	& .row:nth-of-type(1) {
-		border-bottom: 1px solid #eee;
-	}
-	& .col {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		padding-top: 1rem;
-		& h4 {
-			margin: 1rem 0;
-			color: $brand-main;
-		}
-		& a {
-			text-decoration: none;
-			color: $brand-main;
-			font-family: 'Muli';
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			margin: 0.2rem 0;
-			& svg {
-				margin: 0 0.5rem;
-			}
-		}
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem 0;
+  background: $brand-bg;
+  & .row {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    width: 100%;
+    & p {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      & svg {
+        font-size: 1.5rem;
+        color: $brand-main;
+        margin: 0 0.2rem;
+      }
+      & a {
+        color: $brand-main;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        & img {
+          margin: 0 0.5rem;
+        }
+      }
+      & .link {
+        margin-left: 0.2rem;
+        color: #380070;
+      }
+    }
+  }
 
-		& p {
-			margin: 0.2rem 0;
-		}
-	}
+  & .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1rem;
+    & h4 {
+      margin: 1rem 0;
+      color: $brand-main;
+    }
+    & a {
+      text-decoration: none;
+      color: $brand-main;
+      font-family: "Muli";
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 0.2rem 0;
+      & svg {
+        margin: 0 0.5rem;
+      }
+    }
+
+    & p {
+      margin: 0.2rem 0;
+    }
+  }
 }
 
 @media screen and (max-width: 900px) {
-	.footer {
-		& .row {
-			flex-wrap: wrap;
-			padding: 1rem 0;
-			& p {
-				margin: 0.5rem;
-				flex-wrap: wrap;
-				& img {
-					max-width: 4.2rem;
-				}
-			}
-		}
-		& .col {
-			width: 100%;
-			align-items: center;
-			& p {
-				text-align: center;
-			}
-		}
-	}
+  .footer {
+    & .row {
+      flex-wrap: wrap;
+      padding: 1rem 0;
+      & p {
+        margin: 0.5rem;
+        flex-wrap: wrap;
+        & img {
+          max-width: 4.2rem;
+        }
+      }
+    }
+    & .col {
+      width: 100%;
+      align-items: center;
+      & p {
+        text-align: center;
+      }
+    }
+  }
 }
