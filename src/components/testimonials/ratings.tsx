@@ -1,7 +1,11 @@
 export const ratings = [
   {
+    text: "SAT/ACT services have been a big lifesaver for our family. They tutored our two kids with test and college prep and exceeded their goals. They also created a support system for complex subjects in college. They have been a great safety net for our family.",
+    author: "Martha  L  NYC",
+  },
+  {
     text: "SAT/ACT Sense services are exceptional.  Steve Rossner, the owner of the company, and his tutors raise the game on student SAT/ACT achievement.  Steve and his team had the testing knowledge and subject proficiency to help my daughter reach and exceed her goals.  Not only does their philosophy work for college board exams, but also their tutors are the best I’ve ever used for AP test prep as well. I was continuously  impressed. As a mother of three, I would not hesitate to use Steve’s services for all of my children.",
-    author: " Rachel H from Manhasset",
+    author: "Rachel H from Manhasset",
   },
   {
     text: "Our family has used SAT/ACT Sense for over five years and we have been extremely satisfied with the service and the overall program. Each of our four children made tremendous progress in his or her respective SAT or ACT scores from the initial diagnostic exercise through the final exam. We have worked with many different tutors over the course of 5 years and four students and have always found the tutors to be knowledgeable, personable, and enthusiastic about their subject and about teaching. We’ve also been impressed with Steve’s judgement around making tactical moves to mix up the tutors  and try a different approach when necessary to “punch up” a student’s score at the end of the road. Overall, we would highly recommend SAT/ACT sense. While it is not the cheapest tutoring service out there, we view it as a premium product in a competitive space—and at the end of the day, you get what you pay for.",

@@ -8,7 +8,7 @@ type Props = {
 
 const Testimonial = ({ testimonial, testStyle }: Props) => {
   const [visible, setVisible] = useState<boolean>(false);
-  const end = 300;
+  const end = 250;
   return (
     <>
       <div className={testStyle.col}>

@@ -14,7 +14,7 @@ export const headerText = [
   {
     title: "AP Testing",
     id: "AP",
-    banner: `Are you ready for the new VIRTUAL AP exam in May ${year}?`,
+    banner: `We can tutor for all AP Subject Testing.`,
     text: [
       { par: <p>Are the new structures and formats confusing?</p> },
       {

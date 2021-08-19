@@ -33,11 +33,25 @@
   }
   & .inner {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     flex-wrap: nowrap;
+
+    & .load_more {
+      margin-top: 2rem;
+      & button {
+        padding: 0.5rem 1rem;
+        border-radius: 60px;
+        border: 0;
+        background-color: $alert;
+        color: #fff;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
 
     & .container {
       width: 90%;
@@ -95,6 +109,7 @@
           }
         }
       }
+
       & .testimonial_full {
         position: fixed;
         top: 0;

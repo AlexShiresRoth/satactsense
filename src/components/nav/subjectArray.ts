@@ -132,10 +132,7 @@ export const serviceLinks = [
     title: "AP Testing",
     path: "/ap",
     id: "AP",
-    dropdown: [
-      { title: "AP Testing", dropid: "AP", path: "/ap" },
-      // { title: 'SAT II Subject Testing', dropid: 'SUBJECT', path: '/sattwo' },
-    ],
+    dropdown: [],
   },
 
   {
@@ -151,12 +148,7 @@ export const serviceLinks = [
     id: "GENERAL",
     dropdown: [],
   },
-  // {
-  // 	title: 'Johns Hopkins Program for Advanced Testing',
-  // 	path: '/johnshopkins',
-  // 	id: 'CTY',
-  // 	dropdown: [],
-  // },
+
   {
     title: "College Consulting and Life Coaching",
     path: "/collegeconsulting",
@@ -167,8 +159,6 @@ export const serviceLinks = [
 ];
 
 export const categories = [
-  "25 Hour SAT Class",
-  "40 Hour SAT Class",
   "SAT Prep",
   "SSAT Prep",
   "ACT Prep",
@@ -218,6 +208,6 @@ export const categories = [
   "Johns Hopkins SCAT (Grades 2-8)",
   "Johns Hopkins PSAT & SCAT (Grades 5-6)",
   "Johns Hopkins SAT & SCAT (Grades 7-8)",
-  "Book Your Trial Lesson",
+  "Contact Us For More Information",
   "General",
 ];

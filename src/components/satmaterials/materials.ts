@@ -1,12 +1,7 @@
 export const materials = [
-  // {
-  //   title: `Official SAT Study Guide 2020 Edition`,
-  //   url: `https://www.amazon.com/Official-SAT-Study-Guide-2020/dp/1457312190/ref=as_li_ss_tl?ie=UTF8&linkCode=sl1&tag=satactsense0d-20&linkId=40df8f77b953dca4137076c2f2cece11&language=en_US`,
-  //   img: `https://images-na.ssl-images-amazon.com/images/I/41wBo8-XN7L._SX377_BO1,204,203,200_.jpg`,
-  // },
   {
-    title: `10 Practice Tests for the SAT, 2021`,
-    url: `https://amzn.to/3rtWq3p`,
+    title: `10 Practice Tests for the SAT, 2022`,
+    url: `https://amzn.to/37StGbK`,
     img: `https://images-na.ssl-images-amazon.com/images/I/51jlCnEzhqL._SX383_BO1,204,203,200_.jpg`,
   },
   {
@@ -15,9 +10,9 @@ export const materials = [
     img: `https://images-na.ssl-images-amazon.com/images/I/81SQZnnHvqL._SL1500_.jpg`,
   },
   {
-    title: `Official SAT Study Guide 2022 Edition`,
-    url: `https://amzn.to/2W0eA15`,
-    img: `https://images-na.ssl-images-amazon.com/images/I/51pMBjW+ArL._SX389_BO1,204,203,200_.jpg`,
+    title: `SAT College Board Book`,
+    url: `https://amzn.to/2UyEfOe`,
+    img: `https://images-na.ssl-images-amazon.com/images/I/41WuklHoB4L._SX378_BO1,204,203,200_.jpg`,
   },
   {
     title: `Hot Words for the SAT (Barron's Test Prep) Seventh Edition`,

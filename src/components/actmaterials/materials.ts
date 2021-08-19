@@ -1,8 +1,8 @@
 export const materials = [
   {
-    title: `Princeton Review ACT Premium Prep, 2021`,
-    url: `https://amzn.to/3xCB45H`,
-    img: `https://images-na.ssl-images-amazon.com/images/I/51siOqfBw8S._SX382_BO1,204,203,200_.jpg`,
+    title: `Princeton Review ACT Premium Prep, 2022`,
+    url: `https://amzn.to/3D2pOmI`,
+    img: `https://images-na.ssl-images-amazon.com/images/I/51cvcUE5QCL._SX364_BO1,204,203,200_.jpg`,
   },
   {
     title: `ACT Practice Questions`,
@@ -30,9 +30,9 @@ export const materials = [
     img: `https://res.cloudinary.com/snackmanproductions/image/upload/v1591313648/satactsense/51jJpU8q6kL._AC_SL1434__a2c5wh.jpg`,
   },
   {
-    title: `iOS: OutRead`,
-    url: `https://apps.apple.com/us/app/outread-speed-reading-trainer/id778846279`,
-    img: `https://res.cloudinary.com/snackmanproductions/image/upload/c_scale,q_61,w_443/v1591314079/satactsense/2020-06-04_h4nuhu.png`,
+    title: `iOS: Spreeder`,
+    url: `https://apps.apple.com/gb/app/spreeder-speed-reading-e-reader-and-trainer/id1110276339`,
+    img: `https://is4-ssl.mzstatic.com/image/thumb/Purple111/v4/c5/05/1b/c5051b05-3a70-eebe-1313-b90170cf677d/mzl.epucpava.png/230x0w.webp`,
   },
   {
     title: `Android: Speed Reading`,
@@ -40,7 +40,7 @@ export const materials = [
     img: "https://res.cloudinary.com/snackmanproductions/image/upload/v1591314448/satactsense/android-speed-reading-app-trainer_q2mcai.jpg",
   },
   {
-    title: `ACT English Manual(Copyright Steven Rossner) $125(e - mailed as PDF attachment)`,
+    title: `ACT English Manual(Copyright Steven Rossner) $75(e - mailed as PDF attachment)`,
     url: ``,
     img: "",
   },
