@@ -12,6 +12,10 @@ export const ratings = [
     author: `J. McDonald, Garden City, NY`,
   },
   {
+    text: "After working with SAT/ACT Sense, I am happy to say my son is one and done with his College Board tests. After only a few months in the  program, he was ready to take both the ACT and SAT.  He was very pleased with his scores and happy there is no need for a retake.",
+    author: "Stacey B from Northport, NY.",
+  },
+  {
     text: `SAT/ACT Sense helped me to overcome my test anxieties and time management issues which other tutors and test prep companies could not do. I started out at with a 510 on my critical reading and they helped me bring my score up to 650 in just a few months. Most importantly the tutor helped me understand how to take the test and how to eliminate many wrong answers, which put me in a better position to answer the question correctly, especially in the reading comprehension section. I loved the fact that SAT/ACT Sense had proctors who would come to my home and administer a private SAT Test for me -this really helped me get comfortable with the test.`,
     author: `AJ S. (Manhasset, NY ) Accepted into TUFTS College`,
   },
