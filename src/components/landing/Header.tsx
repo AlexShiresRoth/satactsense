@@ -35,7 +35,10 @@ const Landing = ({
       <div className={landingStyle.overlay}></div>
       <div className={landingStyle.col}>
         <div>
-          <h1>Prep in the summer and test in the fall.</h1>
+          <h1>
+            Prep in the Fall
+            <br /> Test in the Winter.
+          </h1>
           <h3>Next SAT Test Date - November 6th</h3>
           <h3>Next ACT Test Date - October 23rd</h3>
           <p>Are you serious about preparing for the SAT or ACT?</p>
