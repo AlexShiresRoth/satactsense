@@ -39,8 +39,8 @@ const Landing = ({
             Prep in the Fall
             <br /> Test in the Winter.
           </h1>
-          <h3>Next SAT Test Date - November 6th</h3>
-          <h3>Next ACT Test Date - October 23rd</h3>
+          <h3>Next SAT Test Date - 12/4/21</h3>
+          <h3>Next ACT Test Date - 12/11/21</h3>
           <p>Are you serious about preparing for the SAT or ACT?</p>
           <p>
             Find out if you qualify for our intensive SAT/ACT complete
