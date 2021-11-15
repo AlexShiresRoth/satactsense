@@ -58,7 +58,8 @@
       font-size: 1rem;
       line-height: 1.5;
       margin: 0.5rem 0;
-      font-weight: 700;
+      font-weight: 400;
+      color: #666;
       animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     }
     & .btn_row {
@@ -129,8 +130,8 @@
 
       & p {
         font-size: 1rem;
-        margin: 0.5rem 0;
-        font-weight: 700;
+        margin: 0rem 0;
+        font-weight: 400;
         font-size: 1.2rem;
       }
       & button {
