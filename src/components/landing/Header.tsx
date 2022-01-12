@@ -36,17 +36,22 @@ const Landing = ({
       <div className={landingStyle.col}>
         <div>
           <h1>
-            Prep in the Fall
-            <br /> Test in the Winter.
+            Prep in the Winter
+            <br /> Test in the Winter
           </h1>
-          <h3>Next SAT Test Date - 12/4/21</h3>
-          <h3>Next ACT Test Date - 12/11/21</h3>
-          <p>Are you serious about preparing for the SAT or ACT?</p>
-          <p>
-            Find out if you qualify for our intensive SAT/ACT complete
-            preparation program.
-          </p>
-          <p>Book your first trial lesson today.</p>
+
+          <div className={landingStyle.text_box}>
+            <h3>Next SAT March 12th, 2022</h3>
+            <h3>Next ACT February 25th, 2022</h3>
+          </div>
+          <div className={landingStyle.text_box}>
+            <p>Are you serious about preparing for the SAT or ACT?</p>
+            <p>
+              Find out if you qualify for our intensive SAT/ACT complete
+              preparation program.
+            </p>
+            <p>Book your first trial lesson today.</p>
+          </div>
         </div>
         <div className={landingStyle.btn_row}>
           <Link to="/satandact">

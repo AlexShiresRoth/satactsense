@@ -38,28 +38,32 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    & .text_box {
+      margin:.5rem 0;
+    }
     & h1 {
       color: lighten($brand-main, 5%);
       font-weight: 700;
       font-size: 3.2rem;
       font-family: "Wotfard", sans-serif;
-      margin: 1rem 0;
+      margin: .2rem 0;
       animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     }
     & h3 {
       font-weight: 700;
       font-size: 1.2rem;
       font-family: "Wotfard", sans-serif;
-      margin: 0.5rem 0;
+      margin: 0.4rem 0 0 .4rem;
+      color: darken($brand-main, 10%);
       animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     }
 
     & p {
       font-size: 1rem;
-      line-height: 1.5;
-      margin: 0.5rem 0;
+      line-height: 1.2;
+      margin: 0.4rem 0 0 .4rem;
       font-weight: 400;
-      color: #666;
+      color: #555;
       animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     }
     & .btn_row {
