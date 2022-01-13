@@ -42,7 +42,7 @@ const Landing = ({
 
           <div className={landingStyle.text_box}>
             <h3>Next SAT March 12th, 2022</h3>
-            <h3>Next ACT February 25th, 2022</h3>
+            <h3>Next ACT February 12th, 2022</h3>
           </div>
           <div className={landingStyle.text_box}>
             <p>Are you serious about preparing for the SAT or ACT?</p>
