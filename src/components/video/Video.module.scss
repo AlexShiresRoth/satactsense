@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  padding: 0rem 0 4rem 0;
+  padding: 0;
   background: $brand-bg;
   justify-items: center;
   align-items: center;
@@ -20,6 +20,13 @@
   & h4 {
     color: #222;
     margin: 0.5rem 0;
+    font-size:1rem;
+    font-style:italic;
+  }
+  & h3  {
+    font-size:1.4rem;
+    margin:.5rem 0;
+    color: $brand-main;
   }
   & .text_container {
     display: flex;
@@ -28,16 +35,28 @@
     align-items: center;
     padding: 2rem 0;
     & p {
-      color: #444;
-      max-width: 80%;
+      color: #666;
+      max-width: 100%;
       margin: 0.5rem 0;
+      line-height:1.2;
+      font-size:1rem;
     }
     & .inner {
       width: 80%;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.6rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
       justify-items: center;
+      & .col {
+        box-shadow:0 1px 10px #eee;
+        padding:1rem;
+        & span {
+          height:1px;
+          width:100%;
+          background-color:#eee;
+          display:block;
+        }
+      }
     }
   }
   & .video_container {

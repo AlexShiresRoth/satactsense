@@ -32,7 +32,7 @@ const Layout = ({
         <meta name="robots" content="index, follow" />
         <meta
           name="SATACTSENSE"
-          content="Tutoring site for sat and act preparation"
+          content="Tutoring for sat and act preparation"
         />
       </Helmet>
       <main className={layoutStyle.main}>
@@ -40,7 +40,6 @@ const Layout = ({
           <Nav />
           {children}
           <EmailSignup />
-          {/* <ClassSchedule /> */}
           <Video />
           <Bio />
           <Action />
