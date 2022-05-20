@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import navStyle from "./Nav.module.scss";
+import navStyle from "./Nav.module.css";
 import Menu from "./Menu";
 import Modal from "../contact/Modal";
 import Faq from "./Faq";
