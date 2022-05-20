@@ -42,10 +42,7 @@ const Landing = ({
 
           <div className={landingStyle.text_box}>
             <h3 style={{ fontStyle: "italic" }}>
-              Next SAT Dates: March 12th & May 7th
-            </h3>
-            <h3 style={{ fontStyle: "italic" }}>
-              Next ACT Dates: April 2nd & June 11th
+              Summer is the best time to prep!
             </h3>
           </div>
           <div className={landingStyle.text_box}>
