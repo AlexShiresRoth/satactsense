@@ -1,6 +1,6 @@
 import React from "react";
 import { materials } from "./materials";
-import style from "./Materials.module.scss";
+import style from "./Materials.module.css";
 import { GoBook } from "react-icons/go";
 import { setModalState, setCategory } from "../../actions/modal";
 import { connect } from "react-redux";

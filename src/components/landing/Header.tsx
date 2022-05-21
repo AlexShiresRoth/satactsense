@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import landingStyle from "./Header.module.scss";
+import landingStyle from "./Header.module.css";
 import { setModalState, setCategory } from "../../actions/modal";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";

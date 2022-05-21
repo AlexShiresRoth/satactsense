@@ -1,7 +1,7 @@
 import React from "react";
 import { setCategory, setModalState } from "../../actions/modal";
 import { connect } from "react-redux";
-import actionStyle from "./Action.module.scss";
+import actionStyle from "./Action.module.css";
 import { GoMail } from "react-icons/go";
 interface ActioProps {
   setCategory: (val: string) => any;

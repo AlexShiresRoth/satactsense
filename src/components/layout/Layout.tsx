@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import layoutStyle from "./Layout.module.scss";
+import layoutStyle from "./Layout.module.css";
 import { Helmet } from "react-helmet";
 import Nav from "../nav/Nav";
 import EmailSignup from "../signup/EmailSignup";
@@ -7,7 +7,7 @@ import Video from "../video/Video";
 import Bio from "../bio/Bio";
 import Action from "../action/Action";
 import Footer from "../footer/Footer";
-// import ClassSchedule from "../scheduling/ClassSchedule";
+
 interface LayoutProps {
   children: ReactNode;
   pageInfo: {

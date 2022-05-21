@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import popupStyle from "./PopUp.module.scss";
+import popupStyle from "./PopUp.module.css";
 import axios from "axios";
 import { MdClose } from "react-icons/md";
 import LoadingSpinner from "../reusable/LoadingSpinner";
@@ -73,10 +73,6 @@ const PopUp = ({ modalState }: Props) => {
         setPopUpState(false);
       }, 1000);
     } catch (error) {
-      if (!error.response) {
-        return;
-      }
-      console.log(error.response.data.msg.map((msg: any) => msg));
       setMessage({
         msg: "Something went wrong, please retry sending",
         loading: false,

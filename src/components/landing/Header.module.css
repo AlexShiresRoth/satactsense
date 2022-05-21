@@ -39,7 +39,7 @@
 }
 
 .header .col {
-  z-index: 1;
+  z-index: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,6 +63,8 @@
   margin: 1rem 0;
   -webkit-animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
           animation: fadein 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  z-index: 0;
+  position:relative;
 }
 
 .header .col p {
@@ -149,7 +151,7 @@
     position: relative;
   }
   .header .col {
-    z-index: 1;
+    z-index: 0;
   }
   .header .col h1 {
     color: #1f4582;

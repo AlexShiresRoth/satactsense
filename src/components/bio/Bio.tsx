@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import bioStyle from "./Bio.module.scss";
+import bioStyle from "./Bio.module.css";
 import { content } from "./bioContent";
 
 const Bio = () => {

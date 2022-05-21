@@ -1,5 +1,5 @@
 import React from "react";
-import footerStyle from "./Footer.module.scss";
+import footerStyle from "./Footer.module.css";
 import { TiSocialSkype, TiSocialFacebookCircular } from "react-icons/ti";
 import { MdPhoneInTalk, MdMail } from "react-icons/md";
 import { Link } from "react-router-dom";
