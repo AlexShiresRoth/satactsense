@@ -41,11 +41,6 @@ const Landing = ({
           </h1>
 
           <div className={landingStyle.text_box}>
-            <h3 style={{ fontStyle: "italic" }}>
-              Summer is the best time to prep!
-            </h3>
-          </div>
-          <div className={landingStyle.text_box}>
             <p>Are you serious about preparing for the SAT or ACT?</p>
             <p>
               Find out if you qualify for our intensive SAT/ACT complete
