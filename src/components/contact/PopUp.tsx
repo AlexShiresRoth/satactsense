@@ -73,10 +73,9 @@ const PopUp = ({ modalState }: Props) => {
         setPopUpState(false);
       }, 1000);
     } catch (error) {
-      if (!error.response) {
+      if (!error) {
         return;
       }
-      console.log(error.response.data.msg.map((msg: any) => msg));
       setMessage({
         msg: "Something went wrong, please retry sending",
         loading: false,

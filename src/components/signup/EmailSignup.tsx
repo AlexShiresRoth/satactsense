@@ -86,9 +86,7 @@ const EmailSignup = () => {
       setMessageState({
         loading: false,
         error: true,
-        message: error.response.data.msg.map(
-          (msg: any) => `${msg.param}: ${msg.msg}`
-        ),
+        message: "Something went wrong, please try again.",
         success: false,
       });
 
