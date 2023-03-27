@@ -36,8 +36,8 @@ const Landing = ({
       <div className={landingStyle.col}>
         <div>
           <h1>
-            Prep in the Winter
-            <br /> & take the test in the Spring
+            Prep in the Spring
+            <br /> & take the test in the Spring/Summer
           </h1>
 
           <div className={landingStyle.text_box}>
@@ -50,7 +50,7 @@ const Landing = ({
           </div>
         </div>
         <div className={landingStyle.btn_row}>
-          <Link to="/satandact">
+          <Link to='/satandact'>
             <button>Learn More</button>
           </Link>
           <button
