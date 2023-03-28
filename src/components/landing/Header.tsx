@@ -37,7 +37,7 @@ const Landing = ({
         <div>
           <h1>
             Prep in the Spring
-            <br /> & take the test in the Spring/Summer
+            <br /> & test in the Spring/Summer
           </h1>
 
           <div className={landingStyle.text_box}>
